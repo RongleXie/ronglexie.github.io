@@ -326,6 +326,22 @@
   
 
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://xieqingrong.github.io.git/about/index.html",
+  owner: 'xieqingrong',
+  repo: 'Blog-Gitment-Comment',
+  oauth: {
+    client_id: '39a2262cb556cc1d1371',
+    client_secret: '8b8757ec1d73829bdb46d82b6cc7cba8b1f9cc07',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
