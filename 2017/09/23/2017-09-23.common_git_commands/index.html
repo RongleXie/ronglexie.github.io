@@ -9,14 +9,14 @@
   <title>常用 Git 命令清单 | 世界因你而精彩</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="整理的常用 Git 命令清单">
-<meta name="keywords" content="随笔,Git">
+<meta name="keywords" content="Git,随笔">
 <meta property="og:type" content="article">
 <meta property="og:title" content="常用 Git 命令清单">
 <meta property="og:url" content="http://xieqingrong.github.io.git/2017/09/23/2017-09-23.common_git_commands/index.html">
 <meta property="og:site_name" content="世界因你而精彩">
 <meta property="og:description" content="整理的常用 Git 命令清单">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-23T16:00:11.622Z">
+<meta property="og:updated_time" content="2017-10-07T11:58:24.588Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用 Git 命令清单">
 <meta name="twitter:description" content="整理的常用 Git 命令清单">
@@ -199,7 +199,7 @@
 <li><p>下载一个项目和它的整个代码历史</p>
 <blockquote>
 <p>$ git clone [url]</p>
-<h1 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h1><p>Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p>
+<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p>
 </blockquote>
 </li>
 <li><p>显示当前的Git配置</p>
@@ -214,8 +214,8 @@
 </li>
 <li><p>设置提交代码时的用户信息</p>
 <blockquote>
-<p>$ git config [–global] user.name “[name]”<br>$ git config [–global] user.email “[email address]”<br>三、增加/删除文件</p>
-</blockquote>
+<p>$ git config [–global] user.name “[name]”<br>$ git config [–global] user.email “[email address]”</p>
+<h2 id="三、增加-删除文件"><a href="#三、增加-删除文件" class="headerlink" title="三、增加/删除文件"></a>三、增加/删除文件</h2></blockquote>
 </li>
 <li><p>添加指定文件到暂存区</p>
 <blockquote>
@@ -252,7 +252,7 @@
 <li><p>改名文件，并且将这个改名放入暂存区</p>
 <blockquote>
 <p>$ git mv [file-original] [file-renamed]</p>
-<h1 id="四、代码提交"><a href="#四、代码提交" class="headerlink" title="四、代码提交"></a>四、代码提交</h1></blockquote>
+<h2 id="四、代码提交"><a href="#四、代码提交" class="headerlink" title="四、代码提交"></a>四、代码提交</h2></blockquote>
 </li>
 <li><p>提交暂存区到仓库区</p>
 <blockquote>
@@ -281,7 +281,7 @@
 <li><p>重做上一次commit，并包括指定文件的新变化</p>
 <blockquote>
 <p>$ git commit –amend [file1] [file2] …</p>
-<h1 id="五、分支"><a href="#五、分支" class="headerlink" title="五、分支"></a>五、分支</h1></blockquote>
+<h2 id="五、分支"><a href="#五、分支" class="headerlink" title="五、分支"></a>五、分支</h2></blockquote>
 </li>
 <li><p>列出所有本地分支</p>
 <blockquote>
@@ -351,7 +351,7 @@
 <li><p>删除远程分支</p>
 <blockquote>
 <p>$ git push origin –delete [branch-name]<br>$ git branch -dr [remote/branch]</p>
-<h1 id="六、标签"><a href="#六、标签" class="headerlink" title="六、标签"></a>六、标签</h1></blockquote>
+<h2 id="六、标签"><a href="#六、标签" class="headerlink" title="六、标签"></a>六、标签</h2></blockquote>
 </li>
 <li><p>列出所有tag</p>
 <blockquote>
@@ -395,8 +395,8 @@
 </li>
 <li><p>新建一个分支，指向某个tag</p>
 <blockquote>
-<p>$ git checkout -b [branch] [tag]<br>#七、查看信息</p>
-</blockquote>
+<p>$ git checkout -b [branch] [tag]</p>
+<h2 id="七、查看信息"><a href="#七、查看信息" class="headerlink" title="七、查看信息"></a>七、查看信息</h2></blockquote>
 </li>
 <li><p>显示有变更的文件</p>
 <blockquote>
@@ -496,7 +496,7 @@
 <li><p>显示当前分支的最近几次提交</p>
 <blockquote>
 <p>$ git reflog</p>
-<h1 id="八、远程同步"><a href="#八、远程同步" class="headerlink" title="八、远程同步"></a>八、远程同步</h1></blockquote>
+<h2 id="八、远程同步"><a href="#八、远程同步" class="headerlink" title="八、远程同步"></a>八、远程同步</h2></blockquote>
 </li>
 <li><p>下载远程仓库的所有变动</p>
 <blockquote>
@@ -536,7 +536,7 @@
 <li><p>推送所有分支到远程仓库</p>
 <blockquote>
 <p>$ git push [remote] –all</p>
-<h1 id="九、撤销"><a href="#九、撤销" class="headerlink" title="九、撤销"></a>九、撤销</h1></blockquote>
+<h2 id="九、撤销"><a href="#九、撤销" class="headerlink" title="九、撤销"></a>九、撤销</h2></blockquote>
 </li>
 <li><p>恢复暂存区的指定文件到工作区</p>
 <blockquote>
@@ -588,7 +588,7 @@
 <li><p>暂时将未提交的变化移除，稍后再移入</p>
 <blockquote>
 <p>$ git stash<br>$ git stash pop</p>
-<h1 id="十、其他"><a href="#十、其他" class="headerlink" title="十、其他"></a>十、其他</h1></blockquote>
+<h2 id="十、其他"><a href="#十、其他" class="headerlink" title="十、其他"></a>十、其他</h2></blockquote>
 </li>
 <li><p>生成一个可供发布的压缩包</p>
 <blockquote>
@@ -640,11 +640,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
       		
 		</ul>
@@ -878,7 +878,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TOMCAT</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -886,7 +886,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color2">TOMCAT</a>
               </li>
             
             <div class="clearfix"></div>
