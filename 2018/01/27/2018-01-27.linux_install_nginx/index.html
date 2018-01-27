@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="世界因你而精彩">
 <meta property="og:description" content="Linux环境下安装Nginx">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-27T08:00:52.154Z">
+<meta property="og:updated_time" content="2018-01-27T08:03:36.144Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux环境下安装Nginx">
 <meta name="twitter:description" content="Linux环境下安装Nginx">
@@ -180,10 +180,10 @@
 <h2 id="1、安装依赖包"><a href="#1、安装依赖包" class="headerlink" title="1、安装依赖包"></a>1、安装依赖包</h2><ul>
 <li><p>模块依赖性Nginx需要依赖下面4个包</p>
 <ol>
-<li>gzip 模块需要 zlib 库 ( 下载:<a href="http://www.zlib.net/" target="_blank" rel="external">http://www.zlib.net/</a> )</li>
-<li>rewrite 模块需要 pcre 库 ( 下载:<a href="http://www.pcre.org/" target="_blank" rel="external">http://www.pcre.org/</a> )</li>
-<li>openssl库需要perl （下载：<a href="https://www.perl.org）" target="_blank" rel="external">https://www.perl.org）</a></li>
-<li>ssl 功能需要 openssl 库 ( 下载:<a href="http://www.openssl.org/" target="_blank" rel="external">http://www.openssl.org/</a> )</li>
+<li>gzip 模块需要 zlib 库 ( 下载:<a href="http://www.zlib.net/" target="_blank" rel="external">http://www.zlib.net/</a> )；</li>
+<li>rewrite 模块需要 pcre 库 ( 下载:<a href="http://www.pcre.org/" target="_blank" rel="external">http://www.pcre.org/</a> )；</li>
+<li>openssl库需要perl （下载：<a href="https://www.perl.org）；" target="_blank" rel="external">https://www.perl.org）；</a></li>
+<li>ssl 功能需要 openssl 库 ( 下载:<a href="http://www.openssl.org/" target="_blank" rel="external">http://www.openssl.org/</a> )；</li>
 </ol>
 </li>
 <li><p>zlib库<br>安装步骤：</p>
@@ -216,13 +216,16 @@
 <ol>
 <li>下载安装包：<br><code>wget https://www.openssl.org/source/openssl-1.1.0c.tar.gz</code></li>
 <li>解压安装包：<br><code>tar –xvf openssl-1.1.0c.tar.gz</code></li>
-<li>执行安装：<br><code>./config &amp;&amp; make &amp;&amp; make install</code><br>安装过程较长，一直等待就行<h2 id="2、安装nginx"><a href="#2、安装nginx" class="headerlink" title="2、安装nginx"></a>2、安装nginx</h2></li>
+<li>执行安装：<br><code>./config &amp;&amp; make &amp;&amp; make install</code><br>安装过程较长，一直等待就行。</li>
 </ol>
-<ul>
-<li>下载安装包：<br><code>wget http://nginx.org/download/nginx-1.9.9.tar.gz</code></li>
-<li>解压安装包：<br><code>tar –zxvf nginx-1.9.9.tar.gz</code></li>
-<li>执行安装：<br><code>./configure --with-pcre=../pcre-8.41 --with-zlib=../zlib-1.2.11 --with-openssl=../openssl-1.1.0c
-make &amp;&amp;make install</code></li>
+<h2 id="2、安装nginx"><a href="#2、安装nginx" class="headerlink" title="2、安装nginx"></a>2、安装nginx</h2><ul>
+<li><p>下载安装包：<br><code>wget http://nginx.org/download/nginx-1.9.9.tar.gz</code></p>
+</li>
+<li><p>解压安装包：<br><code>tar –zxvf nginx-1.9.9.tar.gz</code></p>
+</li>
+<li><p>执行安装：<br><code>./configure --with-pcre=../pcre-8.41 --with-zlib=../zlib-1.2.11 --with-openssl=../openssl-1.1.0c
+make &amp;&amp;make install</code></p>
+</li>
 <li><p>配置启动服务</p>
 <ol>
 <li>输入命令：cd /etc/init.d/</li>
