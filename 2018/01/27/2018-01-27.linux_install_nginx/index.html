@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xieqingrong.github.io.git">
-  <title>Archives | 世界因你而精彩</title>
+  <title>Linux环境下安装Nginx | 世界因你而精彩</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="世界因你而精彩">
-<meta property="og:url" content="http://xieqingrong.github.io.git/archives/index.html">
+  <meta name="description" content="Linux环境下安装Nginx ##1、安装依赖包  模块依赖性Nginx需要依赖下面4个包  gzip 模块需要 zlib 库 ( 下载:http://www.zlib.net/ ) rewrite 模块需要 pcre 库 ( 下载:http://www.pcre.org/ ) openssl库需要perl （下载：https://www.perl.org） ssl 功能需要 openssl 库">
+<meta name="keywords" content="Linux Nginx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux环境下安装Nginx">
+<meta property="og:url" content="http://xieqingrong.github.io.git/2018/01/27/2018-01-27.linux_install_nginx/index.html">
 <meta property="og:site_name" content="世界因你而精彩">
+<meta property="og:description" content="Linux环境下安装Nginx ##1、安装依赖包  模块依赖性Nginx需要依赖下面4个包  gzip 模块需要 zlib 库 ( 下载:http://www.zlib.net/ ) rewrite 模块需要 pcre 库 ( 下载:http://www.pcre.org/ ) openssl库需要perl （下载：https://www.perl.org） ssl 功能需要 openssl 库">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-27T07:52:58.123Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="世界因你而精彩">
+<meta name="twitter:title" content="Linux环境下安装Nginx">
+<meta name="twitter:description" content="Linux环境下安装Nginx ##1、安装依赖包  模块依赖性Nginx需要依赖下面4个包  gzip 模块需要 zlib 库 ( 下载:http://www.zlib.net/ ) rewrite 模块需要 pcre 库 ( 下载:http://www.pcre.org/ ) openssl库需要perl （下载：https://www.perl.org） ssl 功能需要 openssl 库">
   
     <link rel="alternative" href="/atom.xml" title="世界因你而精彩" type="application/atom+xml">
   
@@ -150,36 +155,124 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2018-01-27.linux_install_nginx" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/27/2018-01-27.linux_install_nginx/" class="archive-article-date">
-  	<time datetime="2018-01-27T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-27</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/27/2018-01-27.linux_install_nginx/">Linux环境下安装Nginx</a>
+    <h1 class="article-title" itemprop="name">
+      Linux环境下安装Nginx
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/01/27/2018-01-27.linux_install_nginx/" class="archive-article-date">
+  	<time datetime="2018-01-27T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Linux环境下安装Nginx"><a href="#Linux环境下安装Nginx" class="headerlink" title="Linux环境下安装Nginx"></a>Linux环境下安装Nginx</h1><hr>
+<p>##1、安装依赖包</p>
+<ul>
+<li><p>模块依赖性Nginx需要依赖下面4个包</p>
+<ol>
+<li>gzip 模块需要 zlib 库 ( 下载:<a href="http://www.zlib.net/" target="_blank" rel="external">http://www.zlib.net/</a> )</li>
+<li>rewrite 模块需要 pcre 库 ( 下载:<a href="http://www.pcre.org/" target="_blank" rel="external">http://www.pcre.org/</a> )</li>
+<li>openssl库需要perl （下载：<a href="https://www.perl.org）" target="_blank" rel="external">https://www.perl.org）</a></li>
+<li>ssl 功能需要 openssl 库 ( 下载:<a href="http://www.openssl.org/" target="_blank" rel="external">http://www.openssl.org/</a> )</li>
+</ol>
+</li>
+<li><p>zlib库<br>安装步骤：</p>
+</li>
+</ul>
+<ol>
+<li>下载安装包：<br><code>wget http://www.zlib.net/zlib-1.2.11.tar.gz</code></li>
+<li>解压安装包：<br><code>tar –zxvf zlib-1.2.11.tar.gz</code></li>
+<li>执行安装：<br><code>./configure&amp;&amp; make &amp;&amp; make install</code></li>
+</ol>
+<ul>
+<li>pcre库<br>安装步骤：</li>
+</ul>
+<ol>
+<li>下载安装包：<br><code>wget https://ftp.pcre.org/pub/pcre/pcre-8.41.tar.gz</code></li>
+<li>解压安装包：<br><code>tar –zxvf pcre-8.41.tar.gz</code></li>
+<li>执行安装：<br><code>./configure &amp;&amp;make &amp;&amp; make install</code></li>
+</ol>
+<ul>
+<li>perl库<br>安装步骤：</li>
+</ul>
+<ol>
+<li>下载安装包：<br><code>wget http://www.cpan.org/src/5.0/perl-5.24.0.tar.gz</code></li>
+<li>解压安装包：<br><code>tar –zxvf perl-5.24.0.tar.gz</code></li>
+<li>执行安装：<br><code>./Configure&amp;&amp; make &amp;&amp; make install</code><br>安装过程比较长，按照提示内容，一直下一步就行。</li>
+</ol>
+<ul>
+<li>openssl库<br>安装步骤：</li>
+</ul>
+<ol>
+<li>下载安装包：<br><code>wget https://www.openssl.org/source/openssl-1.1.0c.tar.gz</code></li>
+<li>解压安装包：<br><code>tar –xvf openssl-1.1.0c.tar.gz</code></li>
+<li>执行安装：<br><code>./config &amp;&amp; make &amp;&amp; make install</code><br>安装过程较长，一直等待就行<h2 id="2、安装nginx"><a href="#2、安装nginx" class="headerlink" title="2、安装nginx"></a>2、安装nginx</h2></li>
+</ol>
+<ul>
+<li>下载安装包：<br><code>wget http://nginx.org/download/nginx-1.9.9.tar.gz</code></li>
+<li>解压安装包：<br><code>tar –zxvf nginx-1.9.9.tar.gz</code></li>
+<li>执行安装：<br><code>./configure --with-pcre=../pcre-8.41 --with-zlib=../zlib-1.2.11 --with-openssl=../openssl-1.1.0c
+make &amp;&amp;make install</code></li>
+<li><p>配置启动服务</p>
+<ol>
+<li>输入命令：cd /etc/init.d/</li>
+<li>创建nginx文件：vi nginx</li>
+<li>复制以下内容：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">#! /bin/bash</div><div class="line"># chkconfig: 35 85 15  </div><div class="line"># description: Nginx is an HTTP(S) server, HTTP(S) reverse</div><div class="line">set -e</div><div class="line">PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</div><div class="line">DESC=&quot;nginx daemon&quot;</div><div class="line">NAME=nginx</div><div class="line">DAEMON=/usr/local/nginx/sbin/$NAME</div><div class="line">SCRIPTNAME=/etc/init.d/$NAME</div><div class="line">test -x $DAEMON || exit 0</div><div class="line">d_start()&#123;</div><div class="line">    $DAEMON || echo -n &quot; already running&quot;</div><div class="line">&#125;</div><div class="line">d_stop() &#123;</div><div class="line">    $DAEMON -s quit || echo -n &quot; not running&quot;</div><div class="line">&#125;</div><div class="line">d_reload() &#123;</div><div class="line">    $DAEMON -s reload || echo -n &quot; counld not reload&quot;</div><div class="line">&#125;</div><div class="line">case &quot;$1&quot; in</div><div class="line">start)</div><div class="line">    echo -n &quot;Starting $DESC:$NAME&quot;</div><div class="line">    d_start</div><div class="line">    echo &quot;.&quot;</div><div class="line">;;</div><div class="line">stop)</div><div class="line">    echo -n &quot;Stopping $DESC:$NAME&quot;</div><div class="line">    d_stop</div><div class="line">    echo &quot;.&quot;</div><div class="line">;;</div><div class="line">reload)</div><div class="line">    echo -n &quot;Reloading $DESC configuration...&quot;</div><div class="line">    d_reload</div><div class="line">    echo &quot;reloaded.&quot;</div><div class="line">;;</div><div class="line">restart)</div><div class="line">    echo -n &quot;Restarting $DESC: $NAME&quot;</div><div class="line">    d_stop</div><div class="line">    sleep 2</div><div class="line">    d_start</div><div class="line">    echo &quot;.&quot;</div><div class="line">;;</div><div class="line">*)</div><div class="line">    echo &quot;Usage: $SCRIPTNAME &#123;start|stop|restart|reload&#125;&quot; &gt;&amp;2</div><div class="line">    exit 3</div><div class="line">;;</div><div class="line">esac</div><div class="line">exit 0</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>启动nginx：service nginx start</p>
+</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/wechat.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,190 +284,142 @@
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
       
-        </div></section>
+
       
+
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/19/2017-11-19.http_status_codes/" class="archive-article-date">
-  	<time datetime="2017-11-19T15:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/19/2017-11-19.http_status_codes/">常见HTTP/FTP/WebSocket错误代码大全</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTTP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">FTP</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">WebSocket</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://xieqingrong.github.io.git/2018/01/27/2018-01-27.linux_install_nginx/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/23/2017-09-23.common_git_commands/" class="archive-article-date">
-  	<time datetime="2017-09-23T12:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/19/2017-11-19.http_status_codes/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常见HTTP/FTP/WebSocket错误代码大全</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/23/2017-09-23.common_git_commands/">常用 Git 命令清单</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2018-01-27.linux_install_nginx" data-title="Linux环境下安装Nginx" data-url="http://xieqingrong.github.io.git/2018/01/27/2018-01-27.linux_install_nginx/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/23/2017-09-23.tomcat_green_version_conf/" class="archive-article-date">
-  	<time datetime="2017-09-23T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/23/2017-09-23.tomcat_green_version_conf/">绿色版Tomcat制作</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">TOMCAT</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/20/2017-09-20.hello-world/" class="archive-article-date">
-  	<time datetime="2017-09-20T15:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/20/2017-09-20.hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://xieqingrong.github.io.git/2018/01/27/2018-01-27.linux_install_nginx/",
+  owner: 'xieqingrong',
+  repo: 'xieqingrong.github.io',
+  oauth: {
+    client_id: '39a2262cb556cc1d1371',
+    client_secret: '8b8757ec1d73829bdb46d82b6cc7cba8b1f9cc07',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
   
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -397,8 +442,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

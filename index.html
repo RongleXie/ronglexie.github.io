@@ -152,6 +152,138 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-2018-01-27.linux_install_nginx" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/01/27/2018-01-27.linux_install_nginx/">Linux环境下安装Nginx</a>
+    </h1>
+  
+
+        
+        <a href="/2018/01/27/2018-01-27.linux_install_nginx/" class="archive-article-date">
+  	<time datetime="2018-01-27T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Linux环境下安装Nginx"><a href="#Linux环境下安装Nginx" class="headerlink" title="Linux环境下安装Nginx"></a>Linux环境下安装Nginx</h1><hr>
+<p>##1、安装依赖包</p>
+<ul>
+<li><p>模块依赖性Nginx需要依赖下面4个包</p>
+<ol>
+<li>gzip 模块需要 zlib 库 ( 下载:<a href="http://www.zlib.net/" target="_blank" rel="external">http://www.zlib.net/</a> )</li>
+<li>rewrite 模块需要 pcre 库 ( 下载:<a href="http://www.pcre.org/" target="_blank" rel="external">http://www.pcre.org/</a> )</li>
+<li>openssl库需要perl （下载：<a href="https://www.perl.org）" target="_blank" rel="external">https://www.perl.org）</a></li>
+<li>ssl 功能需要 openssl 库 ( 下载:<a href="http://www.openssl.org/" target="_blank" rel="external">http://www.openssl.org/</a> )</li>
+</ol>
+</li>
+<li><p>zlib库<br>安装步骤：</p>
+</li>
+</ul>
+<ol>
+<li>下载安装包：<br><code>wget http://www.zlib.net/zlib-1.2.11.tar.gz</code></li>
+<li>解压安装包：<br><code>tar –zxvf zlib-1.2.11.tar.gz</code></li>
+<li>执行安装：<br><code>./configure&amp;&amp; make &amp;&amp; make install</code></li>
+</ol>
+<ul>
+<li>pcre库<br>安装步骤：</li>
+</ul>
+<ol>
+<li>下载安装包：<br><code>wget https://ftp.pcre.org/pub/pcre/pcre-8.41.tar.gz</code></li>
+<li>解压安装包：<br><code>tar –zxvf pcre-8.41.tar.gz</code></li>
+<li>执行安装：<br><code>./configure &amp;&amp;make &amp;&amp; make install</code></li>
+</ol>
+<ul>
+<li>perl库<br>安装步骤：</li>
+</ul>
+<ol>
+<li>下载安装包：<br><code>wget http://www.cpan.org/src/5.0/perl-5.24.0.tar.gz</code></li>
+<li>解压安装包：<br><code>tar –zxvf perl-5.24.0.tar.gz</code></li>
+<li>执行安装：<br><code>./Configure&amp;&amp; make &amp;&amp; make install</code><br>安装过程比较长，按照提示内容，一直下一步就行。</li>
+</ol>
+<ul>
+<li>openssl库<br>安装步骤：</li>
+</ul>
+<ol>
+<li>下载安装包：<br><code>wget https://www.openssl.org/source/openssl-1.1.0c.tar.gz</code></li>
+<li>解压安装包：<br><code>tar –xvf openssl-1.1.0c.tar.gz</code></li>
+<li>执行安装：<br><code>./config &amp;&amp; make &amp;&amp; make install</code><br>安装过程较长，一直等待就行<h2 id="2、安装nginx"><a href="#2、安装nginx" class="headerlink" title="2、安装nginx"></a>2、安装nginx</h2></li>
+</ol>
+<ul>
+<li>下载安装包：<br><code>wget http://nginx.org/download/nginx-1.9.9.tar.gz</code></li>
+<li>解压安装包：<br><code>tar –zxvf nginx-1.9.9.tar.gz</code></li>
+<li>执行安装：<br><code>./configure --with-pcre=../pcre-8.41 --with-zlib=../zlib-1.2.11 --with-openssl=../openssl-1.1.0c
+make &amp;&amp;make install</code></li>
+<li><p>配置启动服务</p>
+<ol>
+<li>输入命令：cd /etc/init.d/</li>
+<li>创建nginx文件：vi nginx</li>
+<li>复制以下内容：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">#! /bin/bash</div><div class="line"># chkconfig: 35 85 15  </div><div class="line"># description: Nginx is an HTTP(S) server, HTTP(S) reverse</div><div class="line">set -e</div><div class="line">PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</div><div class="line">DESC=&quot;nginx daemon&quot;</div><div class="line">NAME=nginx</div><div class="line">DAEMON=/usr/local/nginx/sbin/$NAME</div><div class="line">SCRIPTNAME=/etc/init.d/$NAME</div><div class="line">test -x $DAEMON || exit 0</div><div class="line">d_start()&#123;</div><div class="line">    $DAEMON || echo -n &quot; already running&quot;</div><div class="line">&#125;</div><div class="line">d_stop() &#123;</div><div class="line">    $DAEMON -s quit || echo -n &quot; not running&quot;</div><div class="line">&#125;</div><div class="line">d_reload() &#123;</div><div class="line">    $DAEMON -s reload || echo -n &quot; counld not reload&quot;</div><div class="line">&#125;</div><div class="line">case &quot;$1&quot; in</div><div class="line">start)</div><div class="line">    echo -n &quot;Starting $DESC:$NAME&quot;</div><div class="line">    d_start</div><div class="line">    echo &quot;.&quot;</div><div class="line">;;</div><div class="line">stop)</div><div class="line">    echo -n &quot;Stopping $DESC:$NAME&quot;</div><div class="line">    d_stop</div><div class="line">    echo &quot;.&quot;</div><div class="line">;;</div><div class="line">reload)</div><div class="line">    echo -n &quot;Reloading $DESC configuration...&quot;</div><div class="line">    d_reload</div><div class="line">    echo &quot;reloaded.&quot;</div><div class="line">;;</div><div class="line">restart)</div><div class="line">    echo -n &quot;Restarting $DESC: $NAME&quot;</div><div class="line">    d_stop</div><div class="line">    sleep 2</div><div class="line">    d_start</div><div class="line">    echo &quot;.&quot;</div><div class="line">;;</div><div class="line">*)</div><div class="line">    echo &quot;Usage: $SCRIPTNAME &#123;start|stop|restart|reload&#125;&quot; &gt;&amp;2</div><div class="line">    exit 3</div><div class="line">;;</div><div class="line">esac</div><div class="line">exit 0</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>启动nginx：service nginx start</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Linux Nginx</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/01/27/2018-01-27.linux_install_nginx/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-2017-11-19.http_status_codes" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -579,6 +711,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">WebSocket</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Linux Nginx</a>
               </li>
             
             <div class="clearfix"></div>
