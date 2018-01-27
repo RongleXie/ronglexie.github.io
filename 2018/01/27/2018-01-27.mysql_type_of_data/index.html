@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xieqingrong.github.io.git">
-  <title>绿色版Tomcat制作 | 世界因你而精彩</title>
+  <title>MySQL数据类型 | 世界因你而精彩</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="绿色Tomcat制作，可在多种环境下运行，不依赖运行环境。">
-<meta name="keywords" content="随笔,TOMCAT">
+  <meta name="description" content="MySQL数据类型">
+<meta name="keywords" content="随笔,MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="绿色版Tomcat制作">
-<meta property="og:url" content="http://xieqingrong.github.io.git/2017/09/23/2017-09-23.tomcat_green_version_conf/index.html">
+<meta property="og:title" content="MySQL数据类型">
+<meta property="og:url" content="http://xieqingrong.github.io.git/2018/01/27/2018-01-27.mysql_type_of_data/index.html">
 <meta property="og:site_name" content="世界因你而精彩">
-<meta property="og:description" content="绿色Tomcat制作，可在多种环境下运行，不依赖运行环境。">
+<meta property="og:description" content="MySQL数据类型">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-24T14:36:04.436Z">
+<meta property="og:updated_time" content="2018-01-27T08:42:32.670Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="绿色版Tomcat制作">
-<meta name="twitter:description" content="绿色Tomcat制作，可在多种环境下运行，不依赖运行环境。">
+<meta name="twitter:title" content="MySQL数据类型">
+<meta name="twitter:description" content="MySQL数据类型">
   
     <link rel="alternative" href="/atom.xml" title="世界因你而精彩" type="application/atom+xml">
   
@@ -155,30 +155,237 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2017-09-23.tomcat_green_version_conf" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2018-01-27.mysql_type_of_data" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      绿色版Tomcat制作
+      MySQL数据类型
     </h1>
   
 
         
-        <a href="/2017/09/23/2017-09-23.tomcat_green_version_conf/" class="archive-article-date">
-  	<time datetime="2017-09-23T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-23</time>
+        <a href="/2018/01/27/2018-01-27.mysql_type_of_data/" class="archive-article-date">
+  	<time datetime="2018-01-27T08:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>绿色Tomcat制作，可在多种环境下运行，不依赖运行环境。</p>
+        <p>MySQL数据类型</p>
 <a id="more"></a>
-<p>###一、setclasspath.bat文件添加<br><strong><em>rem set user jdk and jre home<br>   set JAVA_HOME=..\jdk1.7.0_13_32<br>   set JRE_HOME=..\jdk1.7.0_13_32\jre</em></strong></p>
-<p>###二、新建startup.bat<br><strong><em>set “CURRENT_DIR=%~dp0”<br>   set “CATALINA_HOME=%CURRENT_DIR%\tomcat7”<br>   set JRE_HOME=%CURRENT_DIR%\JRE<br>   set CLASSPATH=%JRE_HOME%\lib<br>   set PATH=%PATH%;%JRE_HOME%\bin<br>   set JAVA=java<br>   call %CATALINA_HOME%\bin\startup.bat</em></strong></p>
+<ul>
+<li>数字类型<ul>
+<li>整数: tinyint、smallint、mediumint、int、bigint</li>
+<li>浮点数: float、double、real、decimal</li>
+</ul>
+</li>
+<li>日期和时间: date、time、datetime、timestamp、year</li>
+<li>字符串类型<ul>
+<li>字符串: char、varchar</li>
+<li>文本: tinytext、text、mediumtext、longtext</li>
+</ul>
+</li>
+<li>二进制(可用来存储图片、音乐等): tinyblob、blob、mediumblob、longblob</li>
+</ul>
+<h2 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>单位</th>
+<th>最大</th>
+<th>特性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHAR</td>
+<td>字符</td>
+<td>最大为255字符</td>
+<td>存储定长，容易造成空间的浪费</td>
+</tr>
+<tr>
+<td>VARCHAR</td>
+<td>字符</td>
+<td>可以超过255个字符</td>
+<td>存储变长，节省存储空间</td>
+</tr>
+<tr>
+<td>TEXT</td>
+<td>字节</td>
+<td>总大小为65535字节，约为64KB</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>TEXT在MySQL内部大多存储格式为溢出页，效率不如CHAR</li>
+<li>Mysql默认为utf-8，那么在英文模式下1个字符=1个字节，在中文模式下1个字符=3个字节。</li>
+</ul>
+<h2 id="数字类型"><a href="#数字类型" class="headerlink" title="数字类型"></a>数字类型</h2><h3 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h3><table>
+<thead>
+<tr>
+<th style="text-align:left">type</th>
+<th style="text-align:left">Storage</th>
+<th style="text-align:left">Minumun Value</th>
+<th style="text-align:left">Maximum Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">(Bytes)</td>
+<td style="text-align:left">(Signed/Unsigned)</td>
+<td style="text-align:left">(Signed/Unsigned)</td>
+</tr>
+<tr>
+<td style="text-align:left">TINYINT</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">-128</td>
+<td style="text-align:left">127</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">255</td>
+</tr>
+<tr>
+<td style="text-align:left">SMALLINT</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">-32768</td>
+<td style="text-align:left">32767</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">65535</td>
+</tr>
+<tr>
+<td style="text-align:left">MEDIUMINT</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">-8388608</td>
+<td style="text-align:left">8388607</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">16777215</td>
+</tr>
+<tr>
+<td style="text-align:left">INT</td>
+<td style="text-align:left">4</td>
+<td style="text-align:left">-2147483648</td>
+<td style="text-align:left">2147483647</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">4294967295</td>
+</tr>
+<tr>
+<td style="text-align:left">BIGINT</td>
+<td style="text-align:left">8</td>
+<td style="text-align:left">-9223372036854775808</td>
+<td style="text-align:left">9223372036854775807</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">18446744073709551615</td>
+</tr>
+</tbody>
+</table>
+<h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>存储空间</th>
+<th>精度</th>
+<th>精确性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FLOAT(M, D)</td>
+<td>4 bytes</td>
+<td>单精度</td>
+<td>非精确</td>
+<td>单精度浮点型，m总个数，d小数位</td>
+</tr>
+<tr>
+<td>DOUBLE(M, D)</td>
+<td>8 bytes</td>
+<td>双精度</td>
+<td>比Float精度高</td>
+<td>双精度浮点型，m总个数，d小数位</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>FLOAT容易造成精度丢失</li>
+</ul>
+<h3 id="定点数DECIMAL"><a href="#定点数DECIMAL" class="headerlink" title="定点数DECIMAL"></a>定点数DECIMAL</h3><ul>
+<li>高精度的数据类型，常用来存储交易相关的数据</li>
+<li>DECIMAL(M,N).M代表总精度，N代表小数点右侧的位数（标度）</li>
+<li>1 &lt; M &lt; 254, 0 &lt; N &lt; 60;</li>
+<li>存储空间变长</li>
+</ul>
+<h2 id="时间类型"><a href="#时间类型" class="headerlink" title="时间类型"></a>时间类型</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>字节</th>
+<th>例</th>
+<th>精确性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DATE</td>
+<td>三字节</td>
+<td>2015-05-01</td>
+<td>精确到年月日</td>
+</tr>
+<tr>
+<td>TIME</td>
+<td>三字节</td>
+<td>11:12:00</td>
+<td>精确到时分秒</td>
+</tr>
+<tr>
+<td>DATETIME</td>
+<td>八字节</td>
+<td>2015-05-01 11::12:00</td>
+<td>精确到年月日时分秒</td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td></td>
+<td>2015-05-01 11::12:00</td>
+<td>精确到年月日时分秒</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>MySQL在<code>5.6.4</code>版本之后，<code>TIMESTAMP</code>和<code>DATETIME</code>支持到微妙。</li>
+<li><code>TIMESTAMP</code>会根据系统时区进行转换，<code>DATETIME</code>则不会</li>
+<li>存储范围的区别  <ul>
+<li><code>TIMESTAMP</code>存储范围：1970-01-01 00::00:01 to 2038-01-19 03:14:07</li>
+<li><code>DATETIME</code>的存储范围：1000-01-01 00:00:00 to 9999-12-31 23:59:59</li>
+</ul>
+</li>
+<li>一般使用<code>TIMESTAMP</code>国际化</li>
+<li>如存时间戳使用数字类型<code>BIGINT</code></li>
+</ul>
 
       
 
@@ -227,7 +434,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">TOMCAT</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
         		</li>
       		
 		</ul>
@@ -283,7 +490,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://xieqingrong.github.io.git/2017/09/23/2017-09-23.tomcat_green_version_conf/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://xieqingrong.github.io.git/2018/01/27/2018-01-27.mysql_type_of_data/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -297,18 +504,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/09/23/2017-09-23.common_git_commands/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          常用 Git 命令清单
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/09/20/2017-09-20.hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2018/01/27/2018-01-27.linux_install_nginx/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux环境下安装Nginx</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -336,7 +534,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2017-09-23.tomcat_green_version_conf" data-title="绿色版Tomcat制作" data-url="http://xieqingrong.github.io.git/2017/09/23/2017-09-23.tomcat_green_version_conf/"></div>
+	<div class="ds-thread" data-thread-key="2018-01-27.mysql_type_of_data" data-title="MySQL数据类型" data-url="http://xieqingrong.github.io.git/2018/01/27/2018-01-27.mysql_type_of_data/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -367,7 +565,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://xieqingrong.github.io.git/2017/09/23/2017-09-23.tomcat_green_version_conf/",
+  id: "http://xieqingrong.github.io.git/2018/01/27/2018-01-27.mysql_type_of_data/",
   owner: 'xieqingrong',
   repo: 'xieqingrong.github.io',
   oauth: {
