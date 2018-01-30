@@ -17,7 +17,7 @@
 <meta property="og:description" content="Git常用知识思维导图">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.ronglexie.top/assets/img/git_mind.png">
-<meta property="og:updated_time" content="2018-01-29T05:12:29.109Z">
+<meta property="og:updated_time" content="2018-01-30T13:01:39.442Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git常用知识思维导图">
 <meta name="twitter:description" content="Git常用知识思维导图">
@@ -187,6 +187,30 @@
       </header>
     
 	<!-- 目录内容 -->
+	
+		<p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+		<span class="btn-bg"></span>
+		<span class="btn-text">文章导航</span>
+		</p>
+		<div id="toc-article" class="toc-article">
+			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+			<strong class="toc-title">文章目录</strong>
+			
+	   </div>
+	   <script type="text/javascript">
+		function showToc(){
+			var toc_article = document.getElementById("toc-article");
+			var show_toc_btn = document.getElementById("show-toc-btn");
+			toc_article.setAttribute("style","display:block");
+			show_toc_btn.setAttribute("style","display:none");
+			};
+		function showBtn(){
+			var toc_article = document.getElementById("toc-article");
+			var show_toc_btn = document.getElementById("show-toc-btn");
+			toc_article.setAttribute("style","display:none");
+			show_toc_btn.setAttribute("style","display:block");
+			};
+	   </script>
 	     
 	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
@@ -337,6 +361,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
