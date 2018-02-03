@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.ronglexie.top">
-  <title>Linux环境下安装Nginx | 世界因你而精彩|RongleXie</title>
+  <title>相册 | 世界因你而精彩|RongleXie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux环境下安装Nginx">
-<meta name="keywords" content="Linux,Nginx">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Linux环境下安装Nginx">
-<meta property="og:url" content="http://www.ronglexie.top/2018/01/27/2018-01-27.linux_install_nginx/index.html">
+  <meta name="description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($scrip">
+<meta property="og:type" content="website">
+<meta property="og:title" content="相册">
+<meta property="og:url" content="http://www.ronglexie.top/photos/index.html">
 <meta property="og:site_name" content="世界因你而精彩|RongleXie">
-<meta property="og:description" content="Linux环境下安装Nginx">
+<meta property="og:description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($scrip">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-30T13:23:57.652Z">
+<meta property="og:updated_time" content="2018-01-05T05:28:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux环境下安装Nginx">
-<meta name="twitter:description" content="Linux环境下安装Nginx">
+<meta name="twitter:title" content="相册">
+<meta name="twitter:description" content="Photos 	待续   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($scrip">
   
     <link rel="alternative" href="/atom.xml" title="世界因你而精彩|RongleXie" type="application/atom+xml">
   
@@ -167,21 +166,17 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2018-01-27.linux_install_nginx" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-photos" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Linux环境下安装Nginx
+      相册
     </h1>
   
 
-        
-        <a href="/2018/01/27/2018-01-27.linux_install_nginx/" class="archive-article-date">
-  	<time datetime="2018-01-27T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-27</time>
-</a>
         
 	
 	    <span class="archive-article-date">
@@ -191,103 +186,30 @@
       </header>
     
 	<!-- 目录内容 -->
-	
-		<p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-		<span class="btn-bg"></span>
-		<span class="btn-text">文章导航</span>
-		</p>
-		<div id="toc-article" class="toc-article">
-			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-			<strong class="toc-title">文章目录</strong>
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、安装依赖包"><span class="toc-number">1.</span> <span class="toc-text">1、安装依赖包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、安装nginx"><span class="toc-number">2.</span> <span class="toc-text">2、安装nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、配置启动服务"><span class="toc-number">3.</span> <span class="toc-text">3、配置启动服务</span></a></li></ol>
-	   </div>
-	   <script type="text/javascript">
-		function showToc(){
-			var toc_article = document.getElementById("toc-article");
-			var show_toc_btn = document.getElementById("show-toc-btn");
-			toc_article.setAttribute("style","display:block");
-			show_toc_btn.setAttribute("style","display:none");
-			};
-		function showBtn(){
-			var toc_article = document.getElementById("toc-article");
-			var show_toc_btn = document.getElementById("show-toc-btn");
-			toc_article.setAttribute("style","display:none");
-			show_toc_btn.setAttribute("style","display:block");
-			};
-	   </script>
 	     
 	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Linux环境下安装Nginx</p>
-<a id="more"></a>
-<hr>
-<h2 id="1、安装依赖包"><a href="#1、安装依赖包" class="headerlink" title="1、安装依赖包"></a>1、安装依赖包</h2><ul>
-<li><p>模块依赖性Nginx需要依赖下面4个包</p>
-<blockquote>
-<ol>
-<li>gzip 模块需要 zlib 库 ( 下载:<a href="http://www.zlib.net/" target="_blank" rel="external">http://www.zlib.net/</a> )；</li>
-<li>rewrite 模块需要 pcre 库 ( 下载:<a href="http://www.pcre.org/" target="_blank" rel="external">http://www.pcre.org/</a> )；</li>
-<li>openssl库需要perl （下载：<a href="https://www.perl.org）；" target="_blank" rel="external">https://www.perl.org）；</a></li>
-<li>ssl 功能需要 openssl 库 ( 下载:<a href="http://www.openssl.org/" target="_blank" rel="external">http://www.openssl.org/</a> )；</li>
-</ol>
-</blockquote>
-</li>
-<li><p>zlib库<br>安装步骤：</p>
-<blockquote>
-<ol>
-<li>下载安装包：<br>wget <a href="http://www.zlib.net/zlib-1.2.11.tar.gz" target="_blank" rel="external">http://www.zlib.net/zlib-1.2.11.tar.gz</a></li>
-<li>解压安装包：<br>tar –zxvf zlib-1.2.11.tar.gz</li>
-<li>执行安装：<br>./configure&amp;&amp; make &amp;&amp; make install</li>
-</ol>
-</blockquote>
-</li>
-<li><p>pcre库<br>安装步骤：</p>
-<blockquote>
-<ol>
-<li>下载安装包：<br>wget <a href="https://ftp.pcre.org/pub/pcre/pcre-8.41.tar.gz" target="_blank" rel="external">https://ftp.pcre.org/pub/pcre/pcre-8.41.tar.gz</a> </li>
-<li>解压安装包：<br>tar –zxvf pcre-8.41.tar.gz</li>
-<li>执行安装：<br>./configure &amp;&amp;make &amp;&amp; make install</li>
-</ol>
-</blockquote>
-</li>
-<li><p>perl库<br>安装步骤：</p>
-<blockquote>
-<ol>
-<li>下载安装包：<br>wget <a href="http://www.cpan.org/src/5.0/perl-5.24.0.tar.gz" target="_blank" rel="external">http://www.cpan.org/src/5.0/perl-5.24.0.tar.gz</a></li>
-<li>解压安装包：<br>tar –zxvf perl-5.24.0.tar.gz</li>
-<li>执行安装：<br>./Configure&amp;&amp; make &amp;&amp; make install<br>安装过程比较长，按照提示内容，一直下一步就行。</li>
-</ol>
-</blockquote>
-</li>
-<li><p>openssl库<br>安装步骤：</p>
-<blockquote>
-<ol>
-<li>下载安装包：<br>wget <a href="https://www.openssl.org/source/openssl-1.1.0c.tar.gz" target="_blank" rel="external">https://www.openssl.org/source/openssl-1.1.0c.tar.gz</a></li>
-<li>解压安装包：<br>tar –xvf openssl-1.1.0c.tar.gz</li>
-<li>执行安装：<br>./config &amp;&amp; make &amp;&amp; make install<br>安装过程较长，一直等待就行。</li>
-</ol>
-</blockquote>
-</li>
-</ul>
-<h2 id="2、安装nginx"><a href="#2、安装nginx" class="headerlink" title="2、安装nginx"></a>2、安装nginx</h2><blockquote>
-<ol>
-<li>下载安装包：<br>wget <a href="http://nginx.org/download/nginx-1.9.9.tar.gz" target="_blank" rel="external">http://nginx.org/download/nginx-1.9.9.tar.gz</a></li>
-<li>解压安装包：<br>tar –zxvf nginx-1.9.9.tar.gz</li>
-<li>执行安装：<br>./configure –with-pcre=../pcre-8.41 –with-zlib=../zlib-1.2.11 –with-openssl=../openssl-1.1.0c<br>make &amp;&amp;make install</li>
-</ol>
-</blockquote>
-<h2 id="3、配置启动服务"><a href="#3、配置启动服务" class="headerlink" title="3、配置启动服务"></a>3、配置启动服务</h2><blockquote>
-<ul>
-<li>输入命令：cd /etc/init.d/</li>
-<li>创建nginx文件：vi nginx</li>
-<li><p>复制以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">#! /bin/bash</div><div class="line"># chkconfig: 35 85 15  </div><div class="line"># description: Nginx is an HTTP(S) server, HTTP(S) reverse</div><div class="line">set -e</div><div class="line">PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</div><div class="line">DESC=&quot;nginx daemon&quot;</div><div class="line">NAME=nginx</div><div class="line">DAEMON=/usr/local/nginx/sbin/$NAME</div><div class="line">SCRIPTNAME=/etc/init.d/$NAME</div><div class="line">test -x $DAEMON || exit 0</div><div class="line">d_start()&#123;</div><div class="line">    $DAEMON || echo -n &quot; already running&quot;</div><div class="line">&#125;</div><div class="line">d_stop() &#123;</div><div class="line">    $DAEMON -s quit || echo -n &quot; not running&quot;</div><div class="line">&#125;</div><div class="line">d_reload() &#123;</div><div class="line">    $DAEMON -s reload || echo -n &quot; counld not reload&quot;</div><div class="line">&#125;</div><div class="line">case &quot;$1&quot; in</div><div class="line">start)</div><div class="line">    echo -n &quot;Starting $DESC:$NAME&quot;</div><div class="line">    d_start</div><div class="line">    echo &quot;.&quot;</div><div class="line">;;</div><div class="line">stop)</div><div class="line">    echo -n &quot;Stopping $DESC:$NAME&quot;</div><div class="line">    d_stop</div><div class="line">    echo &quot;.&quot;</div><div class="line">;;</div><div class="line">reload)</div><div class="line">    echo -n &quot;Reloading $DESC configuration...&quot;</div><div class="line">    d_reload</div><div class="line">    echo &quot;reloaded.&quot;</div><div class="line">;;</div><div class="line">restart)</div><div class="line">    echo -n &quot;Restarting $DESC: $NAME&quot;</div><div class="line">    d_stop</div><div class="line">    sleep 2</div><div class="line">    d_start</div><div class="line">    echo &quot;.&quot;</div><div class="line">;;</div><div class="line">*)</div><div class="line">    echo &quot;Usage: $SCRIPTNAME &#123;start|stop|restart|reload&#125;&quot; &gt;&amp;2</div><div class="line">    exit 3</div><div class="line">;;</div><div class="line">esac</div><div class="line">exit 0</div></pre></td></tr></table></figure>
-</li>
-<li><p>启动nginx：service nginx start</p>
-</li>
-</ul>
-</blockquote>
+        <link rel="stylesheet" href="./ins.css">
+<div class="photos-btn-wrap">
+	<a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="external">Photos</a>
+	<a class="photos-btn" href="#">待续</a>
+</div>
+<div class="instagram itemscope">
+	<a href="https://www.instagram.com/lawlitewang20/" target="_blank" class="open-ins">图片正在加载中…</a>
+</div>
+<script>
+  (function() {
+    var loadScript = function(path) {
+      var $script = document.createElement('script')
+      document.getElementsByTagName('body')[0].appendChild($script)
+      $script.setAttribute('src', path)
+    }
+    setTimeout(function() {
+      loadScript('./ins.js')
+    }, 0)
+  })()
+</script>
 
       
 
@@ -327,21 +249,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -392,7 +299,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.ronglexie.top/2018/01/27/2018-01-27.linux_install_nginx/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.ronglexie.top/photos/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -404,25 +311,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2018/01/27/2018-01-27.mysql_type_of_data/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MySQL数据类型
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/01/15/2018-01-15.git_mind/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Git常用知识思维导图</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -437,69 +325,10 @@
         </div>
         
         
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、安装依赖包"><span class="toc-number">1.</span> <span class="toc-text">1、安装依赖包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、安装nginx"><span class="toc-number">2.</span> <span class="toc-text">2、安装nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、配置启动服务"><span class="toc-number">3.</span> <span class="toc-text">3、配置启动服务</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
     </div>
 </aside>
 
 
-
-  
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2018-01-27.linux_install_nginx" data-title="Linux环境下安装Nginx" data-url="http://www.ronglexie.top/2018/01/27/2018-01-27.linux_install_nginx/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-  
-  
-  
-
-  
-
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://www.ronglexie.top/2018/01/27/2018-01-27.linux_install_nginx/",
-  owner: 'xieqingrong',
-  repo: 'xieqingrong.github.io',
-  oauth: {
-    client_id: '39a2262cb556cc1d1371',
-    client_secret: '8b8757ec1d73829bdb46d82b6cc7cba8b1f9cc07',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
-  
 
 
           </div>
@@ -529,7 +358,7 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
