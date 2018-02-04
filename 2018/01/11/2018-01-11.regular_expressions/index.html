@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://www.ronglexie.top">
   <title>正则表达式随记 | 世界因你而精彩|RongleXie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="正则表达式随记  学习正则表达式摘录，熟悉js正则函数match、exec、test、search、replace、split">
+  <meta name="description" content="正则表达式随记  学习正则表达式摘录，熟悉js正则函数match、exec、test、search、replace、split   一些匹配方法 去除首尾的 javascript:; 、javascript:void(0) 匹配 匹配一些字符 关键字符替换 替换参数中的值 匹配括号内容 调换 字符串截取 验证 小数点后几位验证 密码强度正则 校验中文 包含中文正则 由数字、26个英文字母或下划线组">
 <meta name="keywords" content="正则表达式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则表达式随记">
 <meta property="og:url" content="http://www.ronglexie.top/2018/01/11/2018-01-11.regular_expressions/index.html">
 <meta property="og:site_name" content="世界因你而精彩|RongleXie">
-<meta property="og:description" content="正则表达式随记  学习正则表达式摘录，熟悉js正则函数match、exec、test、search、replace、split">
+<meta property="og:description" content="正则表达式随记  学习正则表达式摘录，熟悉js正则函数match、exec、test、search、replace、split   一些匹配方法 去除首尾的 javascript:; 、javascript:void(0) 匹配 匹配一些字符 关键字符替换 替换参数中的值 匹配括号内容 调换 字符串截取 验证 小数点后几位验证 密码强度正则 校验中文 包含中文正则 由数字、26个英文字母或下划线组">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-30T13:01:35.333Z">
+<meta property="og:updated_time" content="2018-02-04T09:34:40.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="正则表达式随记">
-<meta name="twitter:description" content="正则表达式随记  学习正则表达式摘录，熟悉js正则函数match、exec、test、search、replace、split">
+<meta name="twitter:description" content="正则表达式随记  学习正则表达式摘录，熟悉js正则函数match、exec、test、search、replace、split   一些匹配方法 去除首尾的 javascript:; 、javascript:void(0) 匹配 匹配一些字符 关键字符替换 替换参数中的值 匹配括号内容 调换 字符串截取 验证 小数点后几位验证 密码强度正则 校验中文 包含中文正则 由数字、26个英文字母或下划线组">
   
     <link rel="alternative" href="/atom.xml" title="世界因你而精彩|RongleXie" type="application/atom+xml">
   
@@ -222,7 +222,6 @@
         <p>正则表达式随记</p>
 <hr>
 <p>学习正则表达式摘录，熟悉js正则函数match、exec、test、search、replace、split</p>
-<a id="more"></a> 
 <!-- TOC -->
 <ul>
 <li><a href="#一些匹配方法">一些匹配方法</a><ul>
@@ -261,6 +260,7 @@
 </li>
 </ul>
 <!-- /TOC -->
+<a id="more"></a> 
 <h2 id="一些匹配方法"><a href="#一些匹配方法" class="headerlink" title="一些匹配方法"></a>一些匹配方法</h2><h3 id="去除首尾的"><a href="#去除首尾的" class="headerlink" title="去除首尾的"></a>去除首尾的</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//去除首尾的‘/’</span></div><div class="line">input = input.replace(<span class="regexp">/^\/*|\/*$/g</span>,<span class="string">''</span>);</div></pre></td></tr></table></figure>
 <h3 id="javascript-、javascript-void-0"><a href="#javascript-、javascript-void-0" class="headerlink" title="javascript:; 、javascript:void(0)"></a>javascript:; 、javascript:void(0)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">'javascript:;'</span>.match(<span class="regexp">/^(javascript\s*\:|#)/</span>);</div><div class="line"><span class="comment">//["javascript:", "javascript:", index: 0, input: "javascript:;"]</span></div></pre></td></tr></table></figure>
 <h3 id="匹配"><a href="#匹配" class="headerlink" title="匹配"></a>匹配</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"access_token=dcb90862-29fb-4b03-93ff-5f0a8f546250; refresh_token=702f4815-a0ff-456c-82ce-24e4d7d619e6; account_uid=1361177947320160506170322436"</span>;</div><div class="line">str.match(<span class="regexp">/account_uid=([^\=]+(\;)|(.*))/ig</span>);</div></pre></td></tr></table></figure>
