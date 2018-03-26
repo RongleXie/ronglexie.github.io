@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.ronglexie.top">
-  <title>正则表达式随记 | 世界因你而精彩|RongleXie</title>
+  <title>Archives: 2018 | 世界因你而精彩|RongleXie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="正则表达式随记  学习正则表达式摘录，熟悉js正则函数match、exec、test、search、replace、split   一些匹配方法 去除首尾的 javascript:; 、javascript:void(0) 匹配 匹配一些字符 关键字符替换 替换参数中的值 匹配括号内容 调换 字符串截取 验证 小数点后几位验证 密码强度正则 校验中文 包含中文正则 由数字、26个英文字母或下划线组">
-<meta name="keywords" content="正则表达式">
-<meta property="og:type" content="article">
-<meta property="og:title" content="正则表达式随记">
-<meta property="og:url" content="http://www.ronglexie.top/2018/01/11/2018-01-11.regular_expressions/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="世界因你而精彩|RongleXie">
+<meta property="og:url" content="http://www.ronglexie.top/archives/2018/page/2/index.html">
 <meta property="og:site_name" content="世界因你而精彩|RongleXie">
-<meta property="og:description" content="正则表达式随记  学习正则表达式摘录，熟悉js正则函数match、exec、test、search、replace、split   一些匹配方法 去除首尾的 javascript:; 、javascript:void(0) 匹配 匹配一些字符 关键字符替换 替换参数中的值 匹配括号内容 调换 字符串截取 验证 小数点后几位验证 密码强度正则 校验中文 包含中文正则 由数字、26个英文字母或下划线组">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-04T09:34:40.409Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="正则表达式随记">
-<meta name="twitter:description" content="正则表达式随记  学习正则表达式摘录，熟悉js正则函数match、exec、test、search、replace、split   一些匹配方法 去除首尾的 javascript:; 、javascript:void(0) 匹配 匹配一些字符 关键字符替换 替换参数中的值 匹配括号内容 调换 字符串截取 验证 小数点后几位验证 密码强度正则 校验中文 包含中文正则 由数字、26个英文字母或下划线组">
+<meta name="twitter:title" content="世界因你而精彩|RongleXie">
   
     <link rel="alternative" href="/atom.xml" title="世界因你而精彩|RongleXie" type="application/atom+xml">
   
@@ -167,171 +162,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2018-01-11.regular_expressions" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      正则表达式随记
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/01/11/2018-01-11.regular_expressions/" class="archive-article-date">
+  	<time datetime="2018-01-11T12:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-11</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/01/11/2018-01-11.regular_expressions/">正则表达式随记</a>
     </h1>
   
 
-        
-        <a href="/2018/01/11/2018-01-11.regular_expressions/" class="archive-article-date">
-  	<time datetime="2018-01-11T12:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-11</time>
-</a>
-        
-	
-	    <span class="archive-article-date">
-		阅读量 <span id="busuanzi_value_page_pv"></span>
-	    </span>
-	
-      </header>
-    
-	<!-- 目录内容 -->
-	
-		<p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
-		<span class="btn-bg"></span>
-		<span class="btn-text">文章导航</span>
-		</p>
-		<div id="toc-article" class="toc-article">
-			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
-			<strong class="toc-title">文章目录</strong>
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一些匹配方法"><span class="toc-number">1.</span> <span class="toc-text">一些匹配方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#去除首尾的"><span class="toc-number">1.1.</span> <span class="toc-text">去除首尾的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javascript-、javascript-void-0"><span class="toc-number">1.2.</span> <span class="toc-text">javascript:; 、javascript:void(0)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匹配"><span class="toc-number">1.3.</span> <span class="toc-text">匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匹配一些字符"><span class="toc-number">1.4.</span> <span class="toc-text">匹配一些字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字符替换"><span class="toc-number">1.5.</span> <span class="toc-text">关键字符替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#替换参数中的值"><span class="toc-number">1.6.</span> <span class="toc-text">替换参数中的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匹配括号内容"><span class="toc-number">1.7.</span> <span class="toc-text">匹配括号内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调换"><span class="toc-number">1.8.</span> <span class="toc-text">调换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串截取"><span class="toc-number">1.9.</span> <span class="toc-text">字符串截取</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#验证"><span class="toc-number">2.</span> <span class="toc-text">验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#小数点后几位验证"><span class="toc-number">2.1.</span> <span class="toc-text">小数点后几位验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#密码强度正则"><span class="toc-number">2.2.</span> <span class="toc-text">密码强度正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#校验中文"><span class="toc-number">2.3.</span> <span class="toc-text">校验中文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包含中文正则"><span class="toc-number">2.4.</span> <span class="toc-text">包含中文正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#由数字、26个英文字母或下划线组成的字符串"><span class="toc-number">2.5.</span> <span class="toc-text">由数字、26个英文字母或下划线组成的字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#身份证号正则"><span class="toc-number">2.6.</span> <span class="toc-text">身份证号正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#校验日期"><span class="toc-number">2.7.</span> <span class="toc-text">校验日期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#校验文件后缀"><span class="toc-number">2.8.</span> <span class="toc-text">校验文件后缀</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用户名正则"><span class="toc-number">2.9.</span> <span class="toc-text">用户名正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#整数正则"><span class="toc-number">2.10.</span> <span class="toc-text">整数正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数字正则"><span class="toc-number">2.11.</span> <span class="toc-text">数字正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Email正则"><span class="toc-number">2.12.</span> <span class="toc-text">Email正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#传真号码"><span class="toc-number">2.13.</span> <span class="toc-text">传真号码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#手机号码正则"><span class="toc-number">2.14.</span> <span class="toc-text">手机号码正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#URL正则"><span class="toc-number">2.15.</span> <span class="toc-text">URL正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IPv4地址正则"><span class="toc-number">2.16.</span> <span class="toc-text">IPv4地址正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十六进制颜色正则"><span class="toc-number">2.17.</span> <span class="toc-text">十六进制颜色正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#QQ号码正则"><span class="toc-number">2.18.</span> <span class="toc-text">QQ号码正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微信号正则"><span class="toc-number">2.19.</span> <span class="toc-text">微信号正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#车牌号正则"><span class="toc-number">2.20.</span> <span class="toc-text">车牌号正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#颜色值校验"><span class="toc-number">2.21.</span> <span class="toc-text">颜色值校验</span></a></li></ol></li></ol>
-	   </div>
-	   <script type="text/javascript">
-		function showToc(){
-			var toc_article = document.getElementById("toc-article");
-			var show_toc_btn = document.getElementById("show-toc-btn");
-			toc_article.setAttribute("style","display:block");
-			show_toc_btn.setAttribute("style","display:none");
-			};
-		function showBtn(){
-			var toc_article = document.getElementById("toc-article");
-			var show_toc_btn = document.getElementById("show-toc-btn");
-			toc_article.setAttribute("style","display:none");
-			show_toc_btn.setAttribute("style","display:block");
-			};
-	   </script>
-	     
-	<!-- 目录内容结束 -->
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>正则表达式随记</p>
-<hr>
-<p>学习正则表达式摘录，熟悉js正则函数match、exec、test、search、replace、split</p>
-<!-- TOC -->
-<ul>
-<li><a href="#一些匹配方法">一些匹配方法</a><ul>
-<li><a href="#去除首尾的">去除首尾的</a></li>
-<li><a href="#javascript-javascriptvoid0">javascript:; 、javascript:void(0)</a></li>
-<li><a href="#匹配">匹配</a></li>
-<li><a href="#匹配一些字符">匹配一些字符</a></li>
-<li><a href="#关键字符替换">关键字符替换</a></li>
-<li><a href="#替换参数中的值">替换参数中的值</a></li>
-<li><a href="#匹配括号内容">匹配括号内容</a></li>
-<li><a href="#调换">调换</a></li>
-<li><a href="#字符串截取">字符串截取</a></li>
-<li><a href="#验证">验证</a></li>
-<li><a href="#小数点后几位验证">小数点后几位验证</a></li>
-<li><a href="#密码强度正则">密码强度正则</a></li>
-<li><a href="#校验中文">校验中文</a></li>
-<li><a href="#包含中文正则">包含中文正则</a></li>
-<li><a href="#由数字26个英文字母或下划线组成的字符串">由数字、26个英文字母或下划线组成的字符串</a></li>
-<li><a href="#身份证号正则">身份证号正则</a></li>
-<li><a href="#校验日期">校验日期</a></li>
-<li><a href="#校验文件后缀">校验文件后缀</a></li>
-<li><a href="#用户名正则">用户名正则</a></li>
-<li><a href="#整数正则">整数正则</a></li>
-<li><a href="#数字正则">数字正则</a></li>
-<li><a href="#email正则">Email正则</a></li>
-<li><a href="#传真号码">传真号码</a></li>
-<li><a href="#手机号码正则">手机号码正则</a></li>
-<li><a href="#url正则">URL正则</a></li>
-<li><a href="#ipv4地址正则">IPv4地址正则</a></li>
-<li><a href="#十六进制颜色正则">十六进制颜色正则</a></li>
-<li><a href="#qq号码正则">QQ号码正则</a></li>
-<li><a href="#微信号正则">微信号正则</a></li>
-<li><a href="#车牌号正则">车牌号正则</a></li>
-<li><a href="#颜色值校验">颜色值校验</a></li>
-</ul>
-</li>
-</ul>
-<!-- /TOC -->
-<a id="more"></a> 
-<h2 id="一些匹配方法"><a href="#一些匹配方法" class="headerlink" title="一些匹配方法"></a>一些匹配方法</h2><h3 id="去除首尾的"><a href="#去除首尾的" class="headerlink" title="去除首尾的"></a>去除首尾的</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//去除首尾的‘/’</span></div><div class="line">input = input.replace(<span class="regexp">/^\/*|\/*$/g</span>,<span class="string">''</span>);</div></pre></td></tr></table></figure>
-<h3 id="javascript-、javascript-void-0"><a href="#javascript-、javascript-void-0" class="headerlink" title="javascript:; 、javascript:void(0)"></a>javascript:; 、javascript:void(0)</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">'javascript:;'</span>.match(<span class="regexp">/^(javascript\s*\:|#)/</span>);</div><div class="line"><span class="comment">//["javascript:", "javascript:", index: 0, input: "javascript:;"]</span></div></pre></td></tr></table></figure>
-<h3 id="匹配"><a href="#匹配" class="headerlink" title="匹配"></a>匹配</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">"access_token=dcb90862-29fb-4b03-93ff-5f0a8f546250; refresh_token=702f4815-a0ff-456c-82ce-24e4d7d619e6; account_uid=1361177947320160506170322436"</span>;</div><div class="line">str.match(<span class="regexp">/account_uid=([^\=]+(\;)|(.*))/ig</span>);</div></pre></td></tr></table></figure>
-<h3 id="匹配一些字符"><a href="#匹配一些字符" class="headerlink" title="匹配一些字符"></a>匹配一些字符</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'asdf html-webpack-plugin for "index/index.html" asdfasdf'</span>;</div><div class="line">str.match(<span class="regexp">/html-webpack-plugin for \"(.*)\"/ig</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">RegExp</span>.$<span class="number">1</span>) <span class="comment">//=&gt;index/index.html</span></div></pre></td></tr></table></figure>
-<h3 id="关键字符替换"><a href="#关键字符替换" class="headerlink" title="关键字符替换"></a>关键字符替换</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">'css/[hash:8].index-index.css'</span>.replace(<span class="regexp">/\[(?:(\w+):)?(contenthash|hash)(?::([a-z]+\d*))?(?::(\d+))?\]/ig</span>,<span class="string">'(.*)'</span>);</div><div class="line"><span class="comment">//=&gt; css/(.*).index-index.css</span></div></pre></td></tr></table></figure>
-<h3 id="替换参数中的值"><a href="#替换参数中的值" class="headerlink" title="替换参数中的值"></a>替换参数中的值</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str  = <span class="string">'&lt;!DOCTYPE html&gt;&lt;html manifest="../../cache.manifest" lang="en"&gt;&lt;head&gt;&lt;meta charset="UTF-8"&gt;'</span>;</div><div class="line">str.replace(<span class="regexp">/&lt;html[^&gt;]*manifest="([^"]*)"[^&gt;]*&gt;/</span>,<span class="function"><span class="keyword">function</span>(<span class="params">word</span>)</span>&#123;</div><div class="line">   <span class="keyword">return</span> word.replace(<span class="regexp">/manifest="([^"]*)"/</span>,<span class="string">'manifest="'</span>+url+<span class="string">'"'</span>);</div><div class="line">&#125;).replace(<span class="regexp">/&lt;html(\s?[^\&gt;]*\&gt;)/</span>,<span class="function"><span class="keyword">function</span>(<span class="params">word</span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(word.indexOf(<span class="string">'manifest'</span>)) <span class="keyword">return</span> word;</div><div class="line">    <span class="keyword">return</span> word.replace(<span class="string">'&lt;html'</span>,<span class="string">'&lt;html manifest="'</span>+url+<span class="string">'"'</span>);</div><div class="line">&#125;);</div><div class="line"><span class="comment">//原：&lt;!DOCTYPE html&gt;&lt;html manifest="../../cache.manifest" lang="en"&gt;&lt;head&gt;&lt;meta charset="UTF-8"&gt;</span></div><div class="line"><span class="comment">//替换成=&gt; &lt;!DOCTYPE html&gt;&lt;html manifest="cache.manifest" lang="en"&gt;&lt;head&gt;&lt;meta charset="UTF-8"&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="匹配括号内容"><a href="#匹配括号内容" class="headerlink" title="匹配括号内容"></a>匹配括号内容</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="string">'max_length(12)'</span>.match(<span class="regexp">/^(.+?)\((.+)\)$/</span>)</div><div class="line"><span class="comment">// ["max_length(12)", "max_length", "12", index: 0, input: "max_length(12)"]</span></div></pre></td></tr></table></figure>
-<h3 id="调换"><a href="#调换" class="headerlink" title="调换"></a>调换</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"Doe, John"</span>; </div><div class="line">name.replace(<span class="regexp">/(\w+)\s*, \s*(\w+)/</span>, <span class="string">"$2 $1"</span>); </div><div class="line"><span class="comment">//=&gt; "John Doe"</span></div></pre></td></tr></table></figure>
-<h3 id="字符串截取"><a href="#字符串截取" class="headerlink" title="字符串截取"></a>字符串截取</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'asfdf === sdfaf ##'</span></div><div class="line">str.match(<span class="regexp">/[^===]+(?=[===])/g</span>) <span class="comment">// 截取 ===之前的内容</span></div><div class="line"></div><div class="line">str.replace(<span class="regexp">/\n/g</span>,<span class="string">''</span>)  <span class="comment">// 替换字符串中的 \n 换行字符</span></div></pre></td></tr></table></figure>
-<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><h3 id="小数点后几位验证"><a href="#小数点后几位验证" class="headerlink" title="小数点后几位验证"></a>小数点后几位验证</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 精确到1位小数</span></div><div class="line">/^[<span class="number">1</span><span class="number">-9</span>][<span class="number">0</span><span class="number">-9</span>]*$|^[<span class="number">1</span><span class="number">-9</span>][<span class="number">0</span><span class="number">-9</span>]*\.[<span class="number">0</span><span class="number">-9</span>]$|^<span class="number">0</span>\.[<span class="number">0</span><span class="number">-9</span>]$/.test(<span class="number">1.2</span>);</div><div class="line"></div><div class="line"><span class="comment">// 精确到2位小数</span></div><div class="line">/^[<span class="number">0</span><span class="number">-9</span>]+(.[<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">2</span>&#125;)?$/.test(<span class="number">1.221</span>);</div></pre></td></tr></table></figure>
-<h3 id="密码强度正则"><a href="#密码强度正则" class="headerlink" title="密码强度正则"></a>密码强度正则</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。</span></div><div class="line">/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).&#123;<span class="number">8</span>,<span class="number">10</span>&#125;$/.test(<span class="string">"weeeeeeeW2"</span>);</div><div class="line"><span class="comment">//密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符</span></div><div class="line">/^.*(?=.&#123;6,&#125;)(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&amp;*? ]).*$/.test("diaoD123#");</div><div class="line"><span class="comment">//输出 true</span></div></pre></td></tr></table></figure>
-<h3 id="校验中文"><a href="#校验中文" class="headerlink" title="校验中文"></a>校验中文</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/^[\u4e00-\u9fa5]&#123;<span class="number">0</span>,&#125;$/.test(<span class="string">"但是d"</span>); <span class="comment">//false</span></div><div class="line">/^[\u4e00-\u9fa5]&#123;<span class="number">0</span>,&#125;$/.test(<span class="string">"但是"</span>); <span class="comment">//true</span></div><div class="line">/^[\u4e00-\u9fa5]&#123;<span class="number">0</span>,&#125;$/.test(<span class="string">"但是"</span>); <span class="comment">//true</span></div></pre></td></tr></table></figure>
-<h3 id="包含中文正则"><a href="#包含中文正则" class="headerlink" title="包含中文正则"></a>包含中文正则</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/[\u4E00-\u9FA5]/.test(<span class="string">"但是d"</span>) <span class="comment">//true</span></div></pre></td></tr></table></figure>
-<h3 id="由数字、26个英文字母或下划线组成的字符串"><a href="#由数字、26个英文字母或下划线组成的字符串" class="headerlink" title="由数字、26个英文字母或下划线组成的字符串"></a>由数字、26个英文字母或下划线组成的字符串</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/^\w+$/.test(<span class="string">"ds2_@#"</span>); <span class="comment">// false</span></div></pre></td></tr></table></figure>
-<h3 id="身份证号正则"><a href="#身份证号正则" class="headerlink" title="身份证号正则"></a>身份证号正则</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//身份证号（18位）正则</span></div><div class="line">/^[<span class="number">1</span><span class="number">-9</span>]\d&#123;<span class="number">5</span>&#125;(<span class="number">18</span>|<span class="number">19</span>|([<span class="number">23</span>]\d))\d&#123;<span class="number">2</span>&#125;((<span class="number">0</span>[<span class="number">1</span><span class="number">-9</span>])|(<span class="number">10</span>|<span class="number">11</span>|<span class="number">12</span>))(([<span class="number">0</span><span class="number">-2</span>][<span class="number">1</span><span class="number">-9</span>])|<span class="number">10</span>|<span class="number">20</span>|<span class="number">30</span>|<span class="number">31</span>)\d&#123;<span class="number">3</span>&#125;[<span class="number">0</span><span class="number">-9</span>Xx]$/.test(<span class="string">"42112319870115371X"</span>);</div><div class="line"><span class="comment">//输出 false</span></div></pre></td></tr></table></figure>
-<h3 id="校验日期"><a href="#校验日期" class="headerlink" title="校验日期"></a>校验日期</h3><p>“yyyy-mm-dd“ 格式的日期校验，已考虑平闰年。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//日期正则，简单判定,未做月份及日期的判定</span></div><div class="line"><span class="keyword">var</span> dP1 = <span class="regexp">/^\d&#123;4&#125;(\-)\d&#123;1,2&#125;\1\d&#123;1,2&#125;$/</span>;</div><div class="line"><span class="comment">//输出 true</span></div><div class="line"><span class="built_in">console</span>.log(dP1.test(<span class="string">"2017-05-11"</span>));</div><div class="line"><span class="comment">//输出 true</span></div><div class="line"><span class="built_in">console</span>.log(dP1.test(<span class="string">"2017-15-11"</span>));</div><div class="line"><span class="comment">//日期正则，复杂判定</span></div><div class="line"><span class="keyword">var</span> dP2 = <span class="regexp">/^(?:(?!0000)[0-9]&#123;4&#125;-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]&#123;2&#125;(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$/</span>;</div><div class="line"><span class="comment">//输出 true</span></div><div class="line"><span class="built_in">console</span>.log(dP2.test(<span class="string">"2017-02-11"</span>));</div><div class="line"><span class="comment">//输出 false</span></div><div class="line"><span class="built_in">console</span>.log(dP2.test(<span class="string">"2017-15-11"</span>));</div><div class="line"><span class="comment">//输出 false</span></div><div class="line"><span class="built_in">console</span>.log(dP2.test(<span class="string">"2017-02-29"</span>));</div><div class="line"><span class="comment">// true</span></div></pre></td></tr></table></figure>
-<h3 id="校验文件后缀"><a href="#校验文件后缀" class="headerlink" title="校验文件后缀"></a>校验文件后缀</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">  <span class="keyword">var</span> strRegex = <span class="string">"(.jpg|.gif|.txt)"</span>;</div><div class="line">  <span class="keyword">var</span> re=<span class="keyword">new</span> <span class="built_in">RegExp</span>(strRegex);</div><div class="line">  <span class="keyword">if</span> (re.test(str))&#123;</div><div class="line">    </div><div class="line">  &#125;</div><div class="line">/(.jpg|.gif)+(\?|\#|$)/.test('a/b/c.jpgsss'); //=&gt; false</div><div class="line">/(.jpg|.gif)+(\?|\#|$)/.test('a/b/c.jpg?'); //=&gt; true</div></pre></td></tr></table></figure>
-<h3 id="用户名正则"><a href="#用户名正则" class="headerlink" title="用户名正则"></a>用户名正则</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//用户名正则，4到16位（字母，数字，下划线，减号）</span></div><div class="line">/^[a-zA-Z0<span class="number">-9</span>_-]&#123;<span class="number">4</span>,<span class="number">16</span>&#125;$/.test(<span class="string">"diaodiao"</span>);</div><div class="line"><span class="comment">//输出 true</span></div></pre></td></tr></table></figure>
-<h3 id="整数正则"><a href="#整数正则" class="headerlink" title="整数正则"></a>整数正则</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/^\d+$/.test(<span class="string">"42"</span>);    <span class="comment">//正整数正则  -&gt; 输出 true</span></div><div class="line">/^-\d+$/.test(<span class="string">"-42"</span>);  <span class="comment">//负整数正则  -&gt; 输出 true</span></div><div class="line">/^-?\d+$/.test(<span class="string">"-42"</span>); <span class="comment">//整数正则  -&gt; 输出 true</span></div><div class="line"></div><div class="line">/^[<span class="number">0</span><span class="number">-9</span>]+$/.test(<span class="number">25.5455</span>) <span class="comment">//正整数正则  -&gt; 输出 false</span></div><div class="line"><span class="comment">// 浮点数</span></div><div class="line">/^(?:[-+])?(?:[<span class="number">0</span><span class="number">-9</span>]+)?(?:\.[<span class="number">0</span><span class="number">-9</span>]*)?(?:[eE][\+\-]?(?:[<span class="number">0</span><span class="number">-9</span>]+))?$/.test(<span class="number">0.2</span>)</div></pre></td></tr></table></figure>
-<h3 id="数字正则"><a href="#数字正则" class="headerlink" title="数字正则"></a>数字正则</h3><p>可以是整数也可以是浮点数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/^\d*\.?\d+$/.test(<span class="string">"42.2"</span>);     <span class="comment">//正数正则  -&gt; 输出 true</span></div><div class="line">/^-\d*\.?\d+$/.test(<span class="string">"-42.2"</span>);   <span class="comment">//负数正则 -&gt; 输出 true</span></div><div class="line">/^-?\d*\.?\d+$/.test(<span class="string">"-42.2"</span>);  <span class="comment">//数字正则 -&gt; 输出 true</span></div></pre></td></tr></table></figure>
-<h3 id="Email正则"><a href="#Email正则" class="headerlink" title="Email正则"></a>Email正则</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Email正则</span></div><div class="line">/^([A-Za-z0<span class="number">-9</span>_\-\.])+\@([A-Za-z0<span class="number">-9</span>_\-\.])+\.([A-Za-z]&#123;<span class="number">2</span>,<span class="number">4</span>&#125;)$/.test(<span class="string">"wowohoo@qq.com"</span>);</div><div class="line"><span class="comment">//输出 true</span></div><div class="line"></div><div class="line"><span class="comment">// 1.邮箱以a-z、A-Z、0-9开头，最小长度为1.</span></div><div class="line"><span class="comment">// 2.如果左侧部分包含-、_、.则这些特殊符号的前面必须包一位数字或字母。</span></div><div class="line"><span class="comment">// 3.@符号是必填项</span></div><div class="line"><span class="comment">// 4.右则部分可分为两部分，第一部分为邮件提供商域名地址，第二部分为域名后缀，现已知的最短为2位。</span></div><div class="line"><span class="comment">//   最长的为6为。</span></div><div class="line"><span class="comment">// 5.邮件提供商域可以包含特殊字符-、_、.</span></div><div class="line">/^[a-z0<span class="number">-9</span>]+([._\\-]*[a-z0<span class="number">-9</span>])*@([a-z0<span class="number">-9</span>]+[-a-z0<span class="number">-9</span>]*[a-z0<span class="number">-9</span>]+.)&#123;<span class="number">1</span>,<span class="number">63</span>&#125;[a-z0<span class="number">-9</span>]+$/.test(<span class="string">"wowohoo@qq.com"</span>);</div></pre></td></tr></table></figure>
-<h3 id="传真号码"><a href="#传真号码" class="headerlink" title="传真号码"></a>传真号码</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 国家代码(2到3位)-区号(2到3位)-电话号码(7到8位)-分机号(3位)</span></div><div class="line">/^(([<span class="number">0</span>\+]\d&#123;<span class="number">2</span>,<span class="number">3</span>&#125;-)?(<span class="number">0</span>\d&#123;<span class="number">2</span>,<span class="number">3</span>&#125;)-)(\d&#123;<span class="number">7</span>,<span class="number">8</span>&#125;)(-(\d&#123;<span class="number">3</span>,&#125;))?$/.test(<span class="string">'021-5055455'</span>)</div></pre></td></tr></table></figure>
-<h3 id="手机号码正则"><a href="#手机号码正则" class="headerlink" title="手机号码正则"></a>手机号码正则</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//手机号正则</span></div><div class="line">/^<span class="number">1</span>[<span class="number">34578</span>]\d&#123;<span class="number">9</span>&#125;$/.test(<span class="string">"13611778887"</span>);</div><div class="line"><span class="comment">//输出 true</span></div><div class="line"></div><div class="line"><span class="comment">//* 13段：130、131、132、133、134、135、136、137、138、139</span></div><div class="line"><span class="comment">//* 14段：145、147</span></div><div class="line"><span class="comment">//* 15段：150、151、152、153、155、156、157、158、159</span></div><div class="line"><span class="comment">//* 17段：170、176、177、178</span></div><div class="line"><span class="comment">//* 18段：180、181、182、183、184、185、186、187、188、189</span></div><div class="line"><span class="comment">//* 国际码 如：中国(+86)</span></div><div class="line">/^((\+?[<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">1</span>,<span class="number">4</span>&#125;)|(\(\+<span class="number">86</span>\)))?(<span class="number">13</span>[<span class="number">0</span><span class="number">-9</span>]|<span class="number">14</span>[<span class="number">57</span>]|<span class="number">15</span>[<span class="number">012356789</span>]|<span class="number">17</span>[<span class="number">03678</span>]|<span class="number">18</span>[<span class="number">0</span><span class="number">-9</span>])\d&#123;<span class="number">8</span>&#125;$/.test(<span class="string">"13611778887"</span>);</div></pre></td></tr></table></figure>
-<h3 id="URL正则"><a href="#URL正则" class="headerlink" title="URL正则"></a>URL正则</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//URL正则</span></div><div class="line">/^((https?|ftp|file):\/\/)?([\da-z\.-]+)\.([a-z\.]&#123;<span class="number">2</span>,<span class="number">6</span>&#125;)([\/\w \.-]*)*\/?$/.test(<span class="string">"http://wangchujiang.com"</span>);</div><div class="line"><span class="comment">//输出 true</span></div><div class="line"></div><div class="line"><span class="comment">//获取url中域名、协议正则 'http://xxx.xx/xxx','https://xxx.xx/xxx','//xxx.xx/xxx'</span></div><div class="line">/^(http(?:|s)\:)*\/\/([^\/]+)/.test(<span class="string">"http://www.baidu.com"</span>);</div><div class="line"></div><div class="line">/^((http|https):\/\/(\w+:&#123;<span class="number">0</span>,<span class="number">1</span>&#125;\w*@)?(\S+)|)(:[<span class="number">0</span><span class="number">-9</span>]+)?(\/|\/([\w#!:.?+=&amp;%@!\-\/]))?$/.test(<span class="string">'https://www.baidu.com/s?wd=@#%$^&amp;%$#'</span>)</div><div class="line"></div><div class="line"><span class="comment">// 必须有协议 </span></div><div class="line">/^[a-zA-Z]+:\/\<span class="comment">//.test("http://www.baidu.com");</span></div></pre></td></tr></table></figure>
-<h3 id="IPv4地址正则"><a href="#IPv4地址正则" class="headerlink" title="IPv4地址正则"></a>IPv4地址正则</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//ipv4地址正则</span></div><div class="line">/^(?:(?:<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>][<span class="number">0</span><span class="number">-9</span>]|[<span class="number">01</span>]?[<span class="number">0</span><span class="number">-9</span>][<span class="number">0</span><span class="number">-9</span>]?)\.)&#123;<span class="number">3</span>&#125;(?:<span class="number">25</span>[<span class="number">0</span><span class="number">-5</span>]|<span class="number">2</span>[<span class="number">0</span><span class="number">-4</span>][<span class="number">0</span><span class="number">-9</span>]|[<span class="number">01</span>]?[<span class="number">0</span><span class="number">-9</span>][<span class="number">0</span><span class="number">-9</span>]?)$/.test(<span class="string">"192.168.130.199"</span>);</div><div class="line"><span class="comment">//输出 true</span></div></pre></td></tr></table></figure>
-<h3 id="十六进制颜色正则"><a href="#十六进制颜色正则" class="headerlink" title="十六进制颜色正则"></a>十六进制颜色正则</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//RGB Hex颜色正则</span></div><div class="line">/^#?([a-fA-F0-9]&#123;6&#125;|[a-fA-F0-9]&#123;3&#125;)$/.test("#b8b8b8");</div><div class="line"><span class="comment">//输出 true</span></div></pre></td></tr></table></figure>
-<h3 id="QQ号码正则"><a href="#QQ号码正则" class="headerlink" title="QQ号码正则"></a>QQ号码正则</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//QQ号正则，5至11位</span></div><div class="line">/^[<span class="number">1</span><span class="number">-9</span>][<span class="number">0</span><span class="number">-9</span>]&#123;<span class="number">4</span>,<span class="number">10</span>&#125;$/.test(<span class="string">"398188661"</span>);<span class="comment">//输出 true</span></div></pre></td></tr></table></figure>
-<h3 id="微信号正则"><a href="#微信号正则" class="headerlink" title="微信号正则"></a>微信号正则</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//微信号正则，6至20位，以字母开头，字母，数字，减号，下划线</span></div><div class="line">/^[a-zA-Z]([-_a-zA-Z0<span class="number">-9</span>]&#123;<span class="number">5</span>,<span class="number">19</span>&#125;)+$/.test(<span class="string">"jslite"</span>); <span class="comment">//输出 true</span></div></pre></td></tr></table></figure>
-<h3 id="车牌号正则"><a href="#车牌号正则" class="headerlink" title="车牌号正则"></a>车牌号正则</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//车牌号正则</span></div><div class="line">/^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]&#123;<span class="number">1</span>&#125;[A-Z]&#123;<span class="number">1</span>&#125;[A-Z0<span class="number">-9</span>]&#123;<span class="number">4</span>&#125;[A-Z0<span class="number">-9</span>挂学警港澳]&#123;<span class="number">1</span>&#125;$/.test(<span class="string">"沪B99116"</span>) <span class="comment">//输出 true</span></div></pre></td></tr></table></figure>
-<h3 id="颜色值校验"><a href="#颜色值校验" class="headerlink" title="颜色值校验"></a>颜色值校验</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// HEX 颜色正则</span></div><div class="line">/^#?([0-9a-fA-F]&#123;3&#125;|[0-9a-fA-F]&#123;6&#125;)$/.test("#ccb2b2")</div></pre></td></tr></table></figure>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/wechat.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -343,163 +203,22 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.ronglexie.top/2018/01/11/2018-01-11.regular_expressions/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/01/15/2018-01-15.git_mind/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Git常用知识思维导图
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/11/19/2017-11-19.http_status_codes/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">常见HTTP/FTP/WebSocket错误代码大全</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一些匹配方法"><span class="toc-number">1.</span> <span class="toc-text">一些匹配方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#去除首尾的"><span class="toc-number">1.1.</span> <span class="toc-text">去除首尾的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#javascript-、javascript-void-0"><span class="toc-number">1.2.</span> <span class="toc-text">javascript:; 、javascript:void(0)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匹配"><span class="toc-number">1.3.</span> <span class="toc-text">匹配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匹配一些字符"><span class="toc-number">1.4.</span> <span class="toc-text">匹配一些字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关键字符替换"><span class="toc-number">1.5.</span> <span class="toc-text">关键字符替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#替换参数中的值"><span class="toc-number">1.6.</span> <span class="toc-text">替换参数中的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#匹配括号内容"><span class="toc-number">1.7.</span> <span class="toc-text">匹配括号内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调换"><span class="toc-number">1.8.</span> <span class="toc-text">调换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串截取"><span class="toc-number">1.9.</span> <span class="toc-text">字符串截取</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#验证"><span class="toc-number">2.</span> <span class="toc-text">验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#小数点后几位验证"><span class="toc-number">2.1.</span> <span class="toc-text">小数点后几位验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#密码强度正则"><span class="toc-number">2.2.</span> <span class="toc-text">密码强度正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#校验中文"><span class="toc-number">2.3.</span> <span class="toc-text">校验中文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#包含中文正则"><span class="toc-number">2.4.</span> <span class="toc-text">包含中文正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#由数字、26个英文字母或下划线组成的字符串"><span class="toc-number">2.5.</span> <span class="toc-text">由数字、26个英文字母或下划线组成的字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#身份证号正则"><span class="toc-number">2.6.</span> <span class="toc-text">身份证号正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#校验日期"><span class="toc-number">2.7.</span> <span class="toc-text">校验日期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#校验文件后缀"><span class="toc-number">2.8.</span> <span class="toc-text">校验文件后缀</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用户名正则"><span class="toc-number">2.9.</span> <span class="toc-text">用户名正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#整数正则"><span class="toc-number">2.10.</span> <span class="toc-text">整数正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数字正则"><span class="toc-number">2.11.</span> <span class="toc-text">数字正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Email正则"><span class="toc-number">2.12.</span> <span class="toc-text">Email正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#传真号码"><span class="toc-number">2.13.</span> <span class="toc-text">传真号码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#手机号码正则"><span class="toc-number">2.14.</span> <span class="toc-text">手机号码正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#URL正则"><span class="toc-number">2.15.</span> <span class="toc-text">URL正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IPv4地址正则"><span class="toc-number">2.16.</span> <span class="toc-text">IPv4地址正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十六进制颜色正则"><span class="toc-number">2.17.</span> <span class="toc-text">十六进制颜色正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#QQ号码正则"><span class="toc-number">2.18.</span> <span class="toc-text">QQ号码正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#微信号正则"><span class="toc-number">2.19.</span> <span class="toc-text">微信号正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#车牌号正则"><span class="toc-number">2.20.</span> <span class="toc-text">车牌号正则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#颜色值校验"><span class="toc-number">2.21.</span> <span class="toc-text">颜色值校验</span></a></li></ol></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2018-01-11.regular_expressions" data-title="正则表达式随记" data-url="http://www.ronglexie.top/2018/01/11/2018-01-11.regular_expressions/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://www.ronglexie.top/2018/01/11/2018-01-11.regular_expressions/",
-  owner: 'xieqingrong',
-  repo: 'xieqingrong.github.io',
-  oauth: {
-    client_id: '39a2262cb556cc1d1371',
-    client_secret: '8b8757ec1d73829bdb46d82b6cc7cba8b1f9cc07',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/archives/2018/">&laquo; Prev</a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -530,8 +249,8 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
