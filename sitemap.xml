@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.ronglexie.top/2018/03/25/2018-03-25.centos_6_bulid_develop_enviroment/</loc>
+    
+    <lastmod>2018-04-26T15:57:15.148Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ronglexie.top/2018/01/27/2018-01-27.linux_install_nginx/</loc>
     
-    <lastmod>2018-04-23T15:51:28.158Z</lastmod>
+    <lastmod>2018-04-23T15:51:34.545Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>http://www.ronglexie.top/photos/data.json</loc>
     
     <lastmod>2018-04-17T04:27:41.022Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ronglexie.top/2018/03/25/2018-03-25.centos_6_bulid_develop_enviroment/</loc>
-    
-    <lastmod>2018-04-15T02:35:22.338Z</lastmod>
     
   </url>
   
