@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>http://www.ronglexie.top/2018/04/15/2018-04-15.java_high_concurrency_base_knowledge/</loc>
+    <lastmod>2018-05-05T04:54:13.016Z</lastmod>
+    <data>
+        <display>
+        <title>并发编程与高并发解决方案（一）：并发编程相关基础知识</title>
+        <pubTime>2018-04-15T08:48:00.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>并发编程</tag>
+         
+        <tag>高并发</tag>
+         
+        <tag>JMM</tag>
+         
+        <tag>MESI</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://www.ronglexie.top/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ronglexie.top/2018/03/25/2018-03-25.centos_6_bulid_develop_enviroment/</loc>
     <lastmod>2018-04-26T15:58:10.947Z</lastmod>
     <data>
