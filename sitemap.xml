@@ -2,21 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.ronglexie.top/2018/04/15/2018-04-15.java_high_concurrency_base_knowledge/</loc>
+    <loc>http://www.ronglexie.top/photos/videos.html</loc>
+    
+    <lastmod>2018-05-05T09:15:39.480Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ronglexie.top/photos/index.html</loc>
+    
+    <lastmod>2018-05-05T09:15:39.474Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ronglexie.top/404/index.html</loc>
+    
+    <lastmod>2018-05-05T09:15:39.464Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ronglexie.top/2018/47519a60.html</loc>
+    
+    <lastmod>2018-05-05T09:15:39.450Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ronglexie.top/2018/1441ddff.html</loc>
+    
+    <lastmod>2018-05-05T09:15:39.443Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ronglexie.top/2018/ef650a30.html</loc>
+    
+    <lastmod>2018-05-05T09:15:39.424Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ronglexie.top/2018/ee4ad963.html</loc>
+    
+    <lastmod>2018-05-05T09:15:39.414Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ronglexie.top/2017/2673a147.html</loc>
+    
+    <lastmod>2018-05-05T09:15:39.407Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ronglexie.top/2017/990df956.html</loc>
+    
+    <lastmod>2018-05-05T09:15:39.396Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ronglexie.top/2017/26f59cd9.html</loc>
+    
+    <lastmod>2018-05-05T09:15:39.387Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ronglexie.top/2017/4a17b156.html</loc>
+    
+    <lastmod>2018-05-05T09:15:39.379Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.ronglexie.top/2018/67b19209.html</loc>
     
     <lastmod>2018-05-05T05:09:51.633Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.ronglexie.top/2018/03/25/2018-03-25.centos_6_bulid_develop_enviroment/</loc>
+    <loc>http://www.ronglexie.top/2018/67b19207.html</loc>
     
     <lastmod>2018-04-26T15:58:10.947Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.ronglexie.top/2018/01/27/2018-01-27.linux_install_nginx/</loc>
+    <loc>http://www.ronglexie.top/2018/53b799ff.html</loc>
     
     <lastmod>2018-04-23T15:51:34.545Z</lastmod>
     
@@ -37,86 +114,9 @@
   </url>
   
   <url>
-    <loc>http://www.ronglexie.top/2018/03/15/2018-03-15.scrapy_distributed_spider_search_engine_full_version/</loc>
+    <loc>http://www.ronglexie.top/2018/3c234171.html</loc>
     
     <lastmod>2018-03-30T04:46:43.613Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ronglexie.top/404/index.html</loc>
-    
-    <lastmod>2018-03-27T01:50:17.953Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ronglexie.top/photos/videos.html</loc>
-    
-    <lastmod>2018-03-05T02:32:49.355Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ronglexie.top/2017/09/23/2017-09-23.tomcat_green_version_conf/</loc>
-    
-    <lastmod>2018-03-05T01:23:18.153Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ronglexie.top/2018/01/27/2018-01-27.javascript_plugins_and_libraries/</loc>
-    
-    <lastmod>2018-02-05T15:59:28.017Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ronglexie.top/2018/01/27/2018-01-27.mysql_type_of_data/</loc>
-    
-    <lastmod>2018-02-04T09:37:37.169Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ronglexie.top/2018/01/11/2018-01-11.regular_expressions/</loc>
-    
-    <lastmod>2018-02-04T09:34:40.409Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ronglexie.top/2017/11/19/2017-11-19.http_status_codes/</loc>
-    
-    <lastmod>2018-02-04T09:34:24.133Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ronglexie.top/2017/09/23/2017-09-23.common_git_commands/</loc>
-    
-    <lastmod>2018-02-04T09:33:58.145Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ronglexie.top/photos/index.html</loc>
-    
-    <lastmod>2018-02-03T17:20:42.373Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ronglexie.top/2017/09/20/2017-09-20.hello-world/</loc>
-    
-    <lastmod>2018-01-30T13:02:01.170Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ronglexie.top/2018/01/15/2018-01-15.git_mind/</loc>
-    
-    <lastmod>2018-01-30T13:01:39.442Z</lastmod>
     
   </url>
   

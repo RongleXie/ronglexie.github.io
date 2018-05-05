@@ -6,20 +6,37 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.ronglexie.top">
-  <title>Linux环境下安装Nginx | 世界因你而精彩|RongleXie</title>
+  <title>并发编程与高并发解决方案（一）：并发编程相关基础知识 | 世界因你而精彩|RongleXie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux环境下安装Nginx  1、安装依赖包 模块依赖性Nginx需要依赖下面4个包  gzip 模块需要 zlib 库 ( 下载:http://www.zlib.net/ )； rewrite 模块需要 pcre 库 ( 下载:http://www.pcre.org/ )； openssl库需要perl （下载：https://www.perl.org）； ssl 功能需要 openssl">
-<meta name="keywords" content="Linux,Nginx">
+  <meta name="description" content="基本概念 并发（Concurrency）：并发是指同时拥有两个或者多个线程，如果程序在单核处理器上运行，多个线程将交替地换入或者换出内存，这些线程是同时”存在“的，每个线程都处理执行过程中的某个状态，如果运行在多核处理器上，此时，程序中的每个线程都将分配到一个处理器上，因此可以同时运行。  高并发（High Concurrency）：高并发是互联网分布式系统架构设计中必须考虑的因素之一，它通常是指">
+<meta name="keywords" content="java,并发编程,高并发,JMM,MESI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux环境下安装Nginx">
-<meta property="og:url" content="http://www.ronglexie.top/2018/01/27/2018-01-27.linux_install_nginx/index.html">
+<meta property="og:title" content="并发编程与高并发解决方案（一）：并发编程相关基础知识">
+<meta property="og:url" content="http://www.ronglexie.top/2018/67b19209.html">
 <meta property="og:site_name" content="世界因你而精彩|RongleXie">
-<meta property="og:description" content="Linux环境下安装Nginx  1、安装依赖包 模块依赖性Nginx需要依赖下面4个包  gzip 模块需要 zlib 库 ( 下载:http://www.zlib.net/ )； rewrite 模块需要 pcre 库 ( 下载:http://www.pcre.org/ )； openssl库需要perl （下载：https://www.perl.org）； ssl 功能需要 openssl">
+<meta property="og:description" content="基本概念 并发（Concurrency）：并发是指同时拥有两个或者多个线程，如果程序在单核处理器上运行，多个线程将交替地换入或者换出内存，这些线程是同时”存在“的，每个线程都处理执行过程中的某个状态，如果运行在多核处理器上，此时，程序中的每个线程都将分配到一个处理器上，因此可以同时运行。  高并发（High Concurrency）：高并发是互联网分布式系统架构设计中必须考虑的因素之一，它通常是指">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-23T15:51:34.545Z">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/CPU多级缓存.jpg">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/缓存一致性.png">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/MESI转换关系.png">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/乱序执行优化1.png">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/乱序执行优化2.png">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/Java内存模型-线程栈区和堆区.jpg">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/Java内存模型-线程栈区和堆区存储模型.jpg">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/Java内存模型-多线程共享.jpg">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/硬件内存架构.jpg">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/Java内存模型和硬件架构之间的桥接.jpg">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/共享对象的可见性.jpg">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/对象竞争现象.jpg">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/Java内存模型抽象结构图.jpg">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/Java内存模型-线程间通信.jpg">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/Java内存模型中同步的操作与规则.jpg">
+<meta property="og:image" content="http://www.ronglexie.top/assets/img/concurrency/并发的优势与风险.jpg">
+<meta property="og:updated_time" content="2018-05-05T05:09:51.633Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux环境下安装Nginx">
-<meta name="twitter:description" content="Linux环境下安装Nginx  1、安装依赖包 模块依赖性Nginx需要依赖下面4个包  gzip 模块需要 zlib 库 ( 下载:http://www.zlib.net/ )； rewrite 模块需要 pcre 库 ( 下载:http://www.pcre.org/ )； openssl库需要perl （下载：https://www.perl.org）； ssl 功能需要 openssl">
+<meta name="twitter:title" content="并发编程与高并发解决方案（一）：并发编程相关基础知识">
+<meta name="twitter:description" content="基本概念 并发（Concurrency）：并发是指同时拥有两个或者多个线程，如果程序在单核处理器上运行，多个线程将交替地换入或者换出内存，这些线程是同时”存在“的，每个线程都处理执行过程中的某个状态，如果运行在多核处理器上，此时，程序中的每个线程都将分配到一个处理器上，因此可以同时运行。  高并发（High Concurrency）：高并发是互联网分布式系统架构设计中必须考虑的因素之一，它通常是指">
+<meta name="twitter:image" content="http://www.ronglexie.top/assets/img/concurrency/CPU多级缓存.jpg">
   
     <link rel="alternative" href="/atom.xml" title="世界因你而精彩|RongleXie" type="application/atom+xml">
   
@@ -173,20 +190,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2018-01-27.linux_install_nginx" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2018-04-15.java_high_concurrency_base_knowledge" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Linux环境下安装Nginx
+      并发编程与高并发解决方案（一）：并发编程相关基础知识
     </h1>
   
 
         
-        <a href="/2018/01/27/2018-01-27.linux_install_nginx/" class="archive-article-date">
-  	<time datetime="2018-01-27T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-27</time>
+        <a href="/2018/67b19209.html" class="archive-article-date">
+  	<time datetime="2018-04-15T08:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-15</time>
 </a>
         
 	
@@ -205,7 +222,7 @@
 		<div id="toc-article" class="toc-article">
 			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 			<strong class="toc-title">文章目录</strong>
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、安装依赖包"><span class="toc-number">1.</span> <span class="toc-text">1、安装依赖包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、安装nginx"><span class="toc-number">2.</span> <span class="toc-text">2、安装nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、配置启动服务"><span class="toc-number">3.</span> <span class="toc-text">3、配置启动服务</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念"><span class="toc-number">1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU多级缓存"><span class="toc-number">2.</span> <span class="toc-text">CPU多级缓存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU多级缓存-缓存一致性协议（MESI-Modify-Modify-Exclusive-Share-Invalid）"><span class="toc-number">3.</span> <span class="toc-text">CPU多级缓存-缓存一致性协议（MESI|Modify|Modify|Exclusive|Share|Invalid）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MESI协议中的状态"><span class="toc-number">3.1.</span> <span class="toc-text">MESI协议中的状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MESI状态转换图"><span class="toc-number">3.2.</span> <span class="toc-text">MESI状态转换图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU多级缓存-乱序执行优化"><span class="toc-number">4.</span> <span class="toc-text">CPU多级缓存-乱序执行优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java内存模型（Java-Memory-Model-JMM）"><span class="toc-number">5.</span> <span class="toc-text">Java内存模型（Java Memory Model,JMM）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JVM对Java内存模型的实现"><span class="toc-number">5.1.</span> <span class="toc-text">JVM对Java内存模型的实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#硬件内存架构"><span class="toc-number">5.2.</span> <span class="toc-text">硬件内存架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java内存模型和硬件架构之间的桥接"><span class="toc-number">5.3.</span> <span class="toc-text">Java内存模型和硬件架构之间的桥接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#支撑Java内存模型的基础原理"><span class="toc-number">5.4.</span> <span class="toc-text">支撑Java内存模型的基础原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#指令重排序"><span class="toc-number">5.4.1.</span> <span class="toc-text">指令重排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据依赖性"><span class="toc-number">5.4.2.</span> <span class="toc-text">数据依赖性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#as-if-serial语义"><span class="toc-number">5.4.3.</span> <span class="toc-text">as-if-serial语义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#内存屏障（Memory-Barrier）"><span class="toc-number">5.4.4.</span> <span class="toc-text">内存屏障（Memory Barrier）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#happens-before原则"><span class="toc-number">5.4.5.</span> <span class="toc-text">happens-before原则</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java内存模型中线程和主内存的抽象关系"><span class="toc-number">5.5.</span> <span class="toc-text">Java内存模型中线程和主内存的抽象关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java内存模型中同步的操作与规则"><span class="toc-number">5.6.</span> <span class="toc-text">Java内存模型中同步的操作与规则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#同步操作"><span class="toc-number">5.6.1.</span> <span class="toc-text">同步操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#同步规则"><span class="toc-number">5.6.2.</span> <span class="toc-text">同步规则</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#并发的优势与风险"><span class="toc-number">6.</span> <span class="toc-text">并发的优势与风险</span></a></li></ol>
 	   </div>
 	   <script type="text/javascript">
 		function showToc(){
@@ -225,78 +242,319 @@
 	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Linux环境下安装Nginx</p>
-<hr>
-<h2 id="1、安装依赖包"><a href="#1、安装依赖包" class="headerlink" title="1、安装依赖包"></a>1、安装依赖包</h2><ul>
-<li>模块依赖性Nginx需要依赖下面4个包<blockquote>
-<ol>
-<li>gzip 模块需要 zlib 库 ( 下载:<a href="http://www.zlib.net/" target="_blank" rel="external">http://www.zlib.net/</a> )；</li>
-<li>rewrite 模块需要 pcre 库 ( 下载:<a href="http://www.pcre.org/" target="_blank" rel="external">http://www.pcre.org/</a> )；</li>
-<li>openssl库需要perl （下载：<a href="https://www.perl.org）；" target="_blank" rel="external">https://www.perl.org）；</a></li>
-<li>ssl 功能需要 openssl 库 ( 下载:<a href="http://www.openssl.org/" target="_blank" rel="external">http://www.openssl.org/</a> )；</li>
-</ol>
-</blockquote>
+        <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ul>
+<li><p>并发（Concurrency）：并发是指同时拥有两个或者多个线程，如果程序在单核处理器上运行，多个线程将交替地换入或者换出内存，这些线程是同时”存在“的，每个线程都处理执行过程中的某个状态，如果运行在多核处理器上，此时，程序中的每个线程都将分配到一个处理器上，因此可以同时运行。</p>
+</li>
+<li><p>高并发（High Concurrency）：高并发是互联网分布式系统架构设计中必须考虑的因素之一，它通常是指，通过设计保证系统能够同时并行处理很多请求。</p>
 </li>
 </ul>
 <a id="more"></a>
+<h2 id="CPU多级缓存"><a href="#CPU多级缓存" class="headerlink" title="CPU多级缓存"></a>CPU多级缓存</h2><ul>
+<li>CPU多级缓存配置（演变）：</li>
+</ul>
+<p><img src="/assets/img/concurrency/CPU多级缓存.jpg" alt="CPU多级缓存"><br>数据的读取和存储都经过高速缓存，CPU核心与高速缓存有一条特殊的快速通道；主存与多级缓存都连在系统总线上（BUS）这条总线同时还用于其他组件的通信。</p>
 <ul>
-<li><p>zlib库<br>安装步骤：</p>
-<blockquote>
-<ol>
-<li>下载安装包：<br>wget <a href="http://www.zlib.net/zlib-1.2.11.tar.gz" target="_blank" rel="external">http://www.zlib.net/zlib-1.2.11.tar.gz</a></li>
-<li>解压安装包：<br>tar –zxvf zlib-1.2.11.tar.gz</li>
-<li>执行安装：<br>./configure&amp;&amp; make &amp;&amp; make install</li>
-</ol>
-</blockquote>
+<li><p>CPU Cache作用：由于CPU频率太快，快到主存跟不上，这样在处理器时钟周期内，CPU常常需要等待主存，浪费资源。Cache的出现就是为了缓解CPU和内存之间速度不匹配问题（结构 -&gt; cache -&gt;memory）。</p>
 </li>
-<li><p>pcre库<br>安装步骤：</p>
-<blockquote>
-<ol>
-<li>下载安装包：<br>wget <a href="https://ftp.pcre.org/pub/pcre/pcre-8.41.tar.gz" target="_blank" rel="external">https://ftp.pcre.org/pub/pcre/pcre-8.41.tar.gz</a> </li>
-<li>解压安装包：<br>tar –zxvf pcre-8.41.tar.gz</li>
-<li>执行安装：<br>./configure &amp;&amp;make &amp;&amp; make install</li>
-</ol>
-</blockquote>
-</li>
-<li><p>perl库<br>安装步骤：</p>
-<blockquote>
-<ol>
-<li>下载安装包：<br>wget <a href="http://www.cpan.org/src/5.0/perl-5.24.0.tar.gz" target="_blank" rel="external">http://www.cpan.org/src/5.0/perl-5.24.0.tar.gz</a></li>
-<li>解压安装包：<br>tar –zxvf perl-5.24.0.tar.gz</li>
-<li>执行安装：<br>./Configure&amp;&amp; make &amp;&amp; make install<br>安装过程比较长，按照提示内容，一直下一步就行。</li>
-</ol>
-</blockquote>
-</li>
-<li><p>openssl库<br>安装步骤：</p>
-<blockquote>
-<ol>
-<li>下载安装包：<br>wget <a href="https://www.openssl.org/source/openssl-1.1.0c.tar.gz" target="_blank" rel="external">https://www.openssl.org/source/openssl-1.1.0c.tar.gz</a></li>
-<li>解压安装包：<br>tar –xvf openssl-1.1.0c.tar.gz</li>
-<li>执行安装：<br>./config &amp;&amp; make &amp;&amp; make install<br>安装过程较长，一直等待就行。</li>
-</ol>
-</blockquote>
+<li><p>局部性原理：局部性原理: CPU访问存储器时，无论是存取指令还是存取数据，所访问的存储单元都趋于聚集在一个较小的连续区域中。</p>
+<ul>
+<li>时间局部性（Temporal Locality）：如果一个信息项正在被访问，那么在近期它很可能还会被再次访问。程序循环、堆栈等是产生时间局部性的原因。</li>
+<li>空间局部性（Spatial Locality）：在最近的将来将用到的信息很可能与现在正在使用的信息在空间地址上是临近的。</li>
+<li>顺序局部性（Order Locality）：在典型程序中，除转移类指令外，大部分指令是顺序进行的。顺序执行和非顺序执行的比例大致是5:1。此外，对大型数组访问也是顺序的。</li>
+</ul>
 </li>
 </ul>
-<h2 id="2、安装nginx"><a href="#2、安装nginx" class="headerlink" title="2、安装nginx"></a>2、安装nginx</h2><blockquote>
-<ol>
-<li>下载安装包：<br>wget <a href="http://nginx.org/download/nginx-1.9.9.tar.gz" target="_blank" rel="external">http://nginx.org/download/nginx-1.9.9.tar.gz</a></li>
-<li>解压安装包：<br>tar –zxvf nginx-1.9.9.tar.gz</li>
-<li>执行安装：<br>./configure –with-pcre=../pcre-8.41 –with-zlib=../zlib-1.2.11 –with-openssl=../openssl-1.1.0c<br>make &amp;&amp;make install</li>
-</ol>
-</blockquote>
-<h2 id="3、配置启动服务"><a href="#3、配置启动服务" class="headerlink" title="3、配置启动服务"></a>3、配置启动服务</h2><blockquote>
+<h2 id="CPU多级缓存-缓存一致性协议（MESI-Modify-Modify-Exclusive-Share-Invalid）"><a href="#CPU多级缓存-缓存一致性协议（MESI-Modify-Modify-Exclusive-Share-Invalid）" class="headerlink" title="CPU多级缓存-缓存一致性协议（MESI|Modify|Modify|Exclusive|Share|Invalid）"></a>CPU多级缓存-缓存一致性协议（MESI|Modify|Modify|Exclusive|Share|Invalid）</h2><p>MESI（Modified Exclusive Shared Or Invalid）(也称为伊利诺斯协议，是因为该协议由伊利诺斯州立大学提出）是一种广泛使用的支持写回策略的缓存一致性协议，该协议被应用在Intel奔腾系列的CPU中，详见“support the more efficient write-back cache in addition to the <a href="http://en.wikipedia.org/wiki/Write-through" target="_blank" rel="external">write-through</a> cache previously used by the Intel 486 processor”。</p>
+<h3 id="MESI协议中的状态"><a href="#MESI协议中的状态" class="headerlink" title="MESI协议中的状态"></a>MESI协议中的状态</h3><p>CPU中每个缓存行（caceh line)使用4种状态进行标记（使用额外的两位(bit)表示):</p>
+<blockquote>
 <ul>
-<li>输入命令：cd /etc/init.d/</li>
-<li>创建nginx文件：vi nginx</li>
-<li><p>复制以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">#! /bin/bash</div><div class="line"># chkconfig: 35 85 15  </div><div class="line"># description: Nginx is an HTTP(S) server, HTTP(S) reverse</div><div class="line">set -e</div><div class="line">PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin</div><div class="line">DESC=&quot;nginx daemon&quot;</div><div class="line">NAME=nginx</div><div class="line">DAEMON=/usr/local/nginx/sbin/$NAME</div><div class="line">SCRIPTNAME=/etc/init.d/$NAME</div><div class="line">test -x $DAEMON || exit 0</div><div class="line">d_start()&#123;</div><div class="line">    $DAEMON || echo -n &quot; already running&quot;</div><div class="line">&#125;</div><div class="line">d_stop() &#123;</div><div class="line">    $DAEMON -s quit || echo -n &quot; not running&quot;</div><div class="line">&#125;</div><div class="line">d_reload() &#123;</div><div class="line">    $DAEMON -s reload || echo -n &quot; counld not reload&quot;</div><div class="line">&#125;</div><div class="line">case &quot;$1&quot; in</div><div class="line">start)</div><div class="line">    echo -n &quot;Starting $DESC:$NAME&quot;</div><div class="line">    d_start</div><div class="line">    echo &quot;.&quot;</div><div class="line">;;</div><div class="line">stop)</div><div class="line">    echo -n &quot;Stopping $DESC:$NAME&quot;</div><div class="line">    d_stop</div><div class="line">    echo &quot;.&quot;</div><div class="line">;;</div><div class="line">reload)</div><div class="line">    echo -n &quot;Reloading $DESC configuration...&quot;</div><div class="line">    d_reload</div><div class="line">    echo &quot;reloaded.&quot;</div><div class="line">;;</div><div class="line">restart)</div><div class="line">    echo -n &quot;Restarting $DESC: $NAME&quot;</div><div class="line">    d_stop</div><div class="line">    sleep 2</div><div class="line">    d_start</div><div class="line">    echo &quot;.&quot;</div><div class="line">;;</div><div class="line">*)</div><div class="line">    echo &quot;Usage: $SCRIPTNAME &#123;start|stop|restart|reload&#125;&quot; &gt;&amp;2</div><div class="line">    exit 3</div><div class="line">;;</div><div class="line">esac</div><div class="line">exit 0</div></pre></td></tr></table></figure>
-</li>
-<li><p>启动nginx：service nginx start</p>
-</li>
+<li>M: 被修改（Modified)：该缓存行只被缓存在该CPU的缓存中，并且是被修改过的（dirty),即与主存中的数据不一致，该缓存行中的内存需要在未来的某个时间点（允许其它CPU读取请主存中相应内存之前）写回（write back）主存。<br>当被写回主存之后，该缓存行的状态会变成独享（exclusive)状态。</li>
+<li>E: 独享的（Exclusive)：该缓存行只被缓存在该CPU的缓存中，它是未被修改过的（clean)，与主存中数据一致。该状态可以在任何时刻当有其它CPU读取该内存时变成共享状态（shared)。<br>同样地，当CPU修改该缓存行中内容时，该状态可以变成Modified状态。</li>
+<li>S:共享的（Shared)：该状态意味着该缓存行可能被多个CPU缓存，并且各个缓存中的数据与主存数据一致（clean)，当有一个CPU修改该缓存行中，<br>其它CPU中该缓存行可以被作废（变成无效状态（Invalid））。</li>
+<li>I: 无效的（Invalid）：该缓存是无效的（可能有其它CPU修改了该缓存行）。</li>
 </ul>
 </blockquote>
+<h3 id="MESI状态转换图"><a href="#MESI状态转换图" class="headerlink" title="MESI状态转换图"></a>MESI状态转换图</h3><p><img src="/assets/img/concurrency/缓存一致性.png" alt="缓存一致性"></p>
+<ul>
+<li><p>CacheLine有四种数据状态（MESI），而引起数据状态转换的CPU Cache操作也有四种:</p>
+<ul>
+<li>本地读取(local read):读本地缓存中的数据</li>
+<li>本地写入(local write): 将数据写到本地缓存里面</li>
+<li>远端读取(remote read): 将内（主）存中的数据读取到缓存中来</li>
+<li>远端写入(remote write): 将缓存中的数据写回到主存里面去</li>
+</ul>
+</li>
+<li><p>CacheLine状态之间的相互转换关系如下图所示：</p>
+</li>
+</ul>
+<p><img src="/assets/img/concurrency/MESI转换关系.png" alt="MESI转换关系"></p>
+<p>在一个典型系统中，可能会有几个缓存（在多核系统中，每个核心都会有自己的缓存）共享主存总线，每个相应的CPU会发出读写请求，而缓存的目的是为了减少CPU读写共享主存的次数。</p>
+<p>一个缓存除在Invalid状态外都可以满足cpu的读请求，一个invalid的缓存行必须从主存中读取（变成S或者 E状态）来满足该CPU的读请求。</p>
+<p>一个写请求只有在该缓存行是M或者E状态时才能被执行，如果缓存行处于S状态，必须先将其它缓存中该缓存行变成Invalid状态（也既是不允许不同CPU同时修改同一缓存行，</p>
+<p>即使修改该缓存行中不同位置的数据也不允许）。该操作经常作用广播的方式来完成，例如：RequestFor Ownership (RFO)</p>
+<p>缓存可以随时将一个非M状态的缓存行作废，或者变成Invalid状态，而一个M状态的缓存行必须先被写回主存。</p>
+<p>一个处于M状态的缓存行必须时刻监听所有试图读该缓存行相对就主存的操作，这种操作必须在缓存将该缓存行写回主存并将状态变成S状态之前被延迟执行。</p>
+<p>一个处于S状态的缓存行也必须监听其它缓存使该缓存行无效或者独享该缓存行的请求，并将该缓存行变成无效（Invalid）。</p>
+<p>一个处于E状态的缓存行也必须监听其它缓存读主存中该缓存行的操作，一旦有这种操作，该缓存行需要变成S状态。</p>
+<p>对于M和E状态而言总是精确的，他们在和该缓存行的真正状态是一致的。而S状态可能是非一致的，如果一个缓存将处于S状态的缓存行作废了，而另一个缓存实际上可能已经</p>
+<p>独享了该缓存行，但是该缓存却不会将该缓存行升迁为E状态，这是因为其它缓存不会广播他们作废掉该缓存行的通知，同样由于缓存并没有保存该缓存行的copy的数量，</p>
+<p>因此（即使有这种通知）也没有办法确定自己是否已经独享了该缓存行。</p>
+<p>从上面的意义看来E状态是一种投机性的优化：如果一个CPU想修改一个处于S状态的缓存行，总线事务需要将所有该缓存行的copy变成invalid状态，而修改E状态的缓存不需要使用总线事务。</p>
+<h2 id="CPU多级缓存-乱序执行优化"><a href="#CPU多级缓存-乱序执行优化" class="headerlink" title="CPU多级缓存-乱序执行优化"></a>CPU多级缓存-乱序执行优化</h2><p>处理器或编译器为提高运算速度而做出违背代码原有顺序的优化。</p>
+<ul>
+<li><p>重排序遵循原则as-if-serial</p>
+<p>as-if-serial语义：不管怎么重排序（编译器和处理器为了提高并行度），（单线程）程序的执行结果不会改变。编译器、runtime和处理器都必须遵守as-if-serial语义。</p>
+<p>为了遵守as-if-serial语义，编译器和处理器不会对存在数据依赖关系的操作做重排序，因为这种重排序会改变执行结果。但是，如果操作之间不存在数据依赖关系，这些操作就可能被编译器和处理器重排序。</p>
+</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a=<span class="number">10</span>;</div><div class="line">b=<span class="number">200</span>;</div><div class="line">result=a*b;</div></pre></td></tr></table></figure>
+<p>它们之间的依赖关系如图：</p>
+<p><img src="/assets/img/concurrency/乱序执行优化1.png" alt="乱序执行优化1"></p>
+<p>由于a=10和b=200之间不存在依赖关系,因此编译器或处理可以这两两个操作进行重排,因此最终执行顺序可能有以下两种情况：</p>
+<p><img src="/assets/img/concurrency/乱序执行优化2.png" alt="乱序执行优化2"></p>
+<p>但无论哪种执行顺序,最终的结果都是对的。正是因为as-if-serial的存在,我们在编写单线程程序时会觉得好像它就是按代码的顺序执行的,这让我们可以不必关心重排的影响。</p>
+<h2 id="Java内存模型（Java-Memory-Model-JMM）"><a href="#Java内存模型（Java-Memory-Model-JMM）" class="headerlink" title="Java内存模型（Java Memory Model,JMM）"></a>Java内存模型（Java Memory Model,JMM）</h2><p>Java内存模型即Java Memory Model，简称JMM。JMM定义了Java 虚拟机(JVM)在计算机内存(RAM)中的工作方式。它规定了一个线程如何和何时可以看到由其他线程修改过后的共享变量的值，以及在必须时如何同步地访问共享变量。</p>
+<h3 id="JVM对Java内存模型的实现"><a href="#JVM对Java内存模型的实现" class="headerlink" title="JVM对Java内存模型的实现"></a>JVM对Java内存模型的实现</h3><p>在JVM内部，Java内存模型把内存分成了两部分：线程栈区和堆区。</p>
+<p><img src="/assets/img/concurrency/Java内存模型-线程栈区和堆区.jpg" alt="Java内存模型-线程栈区和堆区"></p>
+<ul>
+<li>JVM中运行的每个线程都拥有自己的线程栈，线程栈包含了当前线程执行的方法调用相关信息，我们也把它称作调用栈。随着代码的不断执行，调用栈会不断变化。</li>
+<li>线程栈还包含了当前方法的所有本地变量信息。一个线程只能读取自己的线程栈，也就是说，线程中的本地变量对其它线程是不可见的。即使两个线程执行的是同一段代码，它们也会各自在自己的线程栈中创建本地变量，因此，每个线程中的本地变量都会有自己的版本。</li>
+<li>所有原始类型(boolean,byte,short,char,int,long,float,double)的本地变量都直接保存在线程栈当中，对于它们的值各个线程之间都是独立的。对于原始类型的本地变量，一个线程可以传递一个副本给另一个线程，当它们之间是无法共享的。</li>
+<li>堆区包含了Java应用创建的所有对象信息，不管对象是哪个线程创建的，其中的对象包括原始类型的封装类（如Byte、Integer、Long等等）。不管对象是属于一个成员变量还是方法中的本地变量，它都会被存储在堆区。</li>
+</ul>
+<p>下图展示了调用栈和本地变量都存储在栈区，对象都存储在堆区：</p>
+<p><img src="/assets/img/concurrency/Java内存模型-线程栈区和堆区存储模型.jpg" alt="Java内存模型-线程栈区和堆区存储模型"></p>
+<ul>
+<li>一个本地变量如果是原始类型，那么它会被完全存储到栈区。</li>
+<li>一个本地变量也有可能是一个对象的引用，这种情况下，这个本地引用会被存储到栈中，但是对象本身仍然存储在堆区。</li>
+<li>对于一个对象的成员方法，这些方法中包含本地变量，仍需要存储在栈区，即使它们所属的对象在堆区。</li>
+<li>对于一个对象的成员变量，不管它是原始类型还是包装类型，都会被存储到堆区。</li>
+<li>Static类型的变量以及类本身相关信息都会随着类本身存储在堆区。</li>
+</ul>
+<p>堆中的对象可以被多线程共享。如果一个线程获得一个对象的应用，它便可访问这个对象的成员变量。如果两个线程同时调用了同一个对象的同一个方法，那么这两个线程便可同时访问这个对象的成员变量，但是对于本地变量，每个线程都会拷贝一份到自己的线程栈中。</p>
+<p>下图展示了上面描述的过程:</p>
+<p><img src="/assets/img/concurrency/Java内存模型-多线程共享.jpg" alt="Java内存模型-多线程共享"></p>
+<h3 id="硬件内存架构"><a href="#硬件内存架构" class="headerlink" title="硬件内存架构"></a>硬件内存架构</h3><p><img src="/assets/img/concurrency/硬件内存架构.jpg" alt="硬件内存架构"></p>
+<ul>
+<li><p>CPU Registers(寄存器):是CPU内存的基础，CPU在寄存器上执行操作的速度远大于在主存上执行的速度。这是因为CPU访问寄存器速度远大于主存。</p>
+</li>
+<li><p>CPU Cache Memory(高速缓存):由于计算机的存储设备与处理器的运算速度之间有着几个数量级的差距，所以现代计算机系统都不得不加入一层读写速度尽可能接近处理器运算速度的高级缓存，来作为内存与处理器之间的缓冲。将运算时所使用到的数据复制到缓存中,让运算能快速的进行。当运算结束后，再从缓存同步回内存之中，这样处理器就无需等待缓慢的内存读写了。</p>
+</li>
+<li><p>RAM-Main Memory(主存/内存):计算机的主存也称作RAM，所有的CPU都能够访问主存，而且主存比缓存和寄存器大很多。</p>
+</li>
+<li><p>当一个CPU需要读取主存的时候，他会将主存中的部分读取到CPU缓存中，甚至他可能将缓存中的部分内容读到他的内部寄存器里面，然后在寄存器中执行操作。当CPU需要将结果回写到主存的时候，他会将内部寄存器中的值刷新到缓存中，然后在某个时间点从缓存中刷回(flush)主存。</p>
+</li>
+</ul>
+<h3 id="Java内存模型和硬件架构之间的桥接"><a href="#Java内存模型和硬件架构之间的桥接" class="headerlink" title="Java内存模型和硬件架构之间的桥接"></a>Java内存模型和硬件架构之间的桥接</h3><p>Java内存模型和硬件内存架构并不一致。硬件内存架构中并没有区分栈和堆，从硬件上看，不管是栈还是堆，大部分数据都会存到主存中，当然一部分栈和堆的数据也有可能会存到CPU寄存器中，如下图所示，Java内存模型和计算机硬件内存架构是一个交叉关系：</p>
+<p><img src="/assets/img/concurrency/Java内存模型和硬件架构之间的桥接.jpg" alt="Java内存模型和硬件架构之间的桥接"></p>
+<p>当对象和变量存储到计算机的各个内存区域时，必然会面临一些问题，其中最主要的两个问题是：</p>
+<ol>
+<li>共享对象对各个线程的可见性</li>
+<li>共享对象对各个线程的可见性</li>
+</ol>
+<ul>
+<li>共享对象的可见性</li>
+</ul>
+<p>当多个线程同时操作同一个共享对象时，如果没有合理的使用volatile和synchronization关键字，一个线程对共享对象的更新有可能导致其它线程不可见。</p>
+<p>想象一下我们的共享对象存储在主存，一个CPU中的线程读取主存数据到CPU缓存，然后对共享对象做了更改，但CPU缓存中的更改后的对象还没有flush到主存，此时线程对共享对象的更改对其它CPU中的线程是不可见的。最终就是每个线程最终都会拷贝共享对象，而且拷贝的对象位于不同的CPU缓存中。</p>
+<p>下图展示了上面描述的过程。左边CPU中运行的线程从主存中拷贝共享对象obj到它的CPU缓存，把对象obj的count变量改为2。但这个变更对运行在右边CPU中的线程不可见，因为这个更改还没有flush到主存中。</p>
+<p><img src="/assets/img/concurrency/共享对象的可见性.jpg" alt="共享对象的可见性"></p>
+<p>要解决共享对象可见性这个问题，我们可以使用java volatile关键字。 Java’s volatile keyword. volatile 关键字可以保证变量会直接从主存读取，而对变量的更新也会直接写到主存。volatile原理是基于CPU内存屏障指令实现。</p>
+<ul>
+<li>竞争现象</li>
+</ul>
+<p>如果多个线程共享一个对象，如果它们同时修改这个共享对象，这就产生了竞争现象。</p>
+<p>如下图所示，线程A和线程B共享一个对象obj。假设线程A从主存读取Obj.count变量到自己的CPU缓存，同时，线程B也读取了Obj.count变量到它的CPU缓存，并且这两个线程都对Obj.count做了加1操作。此时，Obj.count加1操作被执行了两次，不过都在不同的CPU缓存中。</p>
+<p>如果这两个加1操作是串行执行的，那么Obj.count变量便会在原始值上加2，最终主存中的Obj.count的值会是3。然而下图中两个加1操作是并行的，不管是线程A还是线程B先flush计算结果到主存，最终主存中的Obj.count只会增加1次变成2，尽管一共有两次加1操作。</p>
+<p><img src="/assets/img/concurrency/对象竞争现象.jpg" alt="对象竞争现象"></p>
+<p>要解决上面的问题我们可以使用java synchronized代码块。synchronized代码块可以保证同一个时刻只能有一个线程进入代码竞争区，synchronized代码块也能保证代码块中所有变量都将会从主存中读，当线程退出代码块时，对所有变量的更新将会flush到主存，不管这些变量是不是volatile类型的。</p>
+<h3 id="支撑Java内存模型的基础原理"><a href="#支撑Java内存模型的基础原理" class="headerlink" title="支撑Java内存模型的基础原理"></a>支撑Java内存模型的基础原理</h3><h4 id="指令重排序"><a href="#指令重排序" class="headerlink" title="指令重排序"></a>指令重排序</h4><p>在执行程序时，为了提高性能，编译器和处理器会对指令做重排序。但是，JMM确保在不同的编译器和不同的处理器平台之上，通过插入特定类型的Memory Barrier来禁止特定类型的编译器重排序和处理器重排序，为上层提供一致的内存可见性保证。</p>
+<ol>
+<li>编译器优化重排序：编译器在不改变单线程程序语义的前提下，可以重新安排语句的执行顺序。</li>
+<li>指令级并行的重排序：如果不存l在数据依赖性，处理器可以改变语句对应机器指令的执行顺序。</li>
+<li>内存系统的重排序：处理器使用缓存和读写缓冲区，这使得加载和存储操作看上去可能是在乱序执行。</li>
+</ol>
+<h4 id="数据依赖性"><a href="#数据依赖性" class="headerlink" title="数据依赖性"></a>数据依赖性</h4><p>如果两个操作访问同一个变量，其中一个为写操作，此时这两个操作之间存在数据依赖性。编译器和处理器不会改变存在数据依赖性关系的两个操作的执行顺序，即不会重排序。</p>
+<h4 id="as-if-serial语义"><a href="#as-if-serial语义" class="headerlink" title="as-if-serial语义"></a>as-if-serial语义</h4><p>不管怎么重排序，单线程下的执行结果不能被改变，编译器、runtime和处理器都必须遵守as-if-serial语义。</p>
+<h4 id="内存屏障（Memory-Barrier）"><a href="#内存屏障（Memory-Barrier）" class="headerlink" title="内存屏障（Memory Barrier）"></a>内存屏障（Memory Barrier）</h4><p>通过内存屏障可以禁止特定类型处理器的重排序，从而让程序按我们预想的流程去执行。内存屏障，又称内存栅栏，是一个CPU指令，基本上它是一条这样的指令：</p>
+<ol>
+<li>保证特定操作的执行顺序。</li>
+<li>影响某些数据（或则是某条指令的执行结果）的内存可见性。</li>
+</ol>
+<h4 id="happens-before原则"><a href="#happens-before原则" class="headerlink" title="happens-before原则"></a>happens-before原则</h4><p>从jdk5开始，java使用新的JSR-133内存模型，基于happens-before的概念来阐述操作之间的内存可见性。</p>
+<p>在JMM中，如果一个操作的执行结果需要对另一个操作可见，那么这两个操作之间必须要存在happens-before关系，这个的两个操作既可以在同一个线程，也可以在不同的两个线程中。</p>
+<p>happens-before规则如下：</p>
+<ol>
+<li>程序顺序规则：一个线程中的每个操作，happens-before于该线程中任意的后续操作。</li>
+<li>监视器锁规则：对一个锁的解锁操作，happens-before于随后对这个锁的加锁操作。</li>
+<li>volatile域规则：对一个volatile域的写操作，happens-before于任意线程后续对这个volatile域的读。</li>
+<li>传递性规则：如果 A happens-before B，且 B happens-before C，那么A happens-before C。</li>
+</ol>
+<p>注意：两个操作之间具有happens-before关系，并不意味前一个操作必须要在后一个操作之前执行！仅仅要求前一个操作的执行结果，对于后一个操作是可见的，且前一个操作按顺序排在后一个操作之前。</p>
+<h3 id="Java内存模型中线程和主内存的抽象关系"><a href="#Java内存模型中线程和主内存的抽象关系" class="headerlink" title="Java内存模型中线程和主内存的抽象关系"></a>Java内存模型中线程和主内存的抽象关系</h3><p>Java内存模型抽象结构图：</p>
+<p><img src="/assets/img/concurrency/Java内存模型抽象结构图.jpg" alt="Java内存模型抽象结构图"></p>
+<p>线程A与线程B之间如要通信的话，必须要经历下面2个步骤：</p>
+<ol>
+<li>首先，线程A把本地内存A中更新过的共享变量刷新到主内存中去。</li>
+<li>然后，线程B到主内存中去读取线程A之前已更新过的共享变量。</li>
+</ol>
+<p>下面通过示意图来说明这两个步骤：</p>
+<p><img src="/assets/img/concurrency/Java内存模型-线程间通信.jpg" alt="Java内存模型-线程间通信"></p>
+<p>如上图所示，本地内存A和B有主内存中共享变量x的副本。假设初始时，这三个内存中的x值都为0。线程A在执行时，把更新后的x值（假设值为1）临时存放在自己的本地内存A中。当线程A和线程B需要通信时，线程A首先会把自己本地内存中修改后的x值刷新到主内存中，此时主内存中的x值变为了1。随后，线程B到主内存中去读取线程A更新后的x值，此时线程B的本地内存的x值也变为了1。</p>
+<p>从整体来看，这两个步骤实质上是线程A在向线程B发送消息，而且这个通信过程必须要经过主内存。JMM通过控制主内存与每个线程的本地内存之间的交互，来为java程序员提供内存可见性保证。</p>
+<h3 id="Java内存模型中同步的操作与规则"><a href="#Java内存模型中同步的操作与规则" class="headerlink" title="Java内存模型中同步的操作与规则"></a>Java内存模型中同步的操作与规则</h3><p><img src="/assets/img/concurrency/Java内存模型中同步的操作与规则.jpg" alt="Java内存模型中同步的操作与规则"></p>
+<h4 id="同步操作"><a href="#同步操作" class="headerlink" title="同步操作"></a>同步操作</h4><ul>
+<li>lock(锁定) ：作用于主内存变量，把一个变量标识为一条线程独占状态。</li>
+<li>unlock(解锁) ： 作用于主内存的变量，把一个处于锁定状态的变量释放出来，释放后的变量才可以被其他线程锁定。</li>
+<li>read(读取) ： 作用于主内存的变量，把一个变量值从主内存传输到线程的工作内存中，以便随后的load动作使用。</li>
+<li>load(载入) ：作用于工作内存的变量，它把read操作从主内存中得到的变量值放入工作内存的变量副本中。</li>
+<li>use(使用) ：作用于工作内存的变量，把工作内存中的一个变量值传递给执行引擎。</li>
+<li>assign(赋值) ： 作用于工作内存的变量，它把一个从执行引擎接收到的值赋值给工作内存的变量。</li>
+<li>store(存储) ： 作用于工作内存的变量，把工作内存中的一个变量的值传送到主内存中，以便随后的write操作。</li>
+<li>write(写入) ：作用于主内存的变量中，它把store操作从工作内存中一个变量的值传送到主内存的变量中。</li>
+</ul>
+<h4 id="同步规则"><a href="#同步规则" class="headerlink" title="同步规则"></a>同步规则</h4><ul>
+<li>如果要把一个变量从主内存中复制到工作内存，就需要按顺序的执行read和load操作，如果把变量从工作内存中同步回主内存中，就要按顺序的执行store和write操作。但Java内存模型只要求上述操作必须按顺序执行，而没有保证必须是连续执行。</li>
+<li>不允许read和load、store和write操作之一单独出现。</li>
+<li>不允许一个线程丢弃它的最近assin的操作，即变量在工作内存中改变了之后必须同步到主内存中。</li>
+<li>不允许一个线程无原因的（没有发生过任何assin操作）把数据从工作内存同步回主内存中。</li>
+<li>一个新的变量只能在主内存中诞生，不允许在工作内存中直接使用一个未被初始化（load或assin）的变量。即就是对一个变量实施use和store操作之前，必须先执行过了load或assin操作。</li>
+<li>一个变量在同一个时刻只允许一条线程对其进行lock操作，但lock操作可以被同一条线程重复执行多次，多次执行lock后，只有执行相同次数的unlock操作，变量才会被解锁。所以lock和unlock必须成对出现。</li>
+<li>如果对一个变量执行lock操作，将会清空工作内存中此变量的值，在执行引擎使用这个变量前需要重新执行load或assign操作初始化变量的值。</li>
+<li>如果一个变量事先没有被lock操作锁定，则不允许对它执行unlock操作；也不允许去unlock一个被其他线程锁定的变量。</li>
+<li>对一个变量执行unlock操作之前，必须先把此变量同步到主内存中（执行store和write操作）。</li>
+</ul>
+<h2 id="并发的优势与风险"><a href="#并发的优势与风险" class="headerlink" title="并发的优势与风险"></a>并发的优势与风险</h2><p><img src="/assets/img/concurrency/并发的优势与风险.jpg" alt="并发的优势与风险"></p>
 
       
+	  
+	  
+	  
+		  <style>
+.article-footer-copyright{
+   border-top:1px solid #d3d3d3;
+   margin: 20px auto;     
+   padding-left:2em;
+   width: 80%;
+}
+.article-footer-copyright p{
+  font-size:1.2em;
+}
+.article-footer-copyright span,.copyright abbr{
+  color:#3d3d3d;
+}
+div.copyright{
+	
+     font-weight:bold;
+    color:#FCB297;
+       padding:0.3em 0.5em;
+       margin:0 0 1em 0;
+       border-bottom:none;
+       background-color:#AAD2F0;
+       -moz-border-radius: 1em;
+       -webkit-border-radius:1em;
+       border-radius: 1em;
+  -moz-box-shadow:inset 0px 1px 0px 0px #eeeeee;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #eeeeee;
+  box-shadow:inset 0px 1px 0px 0px #eeeeee;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed) );
+  background:-moz-linear-gradient( center top, #aad2f0 5%, #8bc1ed 100% );
+  /* filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#aad2f0', endColorstr='#8bc1ed'); */
+  background-color:#aad2f0;
+  border:1px solid #dcdcdc;
+  text-shadow:1px 1px 0px #eeeeee;
+  
+}
+div.article-footer-copyright{
+	margin-top:2em;
+	padding:1.5em;
+	border:1px solid #d3d3d3;
+	background-color:#DEEBF7;
+}
+.article-footer-copyright p{
+	line-height: 160%;
+	margin: 10px;
+	font-size: 100%;
+}
+
+.my_post_copyright {
+  width: 85%;
+  max-width: 45em;
+  margin: 2.8em auto 0;
+  padding: 0.5em 1.0em;
+  border: 1px solid #d3d3d3;
+  font-size: 0.93rem;
+  line-height: 1.6em;
+  word-break: break-all;
+  background: rgba(255,255,255,0.4);
+}
+.my_post_copyright p{margin:0;}
+.my_post_copyright span {
+  display: inline-block;
+  width: 5.2em;
+  color: #b5b5b5;
+  font-weight: bold;
+}
+.my_post_copyright .raw {
+  margin-left: 1em;
+  width: 5em;
+}
+.my_post_copyright a {
+  color: #808080;
+  border-bottom:0;
+}
+.my_post_copyright a:hover {
+  color: #a3d2a3;
+  text-decoration: underline;
+}
+.my_post_copyright:hover .fa-clipboard {
+  color: #000;
+}
+.my_post_copyright .post-url:hover {
+  font-weight: normal;
+}
+.my_post_copyright .copy-path {
+  margin-left: 1em;
+  width: 1em;
+  +mobile(){display:none;}
+}
+.my_post_copyright .copy-path:hover {
+  color: #808080;
+  cursor: pointer;
+}
+</style>
+<div class="article-footer-copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="">并发编程与高并发解决方案（一）：并发编程相关基础知识</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 RongleXie 的个人博客">RongleXie</a></p>
+  <p><span>发布时间:</span>2018-04-15 16:04:00</p>
+  <p><span>原始链接:</span><a href="" title="并发编程与高并发解决方案（一）：并发编程相关基础知识" >http://www.ronglexie.top/2018/67b19209.html</a>
+		<span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.ronglexie.top/2018/67b19209.html"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+
+	  
+	  
 
       
         <div class="page-reward">
@@ -333,23 +591,51 @@
     </div>
     <div class="article-info article-info-index">
       
+        <div class="article-pop-out tagcloud">
+          <i class="icon-tuding"></i>
+          <a class="article-tag-list-link color3">置顶</a>
+        </div>
+      
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">并发编程</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">高并发</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">JMM</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">MESI</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -399,7 +685,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.ronglexie.top/2018/01/27/2018-01-27.linux_install_nginx/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.ronglexie.top/2018/67b19209.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -408,23 +694,15 @@
       <div class="clearfix"></div>
     </div>
   </div>
+  
 </article>
 
   
 <nav id="article-nav">
   
-    <a href="/2018/01/27/2018-01-27.mysql_type_of_data/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MySQL数据类型
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/01/15/2018-01-15.git_mind/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Git常用知识思维导图</div>
+    <a href="/2018/67b19207.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CentOS 开发环境搭建</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -451,7 +729,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、安装依赖包"><span class="toc-number">1.</span> <span class="toc-text">1、安装依赖包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、安装nginx"><span class="toc-number">2.</span> <span class="toc-text">2、安装nginx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、配置启动服务"><span class="toc-number">3.</span> <span class="toc-text">3、配置启动服务</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本概念"><span class="toc-number">1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU多级缓存"><span class="toc-number">2.</span> <span class="toc-text">CPU多级缓存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU多级缓存-缓存一致性协议（MESI-Modify-Modify-Exclusive-Share-Invalid）"><span class="toc-number">3.</span> <span class="toc-text">CPU多级缓存-缓存一致性协议（MESI|Modify|Modify|Exclusive|Share|Invalid）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MESI协议中的状态"><span class="toc-number">3.1.</span> <span class="toc-text">MESI协议中的状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MESI状态转换图"><span class="toc-number">3.2.</span> <span class="toc-text">MESI状态转换图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CPU多级缓存-乱序执行优化"><span class="toc-number">4.</span> <span class="toc-text">CPU多级缓存-乱序执行优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Java内存模型（Java-Memory-Model-JMM）"><span class="toc-number">5.</span> <span class="toc-text">Java内存模型（Java Memory Model,JMM）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JVM对Java内存模型的实现"><span class="toc-number">5.1.</span> <span class="toc-text">JVM对Java内存模型的实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#硬件内存架构"><span class="toc-number">5.2.</span> <span class="toc-text">硬件内存架构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java内存模型和硬件架构之间的桥接"><span class="toc-number">5.3.</span> <span class="toc-text">Java内存模型和硬件架构之间的桥接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#支撑Java内存模型的基础原理"><span class="toc-number">5.4.</span> <span class="toc-text">支撑Java内存模型的基础原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#指令重排序"><span class="toc-number">5.4.1.</span> <span class="toc-text">指令重排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据依赖性"><span class="toc-number">5.4.2.</span> <span class="toc-text">数据依赖性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#as-if-serial语义"><span class="toc-number">5.4.3.</span> <span class="toc-text">as-if-serial语义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#内存屏障（Memory-Barrier）"><span class="toc-number">5.4.4.</span> <span class="toc-text">内存屏障（Memory Barrier）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#happens-before原则"><span class="toc-number">5.4.5.</span> <span class="toc-text">happens-before原则</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java内存模型中线程和主内存的抽象关系"><span class="toc-number">5.5.</span> <span class="toc-text">Java内存模型中线程和主内存的抽象关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Java内存模型中同步的操作与规则"><span class="toc-number">5.6.</span> <span class="toc-text">Java内存模型中同步的操作与规则</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#同步操作"><span class="toc-number">5.6.1.</span> <span class="toc-text">同步操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#同步规则"><span class="toc-number">5.6.2.</span> <span class="toc-text">同步规则</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#并发的优势与风险"><span class="toc-number">6.</span> <span class="toc-text">并发的优势与风险</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -465,7 +743,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2018-01-27.linux_install_nginx" data-title="Linux环境下安装Nginx" data-url="http://www.ronglexie.top/2018/01/27/2018-01-27.linux_install_nginx/"></div>
+	<div class="ds-thread" data-thread-key="2018-04-15.java_high_concurrency_base_knowledge" data-title="并发编程与高并发解决方案（一）：并发编程相关基础知识" data-url="http://www.ronglexie.top/2018/67b19209.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -496,7 +774,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://www.ronglexie.top/2018/01/27/2018-01-27.linux_install_nginx/",
+  id: "http://www.ronglexie.top/2018/67b19209.html",
   owner: 'ronglexie',
   repo: 'ronglexie.github.io',
   oauth: {
@@ -606,11 +884,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TOMCAT</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color2">TOMCAT</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -643,22 +921,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搜索引擎</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Scrapy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -711,6 +973,22 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">MESI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搜索引擎</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Scrapy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
             
             <div class="clearfix"></div>

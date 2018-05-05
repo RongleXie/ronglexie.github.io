@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.ronglexie.top">
-  <title>绿色版Tomcat制作 | 世界因你而精彩|RongleXie</title>
+  <title>常用 Git 命令清单 | 世界因你而精彩|RongleXie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="绿色Tomcat制作，可在多种环境下运行，不依赖运行环境。">
-<meta name="keywords" content="TOMCAT">
+  <meta name="description" content="整理的常用 Git 命令清单  几个专用名词的译名如下:   Workspace：工作区 Index / Stage：暂存区 Repository：仓库区（或本地仓库） Remote：远程仓库">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="绿色版Tomcat制作">
-<meta property="og:url" content="http://www.ronglexie.top/2017/09/23/2017-09-23.tomcat_green_version_conf/index.html">
+<meta property="og:title" content="常用 Git 命令清单">
+<meta property="og:url" content="http://www.ronglexie.top/2017/26f59cd9.html">
 <meta property="og:site_name" content="世界因你而精彩|RongleXie">
-<meta property="og:description" content="绿色Tomcat制作，可在多种环境下运行，不依赖运行环境。">
+<meta property="og:description" content="整理的常用 Git 命令清单  几个专用名词的译名如下:   Workspace：工作区 Index / Stage：暂存区 Repository：仓库区（或本地仓库） Remote：远程仓库">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-05T01:23:18.153Z">
+<meta property="og:updated_time" content="2018-05-05T09:15:39.387Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="绿色版Tomcat制作">
-<meta name="twitter:description" content="绿色Tomcat制作，可在多种环境下运行，不依赖运行环境。">
+<meta name="twitter:title" content="常用 Git 命令清单">
+<meta name="twitter:description" content="整理的常用 Git 命令清单  几个专用名词的译名如下:   Workspace：工作区 Index / Stage：暂存区 Repository：仓库区（或本地仓库） Remote：远程仓库">
   
     <link rel="alternative" href="/atom.xml" title="世界因你而精彩|RongleXie" type="application/atom+xml">
   
@@ -173,20 +173,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2017-09-23.tomcat_green_version_conf" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2017-09-23.common_git_commands" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      绿色版Tomcat制作
+      常用 Git 命令清单
     </h1>
   
 
         
-        <a href="/2017/09/23/2017-09-23.tomcat_green_version_conf/" class="archive-article-date">
-  	<time datetime="2017-09-23T06:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-23</time>
+        <a href="/2017/26f59cd9.html" class="archive-article-date">
+  	<time datetime="2017-09-23T12:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-23</time>
 </a>
         
 	
@@ -205,7 +205,7 @@
 		<div id="toc-article" class="toc-article">
 			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 			<strong class="toc-title">文章目录</strong>
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、setclasspath-bat文件添加"><span class="toc-number">1.</span> <span class="toc-text">一、setclasspath.bat文件添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、新建startup-bat"><span class="toc-number">2.</span> <span class="toc-text">二、新建startup.bat</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、新建代码库"><span class="toc-number">1.</span> <span class="toc-text">一、新建代码库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、配置"><span class="toc-number">2.</span> <span class="toc-text">二、配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、增加-删除文件"><span class="toc-number">3.</span> <span class="toc-text">三、增加/删除文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、代码提交"><span class="toc-number">4.</span> <span class="toc-text">四、代码提交</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、分支"><span class="toc-number">5.</span> <span class="toc-text">五、分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、标签"><span class="toc-number">6.</span> <span class="toc-text">六、标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、查看信息"><span class="toc-number">7.</span> <span class="toc-text">七、查看信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、远程同步"><span class="toc-number">8.</span> <span class="toc-text">八、远程同步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九、撤销"><span class="toc-number">9.</span> <span class="toc-text">九、撤销</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十、其他"><span class="toc-number">10.</span> <span class="toc-text">十、其他</span></a></li></ol>
 	   </div>
 	   <script type="text/javascript">
 		function showToc(){
@@ -225,12 +225,453 @@
 	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>绿色Tomcat制作，可在多种环境下运行，不依赖运行环境。</p>
+        <p>整理的常用 Git 命令清单</p>
+<blockquote>
+<p>几个专用名词的译名如下:</p>
+</blockquote>
+<ul>
+<li>Workspace：工作区</li>
+<li>Index / Stage：暂存区</li>
+<li>Repository：仓库区（或本地仓库）</li>
+<li>Remote：远程仓库</li>
+</ul>
 <a id="more"></a>
-<h3 id="一、setclasspath-bat文件添加"><a href="#一、setclasspath-bat文件添加" class="headerlink" title="一、setclasspath.bat文件添加"></a>一、setclasspath.bat文件添加</h3><p><strong><em>rem set user jdk and jre home<br>   set JAVA_HOME=..\jdk1.7.0_13_32<br>   set JRE_HOME=..\jdk1.7.0_13_32\jre</em></strong></p>
-<h3 id="二、新建startup-bat"><a href="#二、新建startup-bat" class="headerlink" title="二、新建startup.bat"></a>二、新建startup.bat</h3><p><strong><em>set “CURRENT_DIR=%~dp0”<br>   set “CATALINA_HOME=%CURRENT_DIR%\tomcat7”<br>   set JRE_HOME=%CURRENT_DIR%\JRE<br>   set CLASSPATH=%JRE_HOME%\lib<br>   set PATH=%PATH%;%JRE_HOME%\bin<br>   set JAVA=java<br>   call %CATALINA_HOME%\bin\startup.bat</em></strong></p>
+<h2 id="一、新建代码库"><a href="#一、新建代码库" class="headerlink" title="一、新建代码库"></a>一、新建代码库</h2><ul>
+<li><p>在当前目录新建一个Git代码库</p>
+<blockquote>
+<p>$ git init</p>
+</blockquote>
+</li>
+<li><p>新建一个目录，将其初始化为Git代码库</p>
+<blockquote>
+<p>$ git init [project-name]</p>
+</blockquote>
+</li>
+<li><p>下载一个项目和它的整个代码历史</p>
+<blockquote>
+<p>$ git clone [url]</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><blockquote>
+<p>Git的设置文件为.gitconfig，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p>
+</blockquote>
+<ul>
+<li><p>显示当前的Git配置</p>
+<blockquote>
+<p>$ git config –list</p>
+</blockquote>
+</li>
+<li><p>编辑Git配置文件</p>
+<blockquote>
+<p>$ git config -e [–global]</p>
+</blockquote>
+</li>
+<li><p>设置提交代码时的用户信息</p>
+<blockquote>
+<p>$ git config [–global] user.name “[name]”<br>$ git config [–global] user.email “[email address]”</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="三、增加-删除文件"><a href="#三、增加-删除文件" class="headerlink" title="三、增加/删除文件"></a>三、增加/删除文件</h2><ul>
+<li><p>添加指定文件到暂存区</p>
+<blockquote>
+<p>$ git add [file1] [file2] …</p>
+</blockquote>
+</li>
+<li><p>添加指定目录到暂存区，包括子目录</p>
+<blockquote>
+<p>$ git add [dir]</p>
+</blockquote>
+</li>
+<li><p>添加当前目录的所有文件到暂存区</p>
+<blockquote>
+<p>$ git add .</p>
+</blockquote>
+</li>
+<li><p>添加每个变化前，都会要求确认</p>
+</li>
+<li><p>对于同一个文件的多处变化，可以实现分次提交</p>
+<blockquote>
+<p>$ git add -p</p>
+</blockquote>
+</li>
+<li><p>删除工作区文件，并且将这次删除放入暂存区</p>
+<blockquote>
+<p>$ git rm [file1] [file2] …</p>
+</blockquote>
+</li>
+<li><p>停止追踪指定文件，但该文件会保留在工作区</p>
+<blockquote>
+<p>$ git rm –cached [file]</p>
+</blockquote>
+</li>
+<li><p>改名文件，并且将这个改名放入暂存区</p>
+<blockquote>
+<p>$ git mv [file-original] [file-renamed]</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="四、代码提交"><a href="#四、代码提交" class="headerlink" title="四、代码提交"></a>四、代码提交</h2><ul>
+<li><p>提交暂存区到仓库区</p>
+<blockquote>
+<p>$ git commit -m [message]</p>
+</blockquote>
+</li>
+<li><p>提交暂存区的指定文件到仓库区</p>
+<blockquote>
+<p>$ git commit [file1] [file2] … -m [message]</p>
+</blockquote>
+</li>
+<li><p>提交工作区自上次commit之后的变化，直接到仓库区</p>
+<blockquote>
+<p>$ git commit -a</p>
+</blockquote>
+</li>
+<li><p>提交时显示所有diff信息</p>
+<blockquote>
+<p>$ git commit -v</p>
+</blockquote>
+</li>
+<li><p>使用一次新的commit，替代上一次提交</p>
+</li>
+<li><p>如果代码没有任何新变化，则用来改写上一次commit的提交信息<br>git commit –amend -m [message]</p>
+</li>
+<li><p>重做上一次commit，并包括指定文件的新变化</p>
+<blockquote>
+<p>$ git commit –amend [file1] [file2] …</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="五、分支"><a href="#五、分支" class="headerlink" title="五、分支"></a>五、分支</h2><ul>
+<li><p>列出所有本地分支</p>
+<blockquote>
+<p>$ git branch</p>
+</blockquote>
+</li>
+<li><p>列出所有远程分支</p>
+<blockquote>
+<p>$ git branch -r</p>
+</blockquote>
+</li>
+<li><p>列出所有本地分支和远程分支</p>
+<blockquote>
+<p>$ git branch -a</p>
+</blockquote>
+</li>
+<li><p>新建一个分支，但依然停留在当前分支</p>
+<blockquote>
+<p>$ git branch [branch-name]</p>
+</blockquote>
+</li>
+<li><p>新建一个分支，并切换到该分支</p>
+<blockquote>
+<p>$ git checkout -b [branch]</p>
+</blockquote>
+</li>
+<li><p>新建一个分支，指向指定commit</p>
+<blockquote>
+<p>$ git branch [branch] [commit]</p>
+</blockquote>
+</li>
+<li><p>新建一个分支，与指定的远程分支建立追踪关系</p>
+<blockquote>
+<p>$ git branch –track [branch] [remote-branch]</p>
+</blockquote>
+</li>
+<li><p>切换到指定分支，并更新工作区</p>
+<blockquote>
+<p>$ git checkout [branch-name]</p>
+</blockquote>
+</li>
+<li><p>切换到上一个分支</p>
+<blockquote>
+<p>$ git checkout -</p>
+</blockquote>
+</li>
+<li><p>建立追踪关系，在现有分支与指定的远程分支之间</p>
+<blockquote>
+<p>$ git branch –set-upstream [branch] [remote-branch]</p>
+</blockquote>
+</li>
+<li><p>合并指定分支到当前分支</p>
+<blockquote>
+<p>$ git merge [branch]</p>
+</blockquote>
+</li>
+<li><p>选择一个commit，合并进当前分支</p>
+<blockquote>
+<p>$ git cherry-pick [commit]</p>
+</blockquote>
+</li>
+<li><p>删除分支</p>
+<blockquote>
+<p>$ git branch -d [branch-name]</p>
+</blockquote>
+</li>
+<li><p>删除远程分支</p>
+<blockquote>
+<p>$ git push origin –delete [branch-name]<br>$ git branch -dr [remote/branch]</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="六、标签"><a href="#六、标签" class="headerlink" title="六、标签"></a>六、标签</h2><ul>
+<li><p>列出所有tag</p>
+<blockquote>
+<p>$ git tag</p>
+</blockquote>
+</li>
+<li><p>新建一个tag在当前commit</p>
+<blockquote>
+<p>$ git tag [tag]</p>
+</blockquote>
+</li>
+<li><p>新建一个tag在指定commit</p>
+<blockquote>
+<p>$ git tag [tag] [commit]</p>
+</blockquote>
+</li>
+<li><p>删除本地tag</p>
+<blockquote>
+<p>$ git tag -d [tag]</p>
+</blockquote>
+</li>
+<li><p>删除远程tag</p>
+<blockquote>
+<p>$ git push origin :refs/tags/[tagName]</p>
+</blockquote>
+</li>
+<li><p>查看tag信息</p>
+<blockquote>
+<p>$ git show [tag]</p>
+</blockquote>
+</li>
+<li><p>提交指定tag</p>
+<blockquote>
+<p>$ git push [remote] [tag]</p>
+</blockquote>
+</li>
+<li><p>提交所有tag</p>
+<blockquote>
+<p>$ git push [remote] –tags</p>
+</blockquote>
+</li>
+<li><p>新建一个分支，指向某个tag</p>
+<blockquote>
+<p>$ git checkout -b [branch] [tag]</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="七、查看信息"><a href="#七、查看信息" class="headerlink" title="七、查看信息"></a>七、查看信息</h2><ul>
+<li><p>显示有变更的文件</p>
+<blockquote>
+<p>$ git status</p>
+</blockquote>
+</li>
+<li><p>显示当前分支的版本历史</p>
+<blockquote>
+<p>$ git log</p>
+</blockquote>
+</li>
+<li><p>显示commit历史，以及每次commit发生变更的文件</p>
+<blockquote>
+<p>$ git log –stat</p>
+</blockquote>
+</li>
+<li><p>搜索提交历史，根据关键词</p>
+<blockquote>
+<p>$ git log -S [keyword]</p>
+</blockquote>
+</li>
+<li><p>显示某个commit之后的所有变动，每个commit占据一行</p>
+<blockquote>
+<p>$ git log [tag] HEAD –pretty=format:%s</p>
+</blockquote>
+</li>
+<li><p>显示某个commit之后的所有变动，其”提交说明”必须符合搜索条件</p>
+<blockquote>
+<p>$ git log [tag] HEAD –grep feature</p>
+</blockquote>
+</li>
+<li><p>显示某个文件的版本历史，包括文件改名</p>
+<blockquote>
+<p>$ git log –follow [file]<br>$ git whatchanged [file]</p>
+</blockquote>
+</li>
+<li><p>显示指定文件相关的每一次diff</p>
+<blockquote>
+<p>$ git log -p [file]</p>
+</blockquote>
+</li>
+<li><p>显示过去5次提交</p>
+<blockquote>
+<p>$ git log -5 –pretty –oneline</p>
+</blockquote>
+</li>
+<li><p>显示所有提交过的用户，按提交次数排序</p>
+<blockquote>
+<p>$ git shortlog -sn</p>
+</blockquote>
+</li>
+<li><p>显示指定文件是什么人在什么时间修改过</p>
+<blockquote>
+<p>$ git blame [file]</p>
+</blockquote>
+</li>
+<li><p>显示暂存区和工作区的差异</p>
+<blockquote>
+<p>$ git diff</p>
+</blockquote>
+</li>
+<li><p>显示暂存区和上一个commit的差异</p>
+<blockquote>
+<p>$ git diff –cached [file]</p>
+</blockquote>
+</li>
+<li><p>显示工作区与当前分支最新commit之间的差异</p>
+<blockquote>
+<p>$ git diff HEAD</p>
+</blockquote>
+</li>
+<li><p>显示两次提交之间的差异</p>
+<blockquote>
+<p>$ git diff [first-branch]…[second-branch]</p>
+</blockquote>
+</li>
+<li><p>显示今天你写了多少行代码</p>
+<blockquote>
+<p>$ git diff –shortstat “@{0 day ago}”</p>
+</blockquote>
+</li>
+<li><p>显示某次提交的元数据和内容变化</p>
+<blockquote>
+<p>$ git show [commit]</p>
+</blockquote>
+</li>
+<li><p>显示某次提交发生变化的文件</p>
+<blockquote>
+<p>$ git show –name-only [commit]</p>
+</blockquote>
+</li>
+<li><p>显示某次提交时，某个文件的内容</p>
+<blockquote>
+<p>$ git show [commit]:[filename]</p>
+</blockquote>
+</li>
+<li><p>显示当前分支的最近几次提交</p>
+<blockquote>
+<p>$ git reflog</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="八、远程同步"><a href="#八、远程同步" class="headerlink" title="八、远程同步"></a>八、远程同步</h2><ul>
+<li><p>下载远程仓库的所有变动</p>
+<blockquote>
+<p>$ git fetch [remote]</p>
+</blockquote>
+</li>
+<li><p>显示所有远程仓库</p>
+<blockquote>
+<p>$ git remote -v</p>
+</blockquote>
+</li>
+<li><p>显示某个远程仓库的信息</p>
+<blockquote>
+<p>$ git remote show [remote]</p>
+</blockquote>
+</li>
+<li><p>增加一个新的远程仓库，并命名</p>
+<blockquote>
+<p>$ git remote add [shortname] [url]</p>
+</blockquote>
+</li>
+<li><p>取回远程仓库的变化，并与本地分支合并</p>
+<blockquote>
+<p>$ git pull [remote] [branch]</p>
+</blockquote>
+</li>
+<li><p>上传本地指定分支到远程仓库</p>
+<blockquote>
+<p>$ git push [remote] [branch]</p>
+</blockquote>
+</li>
+<li><p>强行推送当前分支到远程仓库，即使有冲突</p>
+<blockquote>
+<p>$ git push [remote] –force</p>
+</blockquote>
+</li>
+<li><p>推送所有分支到远程仓库</p>
+<blockquote>
+<p>$ git push [remote] –all</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="九、撤销"><a href="#九、撤销" class="headerlink" title="九、撤销"></a>九、撤销</h2><ul>
+<li><p>恢复暂存区的指定文件到工作区</p>
+<blockquote>
+<p>$ git checkout [file]</p>
+</blockquote>
+</li>
+<li><p>恢复某个commit的指定文件到暂存区和工作区</p>
+<blockquote>
+<p>$ git checkout [commit] [file]</p>
+</blockquote>
+</li>
+<li><p>恢复暂存区的所有文件到工作区</p>
+<blockquote>
+<p>$ git checkout .</p>
+</blockquote>
+</li>
+<li><p>重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</p>
+<blockquote>
+<p>$ git reset [file]</p>
+</blockquote>
+</li>
+<li><p>重置暂存区与工作区，与上一次commit保持一致</p>
+<blockquote>
+<p>$ git reset –hard</p>
+</blockquote>
+</li>
+<li><p>重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</p>
+<blockquote>
+<p>$ git reset [commit]</p>
+</blockquote>
+</li>
+<li><p>重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</p>
+<blockquote>
+<p>$ git reset –hard [commit]</p>
+</blockquote>
+</li>
+<li><p>重置当前HEAD为指定commit，但保持暂存区和工作区不变</p>
+<blockquote>
+<p>$ git reset –keep [commit]</p>
+</blockquote>
+</li>
+<li><p>新建一个commit，用来撤销指定commit</p>
+</li>
+<li><p>后者的所有变化都将被前者抵消，并且应用到当前分支</p>
+<blockquote>
+<p>$ git revert [commit]</p>
+</blockquote>
+</li>
+<li><p>暂时将未提交的变化移除，稍后再移入</p>
+<blockquote>
+<p>$ git stash<br>$ git stash pop</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="十、其他"><a href="#十、其他" class="headerlink" title="十、其他"></a>十、其他</h2><ul>
+<li>生成一个可供发布的压缩包<blockquote>
+<p>$ git archive</p>
+</blockquote>
+</li>
+</ul>
 
       
+	  
+	  
+	  
+	  
 
       
         <div class="page-reward">
@@ -273,7 +714,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">TOMCAT</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
         		</li>
       		
 		</ul>
@@ -329,7 +770,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.ronglexie.top/2017/09/23/2017-09-23.tomcat_green_version_conf/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.ronglexie.top/2017/26f59cd9.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -338,23 +779,24 @@
       <div class="clearfix"></div>
     </div>
   </div>
+  
 </article>
 
   
 <nav id="article-nav">
   
-    <a href="/2017/09/23/2017-09-23.common_git_commands/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/2673a147.html" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          常用 Git 命令清单
+          常见HTTP/FTP/WebSocket错误代码大全
         
       </div>
     </a>
   
   
-    <a href="/2017/09/20/2017-09-20.hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+    <a href="/2017/990df956.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">绿色版Tomcat制作</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -381,7 +823,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、setclasspath-bat文件添加"><span class="toc-number">1.</span> <span class="toc-text">一、setclasspath.bat文件添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、新建startup-bat"><span class="toc-number">2.</span> <span class="toc-text">二、新建startup.bat</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、新建代码库"><span class="toc-number">1.</span> <span class="toc-text">一、新建代码库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、配置"><span class="toc-number">2.</span> <span class="toc-text">二、配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、增加-删除文件"><span class="toc-number">3.</span> <span class="toc-text">三、增加/删除文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、代码提交"><span class="toc-number">4.</span> <span class="toc-text">四、代码提交</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、分支"><span class="toc-number">5.</span> <span class="toc-text">五、分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、标签"><span class="toc-number">6.</span> <span class="toc-text">六、标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#七、查看信息"><span class="toc-number">7.</span> <span class="toc-text">七、查看信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#八、远程同步"><span class="toc-number">8.</span> <span class="toc-text">八、远程同步</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#九、撤销"><span class="toc-number">9.</span> <span class="toc-text">九、撤销</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#十、其他"><span class="toc-number">10.</span> <span class="toc-text">十、其他</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -395,7 +837,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2017-09-23.tomcat_green_version_conf" data-title="绿色版Tomcat制作" data-url="http://www.ronglexie.top/2017/09/23/2017-09-23.tomcat_green_version_conf/"></div>
+	<div class="ds-thread" data-thread-key="2017-09-23.common_git_commands" data-title="常用 Git 命令清单" data-url="http://www.ronglexie.top/2017/26f59cd9.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -426,7 +868,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://www.ronglexie.top/2017/09/23/2017-09-23.tomcat_green_version_conf/",
+  id: "http://www.ronglexie.top/2017/26f59cd9.html",
   owner: 'ronglexie',
   repo: 'ronglexie.github.io',
   oauth: {
@@ -536,11 +978,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TOMCAT</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color2">TOMCAT</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -573,22 +1015,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搜索引擎</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Scrapy</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -641,6 +1067,22 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">MESI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">爬虫</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搜索引擎</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Scrapy</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
             
             <div class="clearfix"></div>
