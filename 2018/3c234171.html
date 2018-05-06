@@ -8,14 +8,13 @@
   <link rel="dns-prefetch" href="http://www.ronglexie.top">
   <title>Scrapy分布式爬虫打造搜索引擎- 系列完整版《转》 | 世界因你而精彩|RongleXie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基于Scrapy、Redis、elasticsearch和django打造一个完整的搜索引擎网站 本教程一共八章：从零开始，直到搭建一个搜索引擎。 项目github代码地址：https://github.com/ronglexie/ArticleSpider">
-<meta name="keywords" content="爬虫,搜索引擎,Scrapy,Python">
+  <meta name="keywords" content="爬虫,搜索引擎,Scrapy,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Scrapy分布式爬虫打造搜索引擎- 系列完整版《转》">
 <meta property="og:url" content="http://www.ronglexie.top/2018/3c234171.html">
 <meta property="og:site_name" content="世界因你而精彩|RongleXie">
-<meta property="og:description" content="基于Scrapy、Redis、elasticsearch和django打造一个完整的搜索引擎网站 本教程一共八章：从零开始，直到搭建一个搜索引擎。 项目github代码地址：https://github.com/ronglexie/ArticleSpider">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p8aniiqlp.bkt.clouddn.com/240166348.jpg">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1779926-d0f10707f0b49b08.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1779926-b46e91f577c5bf6a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1779926-e3b33dc61bc8ab3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -48,11 +47,10 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1779926-1604a12ed995ea8d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1779926-1c550de187cbf9f6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1779926-9608d37c848236d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2018-03-30T04:46:43.613Z">
+<meta property="og:updated_time" content="2018-05-06T08:55:04.121Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Scrapy分布式爬虫打造搜索引擎- 系列完整版《转》">
-<meta name="twitter:description" content="基于Scrapy、Redis、elasticsearch和django打造一个完整的搜索引擎网站 本教程一共八章：从零开始，直到搭建一个搜索引擎。 项目github代码地址：https://github.com/ronglexie/ArticleSpider">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1779926-d0f10707f0b49b08.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="http://p8aniiqlp.bkt.clouddn.com/240166348.jpg">
   
     <link rel="alternative" href="/atom.xml" title="世界因你而精彩|RongleXie" type="application/atom+xml">
   
@@ -276,10 +274,11 @@ var _hmt = _hmt || [];
 	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p>基于Scrapy、Redis、elasticsearch和django打造一个完整的搜索引擎网站</p>
+        <p><img src="http://p8aniiqlp.bkt.clouddn.com/240166348.jpg" alt=""></p>
+<a id="more"></a>
+<p>基于Scrapy、Redis、elasticsearch和django打造一个完整的搜索引擎网站</p>
 <p>本教程一共八章：从零开始，直到搭建一个搜索引擎。</p>
 <p>项目github代码地址：<a href="https://github.com/ronglexie/ArticleSpider" target="_blank" rel="external">https://github.com/ronglexie/ArticleSpider</a></p>
-<a id="more"></a>
 <p>未来是什么时代？是数据时代！数据分析服务、互联网金融，数据建模、自然语言处理、医疗病例分析……越来越多的工作会基于数据来做，而爬虫正是快速获取数据最重要的方式，相比其它语言，Python爬虫更简单、高效</p>
 <h2 id="一、基础知识学习"><a href="#一、基础知识学习" class="headerlink" title="一、基础知识学习:"></a>一、基础知识学习:</h2><h3 id="1-爬取策略的深度优先和广度优先"><a href="#1-爬取策略的深度优先和广度优先" class="headerlink" title="1. 爬取策略的深度优先和广度优先"></a>1. 爬取策略的深度优先和广度优先</h3><p>目录：</p>
 <blockquote>
