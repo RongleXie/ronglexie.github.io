@@ -281,7 +281,7 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<h2 id="CPU多级缓存-缓存一致性协议（MESI-Modify-Modify-Exclusive-Share-Invalid）"><a href="#CPU多级缓存-缓存一致性协议（MESI-Modify-Modify-Exclusive-Share-Invalid）" class="headerlink" title="CPU多级缓存-缓存一致性协议（MESI|Modify|Modify|Exclusive|Share|Invalid）"></a>CPU多级缓存-缓存一致性协议（MESI|Modify|Modify|Exclusive|Share|Invalid）</h2><p>MESI（Modified Exclusive Shared Or Invalid）(也称为伊利诺斯协议，是因为该协议由伊利诺斯州立大学提出）是一种广泛使用的支持写回策略的缓存一致性协议，该协议被应用在Intel奔腾系列的CPU中，详见“support the more efficient write-back cache in addition to the <a href="http://en.wikipedia.org/wiki/Write-through" target="_blank" rel="external">write-through</a> cache previously used by the Intel 486 processor”。</p>
+<h2 id="CPU多级缓存-缓存一致性协议（MESI-Modify-Modify-Exclusive-Share-Invalid）"><a href="#CPU多级缓存-缓存一致性协议（MESI-Modify-Modify-Exclusive-Share-Invalid）" class="headerlink" title="CPU多级缓存-缓存一致性协议（MESI|Modify|Modify|Exclusive|Share|Invalid）"></a>CPU多级缓存-缓存一致性协议（MESI|Modify|Modify|Exclusive|Share|Invalid）</h2><p>MESI（Modified Exclusive Shared Or Invalid）(也称为伊利诺斯协议，是因为该协议由伊利诺斯州立大学提出）是一种广泛使用的支持写回策略的缓存一致性协议，该协议被应用在Intel奔腾系列的CPU中，详见“support the more efficient write-back cache in addition to the <a href="http://en.wikipedia.org/wiki/Write-through" target="_blank" rel="noopener">write-through</a> cache previously used by the Intel 486 processor”。</p>
 <h3 id="MESI协议中的状态"><a href="#MESI协议中的状态" class="headerlink" title="MESI协议中的状态"></a>MESI协议中的状态</h3><p>CPU中每个缓存行（caceh line)使用4种状态进行标记（使用额外的两位(bit)表示):</p>
 <blockquote>
 <ul>
@@ -325,7 +325,7 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <p>例如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">a=<span class="number">10</span>;</div><div class="line">b=<span class="number">200</span>;</div><div class="line">result=a*b;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">10</span>;</span><br><span class="line">b=<span class="number">200</span>;</span><br><span class="line">result=a*b;</span><br></pre></td></tr></table></figure>
 <p>它们之间的依赖关系如图：</p>
 <p><img src="/assets/img/concurrency/乱序执行优化1.png" alt="乱序执行优化1"></p>
 <p>由于a=10和b=200之间不存在依赖关系,因此编译器或处理可以这两两个操作进行重排,因此最终执行顺序可能有以下两种情况：</p>
@@ -881,14 +881,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TOMCAT</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
               </li>
              
@@ -901,7 +893,19 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TOMCAT</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -914,10 +918,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
