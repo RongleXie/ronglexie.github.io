@@ -6,19 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.ronglexie.top">
-  <title>about | 世界因你而精彩|RongleXie</title>
+  <title>Git工作流程 | 世界因你而精彩|RongleXie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于我一只学习JAVA的小菜鸟，欢迎分享知识。 From CD QQ：252254002Email: 252254002@qq.com">
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://www.ronglexie.top/about/index.html">
+  <meta name="keywords" content="Git,工作流程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git工作流程">
+<meta property="og:url" content="http://www.ronglexie.top/2018/c89fc486.html">
 <meta property="og:site_name" content="世界因你而精彩|RongleXie">
-<meta property="og:description" content="关于我一只学习JAVA的小菜鸟，欢迎分享知识。 From CD QQ：252254002Email: 252254002@qq.com">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-21T06:27:46.051Z">
+<meta property="og:image" content="http://p8aniiqlp.bkt.clouddn.com/89134424.jpg">
+<meta property="og:image" content="http://p8aniiqlp.bkt.clouddn.com/git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.jpg">
+<meta property="og:image" content="http://p8aniiqlp.bkt.clouddn.com/git%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93.png">
+<meta property="og:updated_time" content="2018-09-08T13:07:54.080Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
-<meta name="twitter:description" content="关于我一只学习JAVA的小菜鸟，欢迎分享知识。 From CD QQ：252254002Email: 252254002@qq.com">
+<meta name="twitter:title" content="Git工作流程">
+<meta name="twitter:image" content="http://p8aniiqlp.bkt.clouddn.com/89134424.jpg">
   
     <link rel="alternative" href="/atom.xml" title="世界因你而精彩|RongleXie" type="application/atom+xml">
   
@@ -190,20 +192,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-2018-04-22.git_work_process" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      about
+      Git工作流程
     </h1>
   
 
         
-        <a href="/about/index.html" class="archive-article-date">
-  	<time datetime="2017-09-21T06:26:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-21</time>
+        <a href="/2018/c89fc486.html" class="archive-article-date">
+  	<time datetime="2018-04-22T08:48:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-22</time>
 </a>
         
 	
@@ -214,17 +216,320 @@ var _hmt = _hmt || [];
       </header>
     
 	<!-- 目录内容 -->
+	
+		<p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+		<span class="btn-bg"></span>
+		<span class="btn-text">文章导航</span>
+		</p>
+		<div id="toc-article" class="toc-article">
+			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+			<strong class="toc-title">文章目录</strong>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git工作流程"><span class="toc-number">1.</span> <span class="toc-text">Git工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-工作区、暂存区和版本库"><span class="toc-number">2.</span> <span class="toc-text">Git 工作区、暂存区和版本库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git命令"><span class="toc-number">3.</span> <span class="toc-text">Git命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目初始化"><span class="toc-number">4.</span> <span class="toc-text">项目初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单分支开发"><span class="toc-number">5.</span> <span class="toc-text">单分支开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-git-fetch-git-rebase-———-版本开发标准"><span class="toc-number">5.1.</span> <span class="toc-text">1.git fetch + git rebase  ——— (版本开发标准)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-git-pull-git-rebase"><span class="toc-number">5.1.0.1.</span> <span class="toc-text">2.git pull + git rebase</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单人单分支开发"><span class="toc-number">6.</span> <span class="toc-text">单人单分支开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多分支开发-——-重点理解"><span class="toc-number">7.</span> <span class="toc-text">多分支开发 —— 重点理解</span></a></li></ol>
+	   </div>
+	   <script type="text/javascript">
+		function showToc(){
+			var toc_article = document.getElementById("toc-article");
+			var show_toc_btn = document.getElementById("show-toc-btn");
+			toc_article.setAttribute("style","display:block");
+			show_toc_btn.setAttribute("style","display:none");
+			};
+		function showBtn(){
+			var toc_article = document.getElementById("toc-article");
+			var show_toc_btn = document.getElementById("show-toc-btn");
+			toc_article.setAttribute("style","display:none");
+			show_toc_btn.setAttribute("style","display:block");
+			};
+	   </script>
 	     
 	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>一只学习JAVA的小菜鸟，欢迎分享知识。</p>
-<p>From CD</p>
-<p>QQ：252254002<br>Email: 252254002@qq.com</p>
+        <p><img src="http://p8aniiqlp.bkt.clouddn.com/89134424.jpg" alt=""></p>
+<a id="more"></a>
+<h2 id="Git工作流程"><a href="#Git工作流程" class="headerlink" title="Git工作流程"></a>Git工作流程</h2><p>一般工作流程如下：</p>
+<ul>
+<li>克隆 Git 资源作为工作目录。</li>
+<li>在克隆的资源上添加或修改文件。</li>
+<li>如果其他人修改了，你可以更新资源。</li>
+<li>在提交前查看修改。</li>
+<li>提交修改。</li>
+<li>在修改完成后，如果发现错误，可以撤回提交并再次修改并提交。</li>
+</ul>
+<p><img src="http://p8aniiqlp.bkt.clouddn.com/git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.jpg" alt="Git工作流程"></p>
+<p><br></p>
+<h2 id="Git-工作区、暂存区和版本库"><a href="#Git-工作区、暂存区和版本库" class="headerlink" title="Git 工作区、暂存区和版本库"></a>Git 工作区、暂存区和版本库</h2><ul>
+<li>工作区：就是你在电脑里能看到的目录。</li>
+<li>暂存区：一般存放在 “.git目录下”下的index文件（.git/index）中，所以我们把暂存区有时也叫作索引（index）。</li>
+<li>版本库：工作区有一个隐藏目录.git，这个不算工作区，而是Git的版本库。</li>
+</ul>
+<p><img src="http://p8aniiqlp.bkt.clouddn.com/git%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93.png" alt="Git 工作区、暂存区和版本库"></p>
+<ul>
+<li><ul>
+<li>执行 “git add” 命令时，暂存区的目录树被更新，同时工作区修改（或新增）的文件内容被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。</li>
+<li>执行提交操作（git commit）时，暂存区的目录树写到版本库（对象库）中，master 分支会做相应的更新。</li>
+<li>执行 “git reset HEAD” 命令时，暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响。</li>
+<li>执行 “git rm –cached <file>“ 命令时，会直接从暂存区删除文件，工作区则不做出改变。</file></li>
+<li>执行 “git checkout .” 或者 “git checkout – <file>“ 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区的改动。</file></li>
+<li>执行 “git checkout HEAD .” 或者 “git checkout HEAD <file>“ 命令时，会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的.</file></li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<h2 id="Git命令"><a href="#Git命令" class="headerlink" title="Git命令"></a>Git命令</h2><p><a href="https://git-scm.com/docs" target="_blank" rel="noopener">Git官方文档</a></p>
+<p><a href="http://www.runoob.com/git/git-basic-operations.html" target="_blank" rel="noopener">Git使用指南</a></p>
+<p><a href="http://blog.csdn.net/wh_19910525/article/details/7554489" target="_blank" rel="noopener">git rebase 和 git merge</a></p>
+<ol>
+<li>创建仓库：git init</li>
+<li>克隆远程代码：git clone -b &lt;分支名&gt; &lt;代码库地址&gt;</li>
+<li>添加到暂存区：git add <filename> 或者git add -A(add全部修改)</filename></li>
+<li>提交到本地库：git commit -m “tag”</li>
+<li>提交到远程库：git push origin &lt;本地分支&gt;:&lt;远程分支&gt;</li>
+<li>连接远程服务器：git remote add origin &lt;远程服务器地址&gt;</li>
+<li>分支管理<ul>
+<li>新建分支：git branch &lt;分支名&gt; 或者 git checkout -b &lt;分支名&gt;</li>
+<li>切换分支：git checkout &lt;分支名&gt;</li>
+<li>删除本地分支：git branch -d(-D) &lt;分支名&gt;（-D：强制删除）</li>
+<li>删除远程分支：git push origin –delete &lt;分支名&gt; 或者 git push origin :&lt;分支名&gt;（推送一个空分支）</li>
+<li>查看本地分支：git branch</li>
+<li>查看所有分支：git branch -a</li>
+<li>查看本地分支和远程分支的关联情况：git branch -vv</li>
+<li>合并分支：git merge &lt;分支名&gt; 或者 git rebase &lt;分支名&gt;</li>
+</ul>
+</li>
+<li>获取最新改动：git pull 或者 git fetch 或者 git pull &lt;远程库名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</li>
+<li>删除修改：<ul>
+<li>未add到暂存区：git checkout – <filename> 或者 git checkout .</filename></li>
+<li>已add到暂存区：git reset HEAD <filename> 然后再执行未add的暂存区的步骤</filename></li>
+<li>已commit到本地库：git reset –hard <commit_id> 或者 git reset –hard HEAD^(有几个^就回退几个版本)<blockquote>
+<p>git revert 是生成一个新的提交来撤销某次提交，此次提交之前的commit都会被保留<br>git reset 是回到某次提交，提交及之前的commit都会被保留，但是此次之后的修改都会被退回到暂存区</p>
+</blockquote>
+</commit_id></li>
+</ul>
+</li>
+<li>stash<ul>
+<li>暂存本地修改：git stash</li>
+<li>查看暂存：git stash list</li>
+<li>恢复暂存：git stash apply <name> 或者 git stash pop（恢复最近一次暂存）</name></li>
+<li>清除暂存：git stash clear</li>
+</ul>
+</li>
+<li>tag<ul>
+<li>打标签：git tag -a <tagname> -m “注释”</tagname></li>
+<li>查看标签：git tag 或者 git tag -l</li>
+<li>删除标签：git tag -d <tagname></tagname></li>
+<li>提交标签到远程库：git push origin <tagname> 或者 git push origin –tags</tagname></li>
+<li>删除远程标签：git push origin :&lt;远程tagName&gt;</li>
+<li>切换到某个标签代码：git checkout -b &lt;分支名&gt; <tagname></tagname></li>
+</ul>
+</li>
+</ol>
+<p><br></p>
+<h2 id="项目初始化"><a href="#项目初始化" class="headerlink" title="项目初始化"></a>项目初始化</h2><ul>
+<li>创建项目</li>
+</ul>
+<ol>
+<li>mkdir wxgh – 创建本地文件夹</li>
+<li>cd wxgh – 进入到本地文件夹</li>
+<li>git init – 初始化本地git库</li>
+<li>touch README.md – 添加本地文件</li>
+<li>git add README.md – add到缓存区（git add -A add全部修改）</li>
+<li>git commit -m “first commit” – 提交到本地git库</li>
+<li>git remote add origin <a href="http://192.168.2.96/root/wxgh.git" target="_blank" rel="noopener">http://192.168.2.96/root/wxgh.git</a> – 关联远程git库地址</li>
+<li>git push -u origin master – 提交到远程分支<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git init]</span><br><span class="line">B --&gt; C[git add -A]</span><br><span class="line">C --&gt; D[git commit -m tag]</span><br><span class="line">D --&gt; E[git remote add origin https://.......git]</span><br><span class="line">E --&gt; F[git push -u origin master]</span><br><span class="line">F --&gt; G[End]</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>添加已有项目  </li>
+</ul>
+<ol>
+<li>cd existing_git_repo  </li>
+<li>git remote add origin <a href="http://192.168.2.96/root/wxgh.git" target="_blank" rel="noopener">http://192.168.2.96/root/wxgh.git</a>  </li>
+<li>git push -u origin master<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git remote add origin https://.......git]</span><br><span class="line">B --&gt; C[git push -u origin master]</span><br><span class="line">C --&gt; D[End]</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>拉取已有项目<br>git clone -b master <a href="http://192.168.2.96/root/wxgh.git" target="_blank" rel="noopener">http://192.168.2.96/root/wxgh.git</a></li>
+</ul>
+<p><br></p>
+<h2 id="单分支开发"><a href="#单分支开发" class="headerlink" title="单分支开发"></a>单分支开发</h2><h3 id="1-git-fetch-git-rebase-———-版本开发标准"><a href="#1-git-fetch-git-rebase-———-版本开发标准" class="headerlink" title="1.git fetch + git rebase  ——— (版本开发标准)"></a>1.git fetch + git rebase  ——— (版本开发标准)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git add -A]</span><br><span class="line">B --&gt; C[git commit -m tag]</span><br><span class="line">C --&gt; D[git fetch]</span><br><span class="line">D --&gt; E&#123;git rebase origin/master&#125;</span><br><span class="line">E --&gt; |true| F[git push origin master:master]</span><br><span class="line">E --&gt; |false| G[Solve conflict]</span><br><span class="line">G --&gt; H[git add -A]</span><br><span class="line">H --&gt; I[git rebase --contione]</span><br><span class="line">I --&gt; F</span><br><span class="line">F --&gt; J((End))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>分支模型：master –&gt; origin/master</p>
+</blockquote>
+<h5 id="2-git-pull-git-rebase"><a href="#2-git-pull-git-rebase" class="headerlink" title="2.git pull + git rebase"></a>2.git pull + git rebase</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git add -A]</span><br><span class="line">B --&gt; C[git commit -m tag]</span><br><span class="line">C --&gt; D[git checkout master]</span><br><span class="line">D --&gt; E[git pull]</span><br><span class="line">E --&gt; F[git checkout dev]</span><br><span class="line">F --&gt; G&#123;git rebase master&#125;</span><br><span class="line">G --&gt; |true| H(git push origin dev:master)</span><br><span class="line">G --&gt; |false| I[Solve conflict]</span><br><span class="line">I --&gt; J[git add -A]</span><br><span class="line">J --&gt; K[git rebase --continue]</span><br><span class="line">K --&gt; H</span><br><span class="line">H --&gt; L((End))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>分支模型：<br>master(本地) –&gt; origin/master(远程)<br>dev(本地开发)</p>
+</blockquote>
+<p><br></p>
+<h2 id="单人单分支开发"><a href="#单人单分支开发" class="headerlink" title="单人单分支开发"></a>单人单分支开发</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B(git pull)</span><br><span class="line">B --&gt; C[git add -A]</span><br><span class="line">C --&gt; D[git commit -m tag]</span><br><span class="line">D --&gt; E[git push origin master:master]</span><br><span class="line">E --&gt; F(git pull)</span><br><span class="line">F --&gt; G((End))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注：git pull可以在修改前也可以在修改后，但至少保证有一次这样的操作。（单人多机器开发）</p>
+</blockquote>
+<p><br></p>
+<h2 id="多分支开发-——-重点理解"><a href="#多分支开发-——-重点理解" class="headerlink" title="多分支开发 —— 重点理解"></a>多分支开发 —— 重点理解</h2><ul>
+<li>模型<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    master--&gt;&gt;dev1:checkout</span><br><span class="line">    dev1-&gt;&gt;master:merge</span><br><span class="line">    master--&gt;&gt;dev2:checkout</span><br><span class="line">    dev2-&gt;&gt;master:merge</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<ol>
+<li>上面部分为远程分支，下面部分为本地分支</li>
+<li>master为基准分支，dev1、dev2均为从master上checkout出来的功能分支</li>
+<li>所有的git提交均为纵向的，不允许交叉提交</li>
+<li>分支合并均在本地merge后再提交到远程分支，不允许直接合并远程分支</li>
+<li><strong>纵向“变基”使用git rebase，横向合并分支使用git merge，切记！切记！</strong></li>
+</ol>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git fetch]</span><br><span class="line">B --&gt; C[git rebase origin/master]</span><br><span class="line">C --&gt; D[git merge dev1]</span><br><span class="line">D --&gt; |true| E[git push origin master:master]</span><br><span class="line">D --&gt; |false| F[Solve Conflict]</span><br><span class="line">F --&gt; G[git add -A]</span><br><span class="line">G --&gt; H[git merge --continue]</span><br><span class="line">H --&gt; E</span><br><span class="line">E --&gt; I((End))</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<ul>
+<li>新建功能分支并推送到远程Git库保存</li>
+</ul>
+<ol>
+<li>新建分支并建立关联</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git checkout -b temp_dev]</span><br><span class="line">B --&gt; C[git add -A]</span><br><span class="line">C --&gt; D[git commit -m tag]</span><br><span class="line">D --&gt; E[git push --set-upstream origin temp]</span><br><span class="line">E --&gt; F[git pull]</span><br><span class="line">F --&gt; G((End))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<ol>
+<li>temp_dev：本地新建开发分支</li>
+<li>temp：远程新建功能分支</li>
+<li>提交修改后或者修改前一定要记得<strong>git pull</strong>，养成这个良好的习惯能有效的减少冲突</li>
+</ol>
+</blockquote>
+<ol>
+<li>仅新建分支不建立关联<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git checkout -b temp_dev]</span><br><span class="line">B --&gt; C[git add -A]</span><br><span class="line">C --&gt; D[git commit -m tag]</span><br><span class="line">D --&gt; E[git push origin temp_dev:temp]</span><br><span class="line">E --&gt; G((End))</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><br></p>
+<ul>
+<li>拉取本地不存在的远程分支</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B&#123;git checkout -b pull_dev origin/pull&#125;</span><br><span class="line">B --&gt; |true| C((End))</span><br><span class="line">B --&gt; |false| D[git fetch]</span><br><span class="line">D --&gt; B</span><br></pre></td></tr></table></figure>
 
       
 	  
 	  
+	  
+		  <style>
+.article-footer-copyright{
+   border-top:1px solid #d3d3d3;
+   margin: 20px auto;     
+   padding-left:2em;
+   width: 80%;
+}
+.article-footer-copyright p{
+  font-size:1.2em;
+}
+.article-footer-copyright span,.copyright abbr{
+  color:#3d3d3d;
+}
+div.copyright{
+	
+     font-weight:bold;
+    color:#FCB297;
+       padding:0.3em 0.5em;
+       margin:0 0 1em 0;
+       border-bottom:none;
+       background-color:#AAD2F0;
+       -moz-border-radius: 1em;
+       -webkit-border-radius:1em;
+       border-radius: 1em;
+  -moz-box-shadow:inset 0px 1px 0px 0px #eeeeee;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #eeeeee;
+  box-shadow:inset 0px 1px 0px 0px #eeeeee;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed) );
+  background:-moz-linear-gradient( center top, #aad2f0 5%, #8bc1ed 100% );
+  /* filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#aad2f0', endColorstr='#8bc1ed'); */
+  background-color:#aad2f0;
+  border:1px solid #dcdcdc;
+  text-shadow:1px 1px 0px #eeeeee;
+  
+}
+div.article-footer-copyright{
+	margin-top:2em;
+	padding:1.0em;
+	border:1px solid #d3d3d3;
+	background-color:#DEEBF7;
+}
+.article-footer-copyright p{
+	line-height: 160%;
+	margin: 10px;
+	font-size: 100%;
+}
+
+.my_post_copyright {
+  width: 85%;
+  max-width: 45em;
+  margin: 2.8em auto 0;
+  padding: 0.5em 1.0em;
+  border: 1px solid #d3d3d3;
+  font-size: 0.93rem;
+  line-height: 1.6em;
+  word-break: break-all;
+  background: rgba(255,255,255,0.4);
+}
+.my_post_copyright p{margin:0;}
+.my_post_copyright span {
+  display: inline-block;
+  width: 5.2em;
+  color: #b5b5b5;
+  font-weight: bold;
+}
+.my_post_copyright .raw {
+  margin-left: 1em;
+  width: 5em;
+}
+.my_post_copyright a {
+  color: #808080;
+  border-bottom:0;
+}
+.my_post_copyright a:hover {
+  color: #a3d2a3;
+  text-decoration: underline;
+}
+.my_post_copyright:hover .fa-clipboard {
+  color: #000;
+}
+.my_post_copyright .post-url:hover {
+  font-weight: normal;
+}
+.my_post_copyright .copy-path {
+  margin-left: 1em;
+  width: 1em;
+  +mobile(){display:none;}
+}
+.my_post_copyright .copy-path:hover {
+  color: #808080;
+  cursor: pointer;
+}
+</style>
+<div class="article-footer-copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="">Git工作流程</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 RongleXie 的个人博客">RongleXie</a></p>
+  <p><span>发布时间:</span>2018-04-22 16:04:00</p>
+  <p><span>原始链接:</span><a href="" title="Git工作流程" >http://www.ronglexie.top/2018/c89fc486.html</a>
+		<span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.ronglexie.top/2018/c89fc486.html"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+        });
+    });  
+</script>
+
+
 	  
 	  
 
@@ -264,7 +569,33 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">工作流程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -314,7 +645,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://www.ronglexie.top/about/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://www.ronglexie.top/2018/c89fc486.html" alt="微信分享二维码">
     </div>
 </div>
 
@@ -327,6 +658,16 @@ var _hmt = _hmt || [];
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2018/67b19209.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">并发编程与高并发解决方案（一）：并发编程相关基础知识</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -341,6 +682,19 @@ var _hmt = _hmt || [];
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git工作流程"><span class="toc-number">1.</span> <span class="toc-text">Git工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-工作区、暂存区和版本库"><span class="toc-number">2.</span> <span class="toc-text">Git 工作区、暂存区和版本库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git命令"><span class="toc-number">3.</span> <span class="toc-text">Git命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目初始化"><span class="toc-number">4.</span> <span class="toc-text">项目初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单分支开发"><span class="toc-number">5.</span> <span class="toc-text">单分支开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-git-fetch-git-rebase-———-版本开发标准"><span class="toc-number">5.1.</span> <span class="toc-text">1.git fetch + git rebase  ——— (版本开发标准)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-git-pull-git-rebase"><span class="toc-number">5.1.0.1.</span> <span class="toc-text">2.git pull + git rebase</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单人单分支开发"><span class="toc-number">6.</span> <span class="toc-text">单人单分支开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多分支开发-——-重点理解"><span class="toc-number">7.</span> <span class="toc-text">多分支开发 —— 重点理解</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -351,7 +705,7 @@ var _hmt = _hmt || [];
   
 
   
-  <div id="SOHUCS" sid="" ></div> 
+  <div id="SOHUCS" sid="2018-04-22.git_work_process" ></div> 
 <script type="text/javascript"> 
 window.YiliaChangyanWrap = function() {
     var appid = "cytIfNV0j"; 
@@ -395,7 +749,7 @@ window.YiliaChangyanWrap = function() {
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
