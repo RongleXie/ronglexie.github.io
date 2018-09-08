@@ -17,7 +17,7 @@
 <meta property="og:image" content="http://p8aniiqlp.bkt.clouddn.com/89134424.jpg">
 <meta property="og:image" content="http://p8aniiqlp.bkt.clouddn.com/git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.jpg">
 <meta property="og:image" content="http://p8aniiqlp.bkt.clouddn.com/git%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93.png">
-<meta property="og:updated_time" content="2018-09-08T13:07:54.080Z">
+<meta property="og:updated_time" content="2018-09-08T13:18:09.235Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git工作流程">
 <meta name="twitter:image" content="http://p8aniiqlp.bkt.clouddn.com/89134424.jpg">
@@ -224,7 +224,7 @@ var _hmt = _hmt || [];
 		<div id="toc-article" class="toc-article">
 			<span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
 			<strong class="toc-title">文章目录</strong>
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git工作流程"><span class="toc-number">1.</span> <span class="toc-text">Git工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-工作区、暂存区和版本库"><span class="toc-number">2.</span> <span class="toc-text">Git 工作区、暂存区和版本库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git命令"><span class="toc-number">3.</span> <span class="toc-text">Git命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目初始化"><span class="toc-number">4.</span> <span class="toc-text">项目初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单分支开发"><span class="toc-number">5.</span> <span class="toc-text">单分支开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-git-fetch-git-rebase-———-版本开发标准"><span class="toc-number">5.1.</span> <span class="toc-text">1.git fetch + git rebase  ——— (版本开发标准)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-git-pull-git-rebase"><span class="toc-number">5.1.0.1.</span> <span class="toc-text">2.git pull + git rebase</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单人单分支开发"><span class="toc-number">6.</span> <span class="toc-text">单人单分支开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多分支开发-——-重点理解"><span class="toc-number">7.</span> <span class="toc-text">多分支开发 —— 重点理解</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git工作流程"><span class="toc-number">1.</span> <span class="toc-text">Git工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-工作区、暂存区和版本库"><span class="toc-number">2.</span> <span class="toc-text">Git 工作区、暂存区和版本库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git命令"><span class="toc-number">3.</span> <span class="toc-text">Git命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目初始化"><span class="toc-number">4.</span> <span class="toc-text">项目初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单分支开发"><span class="toc-number">5.</span> <span class="toc-text">单分支开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-git-fetch-git-rebase"><span class="toc-number">5.1.</span> <span class="toc-text">1.git fetch + git rebase</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-git-pull-git-rebase"><span class="toc-number">5.1.0.1.</span> <span class="toc-text">2.git pull + git rebase</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单人单分支开发"><span class="toc-number">6.</span> <span class="toc-text">单人单分支开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多分支开发"><span class="toc-number">7.</span> <span class="toc-text">多分支开发</span></a></li></ol>
 	   </div>
 	   <script type="text/javascript">
 		function showToc(){
@@ -328,13 +328,13 @@ var _hmt = _hmt || [];
 <li>创建项目</li>
 </ul>
 <ol>
-<li>mkdir wxgh – 创建本地文件夹</li>
-<li>cd wxgh – 进入到本地文件夹</li>
+<li>mkdir test – 创建本地文件夹</li>
+<li>cd test – 进入到本地文件夹</li>
 <li>git init – 初始化本地git库</li>
 <li>touch README.md – 添加本地文件</li>
 <li>git add README.md – add到缓存区（git add -A add全部修改）</li>
 <li>git commit -m “first commit” – 提交到本地git库</li>
-<li>git remote add origin <a href="http://192.168.2.96/root/wxgh.git" target="_blank" rel="noopener">http://192.168.2.96/root/wxgh.git</a> – 关联远程git库地址</li>
+<li>git remote add origin <a href="http://192.168.0.110/test.git" target="_blank" rel="noopener">http://192.168.0.110/test.git</a> – 关联远程git库地址</li>
 <li>git push -u origin master – 提交到远程分支<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git init]</span><br><span class="line">B --&gt; C[git add -A]</span><br><span class="line">C --&gt; D[git commit -m tag]</span><br><span class="line">D --&gt; E[git remote add origin https://.......git]</span><br><span class="line">E --&gt; F[git push -u origin master]</span><br><span class="line">F --&gt; G[End]</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
@@ -343,15 +343,15 @@ var _hmt = _hmt || [];
 </ul>
 <ol>
 <li>cd existing_git_repo  </li>
-<li>git remote add origin <a href="http://192.168.2.96/root/wxgh.git" target="_blank" rel="noopener">http://192.168.2.96/root/wxgh.git</a>  </li>
+<li>git remote add origin <a href="http://192.168.0.110/test.git" target="_blank" rel="noopener">http://192.168.0.110/test.git</a>  </li>
 <li>git push -u origin master<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git remote add origin https://.......git]</span><br><span class="line">B --&gt; C[git push -u origin master]</span><br><span class="line">C --&gt; D[End]</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <ul>
-<li>拉取已有项目<br>git clone -b master <a href="http://192.168.2.96/root/wxgh.git" target="_blank" rel="noopener">http://192.168.2.96/root/wxgh.git</a></li>
+<li>拉取已有项目<br>git clone -b master <a href="http://192.168.0.110/test.git" target="_blank" rel="noopener">http://192.168.0.110/test.git</a></li>
 </ul>
 <p><br></p>
-<h2 id="单分支开发"><a href="#单分支开发" class="headerlink" title="单分支开发"></a>单分支开发</h2><h3 id="1-git-fetch-git-rebase-———-版本开发标准"><a href="#1-git-fetch-git-rebase-———-版本开发标准" class="headerlink" title="1.git fetch + git rebase  ——— (版本开发标准)"></a>1.git fetch + git rebase  ——— (版本开发标准)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git add -A]</span><br><span class="line">B --&gt; C[git commit -m tag]</span><br><span class="line">C --&gt; D[git fetch]</span><br><span class="line">D --&gt; E&#123;git rebase origin/master&#125;</span><br><span class="line">E --&gt; |true| F[git push origin master:master]</span><br><span class="line">E --&gt; |false| G[Solve conflict]</span><br><span class="line">G --&gt; H[git add -A]</span><br><span class="line">H --&gt; I[git rebase --contione]</span><br><span class="line">I --&gt; F</span><br><span class="line">F --&gt; J((End))</span><br></pre></td></tr></table></figure>
+<h2 id="单分支开发"><a href="#单分支开发" class="headerlink" title="单分支开发"></a>单分支开发</h2><h3 id="1-git-fetch-git-rebase"><a href="#1-git-fetch-git-rebase" class="headerlink" title="1.git fetch + git rebase"></a>1.git fetch + git rebase</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git add -A]</span><br><span class="line">B --&gt; C[git commit -m tag]</span><br><span class="line">C --&gt; D[git fetch]</span><br><span class="line">D --&gt; E&#123;git rebase origin/master&#125;</span><br><span class="line">E --&gt; |true| F[git push origin master:master]</span><br><span class="line">E --&gt; |false| G[Solve conflict]</span><br><span class="line">G --&gt; H[git add -A]</span><br><span class="line">H --&gt; I[git rebase --contione]</span><br><span class="line">I --&gt; F</span><br><span class="line">F --&gt; J((End))</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>分支模型：master –&gt; origin/master</p>
 </blockquote>
@@ -365,7 +365,7 @@ var _hmt = _hmt || [];
 <p>注：git pull可以在修改前也可以在修改后，但至少保证有一次这样的操作。（单人多机器开发）</p>
 </blockquote>
 <p><br></p>
-<h2 id="多分支开发-——-重点理解"><a href="#多分支开发-——-重点理解" class="headerlink" title="多分支开发 —— 重点理解"></a>多分支开发 —— 重点理解</h2><ul>
+<h2 id="多分支开发"><a href="#多分支开发" class="headerlink" title="多分支开发"></a>多分支开发</h2><ul>
 <li>模型<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    master--&gt;&gt;dev1:checkout</span><br><span class="line">    dev1-&gt;&gt;master:merge</span><br><span class="line">    master--&gt;&gt;dev2:checkout</span><br><span class="line">    dev2-&gt;&gt;master:merge</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -689,7 +689,7 @@ div.article-footer-copyright{
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git工作流程"><span class="toc-number">1.</span> <span class="toc-text">Git工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-工作区、暂存区和版本库"><span class="toc-number">2.</span> <span class="toc-text">Git 工作区、暂存区和版本库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git命令"><span class="toc-number">3.</span> <span class="toc-text">Git命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目初始化"><span class="toc-number">4.</span> <span class="toc-text">项目初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单分支开发"><span class="toc-number">5.</span> <span class="toc-text">单分支开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-git-fetch-git-rebase-———-版本开发标准"><span class="toc-number">5.1.</span> <span class="toc-text">1.git fetch + git rebase  ——— (版本开发标准)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-git-pull-git-rebase"><span class="toc-number">5.1.0.1.</span> <span class="toc-text">2.git pull + git rebase</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单人单分支开发"><span class="toc-number">6.</span> <span class="toc-text">单人单分支开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多分支开发-——-重点理解"><span class="toc-number">7.</span> <span class="toc-text">多分支开发 —— 重点理解</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git工作流程"><span class="toc-number">1.</span> <span class="toc-text">Git工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git-工作区、暂存区和版本库"><span class="toc-number">2.</span> <span class="toc-text">Git 工作区、暂存区和版本库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git命令"><span class="toc-number">3.</span> <span class="toc-text">Git命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目初始化"><span class="toc-number">4.</span> <span class="toc-text">项目初始化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单分支开发"><span class="toc-number">5.</span> <span class="toc-text">单分支开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-git-fetch-git-rebase"><span class="toc-number">5.1.</span> <span class="toc-text">1.git fetch + git rebase</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-git-pull-git-rebase"><span class="toc-number">5.1.0.1.</span> <span class="toc-text">2.git pull + git rebase</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单人单分支开发"><span class="toc-number">6.</span> <span class="toc-text">单人单分支开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多分支开发"><span class="toc-number">7.</span> <span class="toc-text">多分支开发</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -819,19 +819,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TOMCAT</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+                <a href="javascript:void(0)" class="js-tag color2">TOMCAT</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -847,11 +839,23 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">正则表达式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -891,14 +895,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">并发编程</a>
               </li>
              
@@ -912,6 +908,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">MESI</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
