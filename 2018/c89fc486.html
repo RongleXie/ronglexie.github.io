@@ -14,13 +14,13 @@
 <meta property="og:url" content="http://www.ronglexie.top/2018/c89fc486.html">
 <meta property="og:site_name" content="世界因你而精彩|RongleXie">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p8aniiqlp.bkt.clouddn.com/89134424.jpg">
+<meta property="og:image" content="http://p8aniiqlp.bkt.clouddn.com/3236287836.jpg">
 <meta property="og:image" content="http://p8aniiqlp.bkt.clouddn.com/git%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.jpg">
 <meta property="og:image" content="http://p8aniiqlp.bkt.clouddn.com/git%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93.png">
-<meta property="og:updated_time" content="2018-09-08T13:18:09.235Z">
+<meta property="og:updated_time" content="2018-09-13T03:43:51.182Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git工作流程">
-<meta name="twitter:image" content="http://p8aniiqlp.bkt.clouddn.com/89134424.jpg">
+<meta name="twitter:image" content="http://p8aniiqlp.bkt.clouddn.com/3236287836.jpg">
   
     <link rel="alternative" href="/atom.xml" title="世界因你而精彩|RongleXie" type="application/atom+xml">
   
@@ -192,7 +192,7 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2018-04-22.git_work_process" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2018-04-22.git_" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -244,7 +244,7 @@ var _hmt = _hmt || [];
 	<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://p8aniiqlp.bkt.clouddn.com/89134424.jpg" alt=""></p>
+        <p><img src="http://p8aniiqlp.bkt.clouddn.com/3236287836.jpg" alt=""></p>
 <a id="more"></a>
 <h2 id="Git工作流程"><a href="#Git工作流程" class="headerlink" title="Git工作流程"></a>Git工作流程</h2><p>一般工作流程如下：</p>
 <ul>
@@ -275,9 +275,9 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <p><br></p>
-<h2 id="Git命令"><a href="#Git命令" class="headerlink" title="Git命令"></a>Git命令</h2><p><a href="https://git-scm.com/docs" target="_blank" rel="noopener">Git官方文档</a></p>
-<p><a href="http://www.runoob.com/git/git-basic-operations.html" target="_blank" rel="noopener">Git使用指南</a></p>
-<p><a href="http://blog.csdn.net/wh_19910525/article/details/7554489" target="_blank" rel="noopener">git rebase 和 git merge</a></p>
+<h2 id="Git命令"><a href="#Git命令" class="headerlink" title="Git命令"></a>Git命令</h2><p><a href="https://git-scm.com/docs" target="_blank" rel="external">Git官方文档</a></p>
+<p><a href="http://www.runoob.com/git/git-basic-operations.html" target="_blank" rel="external">Git使用指南</a></p>
+<p><a href="http://blog.csdn.net/wh_19910525/article/details/7554489" target="_blank" rel="external">git rebase 和 git merge</a></p>
 <ol>
 <li>创建仓库：git init</li>
 <li>克隆远程代码：git clone -b &lt;分支名&gt; &lt;代码库地址&gt;</li>
@@ -300,10 +300,10 @@ var _hmt = _hmt || [];
 <li>删除修改：<ul>
 <li>未add到暂存区：git checkout – <filename> 或者 git checkout .</filename></li>
 <li>已add到暂存区：git reset HEAD <filename> 然后再执行未add的暂存区的步骤</filename></li>
-<li>已commit到本地库：git reset –hard <commit_id> 或者 git reset –hard HEAD^(有几个^就回退几个版本)<blockquote>
+<li>已commit到本地库：git reset –hard &lt;commit_id&gt; 或者 git reset –hard HEAD^(有几个^就回退几个版本)<blockquote>
 <p>git revert 是生成一个新的提交来撤销某次提交，此次提交之前的commit都会被保留<br>git reset 是回到某次提交，提交及之前的commit都会被保留，但是此次之后的修改都会被退回到暂存区</p>
 </blockquote>
-</commit_id></li>
+</li>
 </ul>
 </li>
 <li>stash<ul>
@@ -334,8 +334,8 @@ var _hmt = _hmt || [];
 <li>touch README.md – 添加本地文件</li>
 <li>git add README.md – add到缓存区（git add -A add全部修改）</li>
 <li>git commit -m “first commit” – 提交到本地git库</li>
-<li>git remote add origin <a href="http://192.168.0.110/test.git" target="_blank" rel="noopener">http://192.168.0.110/test.git</a> – 关联远程git库地址</li>
-<li>git push -u origin master – 提交到远程分支<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git init]</span><br><span class="line">B --&gt; C[git add -A]</span><br><span class="line">C --&gt; D[git commit -m tag]</span><br><span class="line">D --&gt; E[git remote add origin https://.......git]</span><br><span class="line">E --&gt; F[git push -u origin master]</span><br><span class="line">F --&gt; G[End]</span><br></pre></td></tr></table></figure>
+<li>git remote add origin <a href="http://192.168.0.110/test.git" target="_blank" rel="external">http://192.168.0.110/test.git</a> – 关联远程git库地址</li>
+<li>git push -u origin master – 提交到远程分支<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">graph TB</div><div class="line">A((Start)) --&gt; B[git init]</div><div class="line">B --&gt; C[git add -A]</div><div class="line">C --&gt; D[git commit -m tag]</div><div class="line">D --&gt; E[git remote add origin https://.......git]</div><div class="line">E --&gt; F[git push -u origin master]</div><div class="line">F --&gt; G[End]</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <ul>
@@ -343,30 +343,30 @@ var _hmt = _hmt || [];
 </ul>
 <ol>
 <li>cd existing_git_repo  </li>
-<li>git remote add origin <a href="http://192.168.0.110/test.git" target="_blank" rel="noopener">http://192.168.0.110/test.git</a>  </li>
-<li>git push -u origin master<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git remote add origin https://.......git]</span><br><span class="line">B --&gt; C[git push -u origin master]</span><br><span class="line">C --&gt; D[End]</span><br></pre></td></tr></table></figure>
+<li>git remote add origin <a href="http://192.168.0.110/test.git" target="_blank" rel="external">http://192.168.0.110/test.git</a>  </li>
+<li>git push -u origin master<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">graph TB</div><div class="line">A((Start)) --&gt; B[git remote add origin https://.......git]</div><div class="line">B --&gt; C[git push -u origin master]</div><div class="line">C --&gt; D[End]</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <ul>
-<li>拉取已有项目<br>git clone -b master <a href="http://192.168.0.110/test.git" target="_blank" rel="noopener">http://192.168.0.110/test.git</a></li>
+<li>拉取已有项目<br>git clone -b master <a href="http://192.168.0.110/test.git" target="_blank" rel="external">http://192.168.0.110/test.git</a></li>
 </ul>
 <p><br></p>
-<h2 id="单分支开发"><a href="#单分支开发" class="headerlink" title="单分支开发"></a>单分支开发</h2><h3 id="1-git-fetch-git-rebase"><a href="#1-git-fetch-git-rebase" class="headerlink" title="1.git fetch + git rebase"></a>1.git fetch + git rebase</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git add -A]</span><br><span class="line">B --&gt; C[git commit -m tag]</span><br><span class="line">C --&gt; D[git fetch]</span><br><span class="line">D --&gt; E&#123;git rebase origin/master&#125;</span><br><span class="line">E --&gt; |true| F[git push origin master:master]</span><br><span class="line">E --&gt; |false| G[Solve conflict]</span><br><span class="line">G --&gt; H[git add -A]</span><br><span class="line">H --&gt; I[git rebase --contione]</span><br><span class="line">I --&gt; F</span><br><span class="line">F --&gt; J((End))</span><br></pre></td></tr></table></figure>
+<h2 id="单分支开发"><a href="#单分支开发" class="headerlink" title="单分支开发"></a>单分支开发</h2><h3 id="1-git-fetch-git-rebase"><a href="#1-git-fetch-git-rebase" class="headerlink" title="1.git fetch + git rebase"></a>1.git fetch + git rebase</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">graph TB</div><div class="line">A((Start)) --&gt; B[git add -A]</div><div class="line">B --&gt; C[git commit -m tag]</div><div class="line">C --&gt; D[git fetch]</div><div class="line">D --&gt; E&#123;git rebase origin/master&#125;</div><div class="line">E --&gt; |true| F[git push origin master:master]</div><div class="line">E --&gt; |false| G[Solve conflict]</div><div class="line">G --&gt; H[git add -A]</div><div class="line">H --&gt; I[git rebase --contione]</div><div class="line">I --&gt; F</div><div class="line">F --&gt; J((End))</div></pre></td></tr></table></figure>
 <blockquote>
 <p>分支模型：master –&gt; origin/master</p>
 </blockquote>
-<h5 id="2-git-pull-git-rebase"><a href="#2-git-pull-git-rebase" class="headerlink" title="2.git pull + git rebase"></a>2.git pull + git rebase</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git add -A]</span><br><span class="line">B --&gt; C[git commit -m tag]</span><br><span class="line">C --&gt; D[git checkout master]</span><br><span class="line">D --&gt; E[git pull]</span><br><span class="line">E --&gt; F[git checkout dev]</span><br><span class="line">F --&gt; G&#123;git rebase master&#125;</span><br><span class="line">G --&gt; |true| H(git push origin dev:master)</span><br><span class="line">G --&gt; |false| I[Solve conflict]</span><br><span class="line">I --&gt; J[git add -A]</span><br><span class="line">J --&gt; K[git rebase --continue]</span><br><span class="line">K --&gt; H</span><br><span class="line">H --&gt; L((End))</span><br></pre></td></tr></table></figure>
+<h5 id="2-git-pull-git-rebase"><a href="#2-git-pull-git-rebase" class="headerlink" title="2.git pull + git rebase"></a>2.git pull + git rebase</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">graph TB</div><div class="line">A((Start)) --&gt; B[git add -A]</div><div class="line">B --&gt; C[git commit -m tag]</div><div class="line">C --&gt; D[git checkout master]</div><div class="line">D --&gt; E[git pull]</div><div class="line">E --&gt; F[git checkout dev]</div><div class="line">F --&gt; G&#123;git rebase master&#125;</div><div class="line">G --&gt; |true| H(git push origin dev:master)</div><div class="line">G --&gt; |false| I[Solve conflict]</div><div class="line">I --&gt; J[git add -A]</div><div class="line">J --&gt; K[git rebase --continue]</div><div class="line">K --&gt; H</div><div class="line">H --&gt; L((End))</div></pre></td></tr></table></figure>
 <blockquote>
 <p>分支模型：<br>master(本地) –&gt; origin/master(远程)<br>dev(本地开发)</p>
 </blockquote>
 <p><br></p>
-<h2 id="单人单分支开发"><a href="#单人单分支开发" class="headerlink" title="单人单分支开发"></a>单人单分支开发</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B(git pull)</span><br><span class="line">B --&gt; C[git add -A]</span><br><span class="line">C --&gt; D[git commit -m tag]</span><br><span class="line">D --&gt; E[git push origin master:master]</span><br><span class="line">E --&gt; F(git pull)</span><br><span class="line">F --&gt; G((End))</span><br></pre></td></tr></table></figure>
+<h2 id="单人单分支开发"><a href="#单人单分支开发" class="headerlink" title="单人单分支开发"></a>单人单分支开发</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">graph TB</div><div class="line">A((Start)) --&gt; B(git pull)</div><div class="line">B --&gt; C[git add -A]</div><div class="line">C --&gt; D[git commit -m tag]</div><div class="line">D --&gt; E[git push origin master:master]</div><div class="line">E --&gt; F(git pull)</div><div class="line">F --&gt; G((End))</div></pre></td></tr></table></figure>
 <blockquote>
 <p>注：git pull可以在修改前也可以在修改后，但至少保证有一次这样的操作。（单人多机器开发）</p>
 </blockquote>
 <p><br></p>
 <h2 id="多分支开发"><a href="#多分支开发" class="headerlink" title="多分支开发"></a>多分支开发</h2><ul>
-<li>模型<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    master--&gt;&gt;dev1:checkout</span><br><span class="line">    dev1-&gt;&gt;master:merge</span><br><span class="line">    master--&gt;&gt;dev2:checkout</span><br><span class="line">    dev2-&gt;&gt;master:merge</span><br></pre></td></tr></table></figure>
+<li>模型<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sequenceDiagram</div><div class="line">    master--&gt;&gt;dev1:checkout</div><div class="line">    dev1-&gt;&gt;master:merge</div><div class="line">    master--&gt;&gt;dev2:checkout</div><div class="line">    dev2-&gt;&gt;master:merge</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <blockquote>
@@ -378,7 +378,7 @@ var _hmt = _hmt || [];
 <li><strong>纵向“变基”使用git rebase，横向合并分支使用git merge，切记！切记！</strong></li>
 </ol>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git fetch]</span><br><span class="line">B --&gt; C[git rebase origin/master]</span><br><span class="line">C --&gt; D[git merge dev1]</span><br><span class="line">D --&gt; |true| E[git push origin master:master]</span><br><span class="line">D --&gt; |false| F[Solve Conflict]</span><br><span class="line">F --&gt; G[git add -A]</span><br><span class="line">G --&gt; H[git merge --continue]</span><br><span class="line">H --&gt; E</span><br><span class="line">E --&gt; I((End))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">graph TB</div><div class="line">A((Start)) --&gt; B[git fetch]</div><div class="line">B --&gt; C[git rebase origin/master]</div><div class="line">C --&gt; D[git merge dev1]</div><div class="line">D --&gt; |true| E[git push origin master:master]</div><div class="line">D --&gt; |false| F[Solve Conflict]</div><div class="line">F --&gt; G[git add -A]</div><div class="line">G --&gt; H[git merge --continue]</div><div class="line">H --&gt; E</div><div class="line">E --&gt; I((End))</div></pre></td></tr></table></figure>
 <p><br></p>
 <ul>
 <li>新建功能分支并推送到远程Git库保存</li>
@@ -386,7 +386,7 @@ var _hmt = _hmt || [];
 <ol>
 <li>新建分支并建立关联</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git checkout -b temp_dev]</span><br><span class="line">B --&gt; C[git add -A]</span><br><span class="line">C --&gt; D[git commit -m tag]</span><br><span class="line">D --&gt; E[git push --set-upstream origin temp]</span><br><span class="line">E --&gt; F[git pull]</span><br><span class="line">F --&gt; G((End))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">graph TB</div><div class="line">A((Start)) --&gt; B[git checkout -b temp_dev]</div><div class="line">B --&gt; C[git add -A]</div><div class="line">C --&gt; D[git commit -m tag]</div><div class="line">D --&gt; E[git push --set-upstream origin temp]</div><div class="line">E --&gt; F[git pull]</div><div class="line">F --&gt; G((End))</div></pre></td></tr></table></figure>
 <blockquote>
 <ol>
 <li>temp_dev：本地新建开发分支</li>
@@ -394,15 +394,15 @@ var _hmt = _hmt || [];
 <li>提交修改后或者修改前一定要记得<strong>git pull</strong>，养成这个良好的习惯能有效的减少冲突</li>
 </ol>
 </blockquote>
-<ol>
-<li>仅新建分支不建立关联<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B[git checkout -b temp_dev]</span><br><span class="line">B --&gt; C[git add -A]</span><br><span class="line">C --&gt; D[git commit -m tag]</span><br><span class="line">D --&gt; E[git push origin temp_dev:temp]</span><br><span class="line">E --&gt; G((End))</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>仅新建分支不建立关联<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">graph TB</div><div class="line">A((Start)) --&gt; B[git checkout -b temp_dev]</div><div class="line">B --&gt; C[git add -A]</div><div class="line">C --&gt; D[git commit -m tag]</div><div class="line">D --&gt; E[git push origin temp_dev:temp]</div><div class="line">E --&gt; G((End))</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p><br></p>
 <ul>
 <li>拉取本地不存在的远程分支</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A((Start)) --&gt; B&#123;git checkout -b pull_dev origin/pull&#125;</span><br><span class="line">B --&gt; |true| C((End))</span><br><span class="line">B --&gt; |false| D[git fetch]</span><br><span class="line">D --&gt; B</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">graph TB</div><div class="line">A((Start)) --&gt; B&#123;git checkout -b pull_dev origin/pull&#125;</div><div class="line">B --&gt; |true| C((End))</div><div class="line">B --&gt; |false| D[git fetch]</div><div class="line">D --&gt; B</div></pre></td></tr></table></figure>
 
       
 	  
@@ -705,7 +705,7 @@ div.article-footer-copyright{
   
 
   
-  <div id="SOHUCS" sid="2018-04-22.git_work_process" ></div> 
+  <div id="SOHUCS" sid="2018-04-22.git_" ></div> 
 <script type="text/javascript"> 
 window.YiliaChangyanWrap = function() {
     var appid = "cytIfNV0j"; 
@@ -843,15 +843,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -895,6 +895,10 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">并发编程</a>
               </li>
              
@@ -908,10 +912,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">MESI</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">工作流程</a>
               </li>
              
               <li class="article-tag-list-item">
