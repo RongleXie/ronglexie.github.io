@@ -247,58 +247,58 @@ var _hmt = _hmt || [];
 <p>CentOS环境下Java、Tomcat、Maven、Vsftpd、Nginx、Mysql、Git开发环境搭建。</p>
 <h2 id="一-Yum源配置"><a href="#一-Yum源配置" class="headerlink" title="一.Yum源配置"></a>一.Yum源配置</h2><p><a href="!https://opsx.alibaba.com/mirror">阿里云开源镜像站</a></p>
 <hr>
-<h3 id="1-备份"><a href="#1-备份" class="headerlink" title="1. 备份"></a>1. 备份</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure>
+<h3 id="1-备份"><a href="#1-备份" class="headerlink" title="1. 备份"></a>1. 备份</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</div></pre></td></tr></table></figure>
 <h3 id="2-下载阿里云新的CentOS-Base-repo-到-etc-yum-repos-d"><a href="#2-下载阿里云新的CentOS-Base-repo-到-etc-yum-repos-d" class="headerlink" title="2. 下载阿里云新的CentOS-Base.repo 到/etc/yum.repos.d/"></a>2. 下载阿里云新的CentOS-Base.repo 到/etc/yum.repos.d/</h3><ul>
 <li>CentOS 5</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-5.repo</span><br><span class="line">或</span><br><span class="line">curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-5.repo</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-5.repo</div><div class="line">或</div><div class="line">curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-5.repo</div></pre></td></tr></table></figure>
 <ul>
 <li>CentOS 6</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo</span><br><span class="line">或</span><br><span class="line">curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo</div><div class="line">或</div><div class="line">curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo</div></pre></td></tr></table></figure>
 <ul>
 <li>CentOS 7</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line">或</span><br><span class="line">curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br></pre></td></tr></table></figure>
-<h3 id="3-之后运行yum-makecache生成缓存"><a href="#3-之后运行yum-makecache生成缓存" class="headerlink" title="3. 之后运行yum makecache生成缓存"></a>3. 之后运行yum makecache生成缓存</h3><h2 id="二-Java环境安装"><a href="#二-Java环境安装" class="headerlink" title="二.Java环境安装"></a>二.Java环境安装</h2><p><a href="http://www.oracle.com/technetwork/cn/java/archive-139210-zhs.html" target="_blank" rel="noopener">JAVA所有版本下载</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</div><div class="line">或</div><div class="line">curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</div></pre></td></tr></table></figure>
+<h3 id="3-之后运行yum-makecache生成缓存"><a href="#3-之后运行yum-makecache生成缓存" class="headerlink" title="3. 之后运行yum makecache生成缓存"></a>3. 之后运行yum makecache生成缓存</h3><h2 id="二-Java环境安装"><a href="#二-Java环境安装" class="headerlink" title="二.Java环境安装"></a>二.Java环境安装</h2><p><a href="http://www.oracle.com/technetwork/cn/java/archive-139210-zhs.html" target="_blank" rel="external">JAVA所有版本下载</a></p>
 <hr>
 <h3 id="1-清理系统默认自带jdk-如有些系统默认安装了openjdk等"><a href="#1-清理系统默认自带jdk-如有些系统默认安装了openjdk等" class="headerlink" title="1. 清理系统默认自带jdk(如有些系统默认安装了openjdk等)"></a>1. 清理系统默认自带jdk(如有些系统默认安装了openjdk等)</h3><ul>
 <li>先执行rpm -qa|grep jdk 查看已安装的jdk</li>
 <li>然后卸载 sudo yum remove xxx(xxx为上次命令查询到的结果)</li>
 </ul>
-<h3 id="2-赋予用户安装包的所有权限"><a href="#2-赋予用户安装包的所有权限" class="headerlink" title="2. 赋予用户安装包的所有权限"></a>2. 赋予用户安装包的所有权限</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod 777 jdk-7u80-linux-x64.rpm</span><br></pre></td></tr></table></figure>
-<h3 id="3-安装"><a href="#3-安装" class="headerlink" title="3. 安装"></a>3. 安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rpm -ivh jdk-7u80-linux-x64.rpm</span><br></pre></td></tr></table></figure>
+<h3 id="2-赋予用户安装包的所有权限"><a href="#2-赋予用户安装包的所有权限" class="headerlink" title="2. 赋予用户安装包的所有权限"></a>2. 赋予用户安装包的所有权限</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chmod 777 jdk-7u80-linux-x64.rpm</div></pre></td></tr></table></figure>
+<h3 id="3-安装"><a href="#3-安装" class="headerlink" title="3. 安装"></a>3. 安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo rpm -ivh jdk-7u80-linux-x64.rpm</div></pre></td></tr></table></figure>
 <h3 id="4-默认安装环境"><a href="#4-默认安装环境" class="headerlink" title="4. 默认安装环境"></a>4. 默认安装环境</h3><p><strong><em>/usr/java/jdk1.7.0_80</em></strong></p>
 <h3 id="5-jdk配置环境变量"><a href="#5-jdk配置环境变量" class="headerlink" title="5. jdk配置环境变量"></a>5. jdk配置环境变量</h3><ul>
 <li>编辑配置文件</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/profile</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/profile</div></pre></td></tr></table></figure>
 <ul>
 <li>添加配置并保存：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/java/jdk1.7.0_80</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">export JAVA_HOME=/usr/java/jdk1.7.0_80</div><div class="line">export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</div><div class="line">export PATH=$PATH:$JAVA_HOME/bin</div></pre></td></tr></table></figure>
 <ul>
 <li>使配置文件生效：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source /etc/profile</div></pre></td></tr></table></figure>
 <ul>
 <li>验证安装是否成功(执行命令后出现jdk版本信息则表明安装成功)</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
-<h3 id="6-卸载jdk"><a href="#6-卸载jdk" class="headerlink" title="6. 卸载jdk"></a>6. 卸载jdk</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum remove jdk_1.7.0_80</span><br></pre></td></tr></table></figure>
-<h2 id="三-Tomcat安装"><a href="#三-Tomcat安装" class="headerlink" title="三.Tomcat安装"></a>三.Tomcat安装</h2><p><a href="https://tomcat.apache.org/" target="_blank" rel="noopener">tomcat下载</a><br><a href="https://tomcat.apache.org/download-70.cgi" target="_blank" rel="noopener">tomcat7下载</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -version</div></pre></td></tr></table></figure>
+<h3 id="6-卸载jdk"><a href="#6-卸载jdk" class="headerlink" title="6. 卸载jdk"></a>6. 卸载jdk</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo yum remove jdk_1.7.0_80</div></pre></td></tr></table></figure>
+<h2 id="三-Tomcat安装"><a href="#三-Tomcat安装" class="headerlink" title="三.Tomcat安装"></a>三.Tomcat安装</h2><p><a href="https://tomcat.apache.org/" target="_blank" rel="external">tomcat下载</a><br><a href="https://tomcat.apache.org/download-70.cgi" target="_blank" rel="external">tomcat7下载</a></p>
 <p><strong>注：安装tomcat之前需安装好jdk</strong></p>
 <hr>
-<h3 id="1-解压安装包"><a href="#1-解压安装包" class="headerlink" title="1. 解压安装包"></a>1. 解压安装包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf apache-tomcat-7.0.85.tar.gz</span><br></pre></td></tr></table></figure>
-<h3 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2. 配置环境变量"></a>2. 配置环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/profile</span><br></pre></td></tr></table></figure>
+<h3 id="1-解压安装包"><a href="#1-解压安装包" class="headerlink" title="1. 解压安装包"></a>1. 解压安装包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zxvf apache-tomcat-7.0.85.tar.gz</div></pre></td></tr></table></figure>
+<h3 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2. 配置环境变量"></a>2. 配置环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/profile</div></pre></td></tr></table></figure>
 <ul>
 <li>添加配置并保存：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export CATALINA_HOME=/rongle/soft/apache-tomcat-7.0.85</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">export CATALINA_HOME=/rongle/soft/apache-tomcat-7.0.85</div></pre></td></tr></table></figure>
 <ul>
 <li>使配置文件生效：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source /etc/profile</div></pre></td></tr></table></figure>
 <h3 id="3-配置UTF-8字符集"><a href="#3-配置UTF-8字符集" class="headerlink" title="3. 配置UTF-8字符集"></a>3. 配置UTF-8字符集</h3><ul>
 <li>编辑${CATALINA_HOME}/conf/server.xml</li>
 <li>找到配置默认端口的位置，在xml节点末尾增加URIEncoding=”UTF-8”</li>
@@ -306,34 +306,34 @@ var _hmt = _hmt || [];
 <h3 id="4-验证安装是否成功"><a href="#4-验证安装是否成功" class="headerlink" title="4. 验证安装是否成功"></a>4. 验证安装是否成功</h3><ul>
 <li>进入${CATALINA_HOME}/bin</li>
 <li>执行./startup.sh</li>
-<li>访问<a href="http://ip:port进入tomcat默认页面则表明安装成功" target="_blank" rel="noopener">http://ip:port进入tomcat默认页面则表明安装成功</a></li>
+<li>访问<a href="http://ip:port进入tomcat默认页面则表明安装成功" target="_blank" rel="external">http://ip:port进入tomcat默认页面则表明安装成功</a></li>
 </ul>
-<h3 id="5-启动tomcat"><a href="#5-启动tomcat" class="headerlink" title="5. 启动tomcat"></a>5. 启动tomcat</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;CATALINA_HOME&#125;/bin/startup.sh</span><br></pre></td></tr></table></figure>
-<h3 id="6-关闭tomcat"><a href="#6-关闭tomcat" class="headerlink" title="6. 关闭tomcat"></a>6. 关闭tomcat</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&#123;CATALINA_HOME&#125;/bin/shutdown.sh</span><br></pre></td></tr></table></figure>
-<h2 id="四-Maven安装"><a href="#四-Maven安装" class="headerlink" title="四.Maven安装"></a>四.Maven安装</h2><p><a href="https://maven.apache.org/" target="_blank" rel="noopener">maven官网</a></p>
+<h3 id="5-启动tomcat"><a href="#5-启动tomcat" class="headerlink" title="5. 启动tomcat"></a>5. 启动tomcat</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$&#123;CATALINA_HOME&#125;/bin/startup.sh</div></pre></td></tr></table></figure>
+<h3 id="6-关闭tomcat"><a href="#6-关闭tomcat" class="headerlink" title="6. 关闭tomcat"></a>6. 关闭tomcat</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$&#123;CATALINA_HOME&#125;/bin/shutdown.sh</div></pre></td></tr></table></figure>
+<h2 id="四-Maven安装"><a href="#四-Maven安装" class="headerlink" title="四.Maven安装"></a>四.Maven安装</h2><p><a href="https://maven.apache.org/" target="_blank" rel="external">maven官网</a></p>
 <p><strong>注：安装maven之前需安装好jdk</strong></p>
 <hr>
-<h3 id="1-解压安装包-1"><a href="#1-解压安装包-1" class="headerlink" title="1. 解压安装包"></a>1. 解压安装包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf apache-maven-3.5.3-bin.tar.gz</span><br></pre></td></tr></table></figure>
-<h3 id="2-配置环境变量-1"><a href="#2-配置环境变量-1" class="headerlink" title="2. 配置环境变量"></a>2. 配置环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/profile</span><br></pre></td></tr></table></figure>
+<h3 id="1-解压安装包-1"><a href="#1-解压安装包-1" class="headerlink" title="1. 解压安装包"></a>1. 解压安装包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zxvf apache-maven-3.5.3-bin.tar.gz</div></pre></td></tr></table></figure>
+<h3 id="2-配置环境变量-1"><a href="#2-配置环境变量-1" class="headerlink" title="2. 配置环境变量"></a>2. 配置环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/profile</div></pre></td></tr></table></figure>
 <ul>
 <li>添加配置并保存：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export MAVEN_HOME=/rongle/soft/apache-maven-3.5.3</span><br><span class="line">export PATH=:$MAVEN_HOME/bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">export MAVEN_HOME=/rongle/soft/apache-maven-3.5.3</div><div class="line">export PATH=:$MAVEN_HOME/bin</div></pre></td></tr></table></figure>
 <ul>
 <li>使配置文件生效：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
-<h3 id="3-验证安装是否成功-执行命令后出现maven版本信息则表明安装成功"><a href="#3-验证安装是否成功-执行命令后出现maven版本信息则表明安装成功" class="headerlink" title="3. 验证安装是否成功(执行命令后出现maven版本信息则表明安装成功)"></a>3. 验证安装是否成功(执行命令后出现maven版本信息则表明安装成功)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -version</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source /etc/profile</div></pre></td></tr></table></figure>
+<h3 id="3-验证安装是否成功-执行命令后出现maven版本信息则表明安装成功"><a href="#3-验证安装是否成功-执行命令后出现maven版本信息则表明安装成功" class="headerlink" title="3. 验证安装是否成功(执行命令后出现maven版本信息则表明安装成功)"></a>3. 验证安装是否成功(执行命令后出现maven版本信息则表明安装成功)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mvn -version</div></pre></td></tr></table></figure>
 <h2 id="五-Vsftpd安装"><a href="#五-Vsftpd安装" class="headerlink" title="五.Vsftpd安装"></a>五.Vsftpd安装</h2><h3 id="1-查看系统是否已安装vsftpd"><a href="#1-查看系统是否已安装vsftpd" class="headerlink" title="1. 查看系统是否已安装vsftpd"></a>1. 查看系统是否已安装vsftpd</h3><ul>
 <li>先执行rpm -qa|grep vsftpd 查看已安装的vsftpd</li>
 <li>然后卸载 sudo yum remove xxx(xxx为上次命令查询到的结果)</li>
 </ul>
-<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install vsftpd</span><br></pre></td></tr></table></figure>
+<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2. 安装"></a>2. 安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install vsftpd</div></pre></td></tr></table></figure>
 <h3 id="3-默认配置文件"><a href="#3-默认配置文件" class="headerlink" title="3. 默认配置文件"></a>3. 默认配置文件</h3><p><strong><em>/etc/vsftpd/vsftpd.conf</em></strong></p>
 <h3 id="4-创建虚拟用户"><a href="#4-创建虚拟用户" class="headerlink" title="4. 创建虚拟用户"></a>4. 创建虚拟用户</h3><ul>
 <li>创建ftp文件存放文件夹，如：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /ftpfile</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir /ftpfile</div></pre></td></tr></table></figure>
 <ul>
 <li>添加匿名用户<ul>
 <li>-d：指定用户登入时的主目录，替换系统默认值/home/&lt;用户名### </li>
@@ -341,34 +341,34 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd ftpuser -d /ftpfile -s /sbin/nologin</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">useradd ftpuser -d /ftpfile -s /sbin/nologin</div></pre></td></tr></table></figure>
 <ul>
 <li>修改ftpfile权限</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R ftpuser.ftpuser /ftpfile</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chown -R ftpuser.ftpuser /ftpfile</div></pre></td></tr></table></figure>
 <ul>
 <li>重设ftpuser密码</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">passwd ftpuser</span><br><span class="line">password:123456</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">passwd ftpuser</div><div class="line">password:123456</div></pre></td></tr></table></figure>
 <h3 id="5-配置"><a href="#5-配置" class="headerlink" title="5. 配置"></a>5. 配置</h3><ul>
 <li>创建配置文件,并添加ftpuser后保存</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/vsftpd</span><br><span class="line">touch chroot_list</span><br><span class="line">vim chroot_list</span><br><span class="line">ftpuser</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd /etc/vsftpd</div><div class="line">touch chroot_list</div><div class="line">vim chroot_list</div><div class="line">ftpuser</div></pre></td></tr></table></figure>
 <ul>
 <li>修改安全配置文件，设置SELINUX=disabled</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/selinux/config</span><br><span class="line">SELINUX=disabled</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">vim /etc/selinux/config</div><div class="line">SELINUX=disabled</div></pre></td></tr></table></figure>
 <ul>
 <li>注：后续验证时出来550拒绝访问请执行：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo setsebool -P ftp_home_dir 1</span><br></pre></td></tr></table></figure>
-<h3 id="6-重启系统"><a href="#6-重启系统" class="headerlink" title="6. 重启系统"></a>6. 重启系统</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>
-<h3 id="7-防火墙配置"><a href="#7-防火墙配置" class="headerlink" title="7. 防火墙配置"></a>7. 防火墙配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/iptables</span><br><span class="line"></span><br><span class="line">-A INPUT -p TCP --dport 61001:62000 -j ACCEPT </span><br><span class="line">-A OUTPUT -p TCP --sport 61001:62000 -j ACCEPT </span><br><span class="line">-A INPUT -p TCP --dport 20 -j ACCEPT </span><br><span class="line">-A OUTPUT -p TCP --sport 20 -j ACCEPT </span><br><span class="line">-A INPUT -p TCP --dport 21 -j ACCEPT </span><br><span class="line">-A OUTPUT -p TCP --sport 21 -j ACCEPT</span><br></pre></td></tr></table></figure>
-<h3 id="8-重启防火墙"><a href="#8-重启防火墙" class="headerlink" title="8. 重启防火墙"></a>8. 重启防火墙</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service iptables restart</span><br></pre></td></tr></table></figure>
-<h3 id="9-启动-关闭-重启vsftpd服务"><a href="#9-启动-关闭-重启vsftpd服务" class="headerlink" title="9. 启动/关闭/重启vsftpd服务"></a>9. 启动/关闭/重启vsftpd服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service vsftpd start/stop/restart</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo setsebool -P ftp_home_dir 1</div></pre></td></tr></table></figure>
+<h3 id="6-重启系统"><a href="#6-重启系统" class="headerlink" title="6. 重启系统"></a>6. 重启系统</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reboot</div></pre></td></tr></table></figure>
+<h3 id="7-防火墙配置"><a href="#7-防火墙配置" class="headerlink" title="7. 防火墙配置"></a>7. 防火墙配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">vim /etc/sysconfig/iptables</div><div class="line"></div><div class="line">-A INPUT -p TCP --dport 61001:62000 -j ACCEPT </div><div class="line">-A OUTPUT -p TCP --sport 61001:62000 -j ACCEPT </div><div class="line">-A INPUT -p TCP --dport 20 -j ACCEPT </div><div class="line">-A OUTPUT -p TCP --sport 20 -j ACCEPT </div><div class="line">-A INPUT -p TCP --dport 21 -j ACCEPT </div><div class="line">-A OUTPUT -p TCP --sport 21 -j ACCEPT</div></pre></td></tr></table></figure>
+<h3 id="8-重启防火墙"><a href="#8-重启防火墙" class="headerlink" title="8. 重启防火墙"></a>8. 重启防火墙</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service iptables restart</div></pre></td></tr></table></figure>
+<h3 id="9-启动-关闭-重启vsftpd服务"><a href="#9-启动-关闭-重启vsftpd服务" class="headerlink" title="9. 启动/关闭/重启vsftpd服务"></a>9. 启动/关闭/重启vsftpd服务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service vsftpd start/stop/restart</div></pre></td></tr></table></figure>
 <h3 id="10-验证服务是否可用"><a href="#10-验证服务是否可用" class="headerlink" title="10. 验证服务是否可用"></a>10. 验证服务是否可用</h3><ul>
 <li>浏览器访问<ul>
-<li>在浏览器中访问<a href="ftp://ip" target="_blank" rel="noopener">ftp://ip</a></li>
+<li>在浏览器中访问<a href="ftp://ip" target="_blank" rel="external">ftp://ip</a></li>
 <li>输入用户名ftpuser密码123456进入ftpfile目录则表明服务可用</li>
 </ul>
 </li>
@@ -377,63 +377,63 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<h2 id="六-Nginx安装"><a href="#六-Nginx安装" class="headerlink" title="六.Nginx安装"></a>六.Nginx安装</h2><h3 id="1-安装其他依赖"><a href="#1-安装其他依赖" class="headerlink" title="1. 安装其他依赖"></a>1. 安装其他依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel</span><br></pre></td></tr></table></figure>
-<h3 id="2-解压源码包"><a href="#2-解压源码包" class="headerlink" title="2. 解压源码包"></a>2. 解压源码包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf nginx-1.12.2.tar.gz</span><br></pre></td></tr></table></figure>
-<h3 id="3-编译安装源码"><a href="#3-编译安装源码" class="headerlink" title="3. 编译安装源码"></a>3. 编译安装源码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+<h2 id="六-Nginx安装"><a href="#六-Nginx安装" class="headerlink" title="六.Nginx安装"></a>六.Nginx安装</h2><h3 id="1-安装其他依赖"><a href="#1-安装其他依赖" class="headerlink" title="1. 安装其他依赖"></a>1. 安装其他依赖</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel</div></pre></td></tr></table></figure>
+<h3 id="2-解压源码包"><a href="#2-解压源码包" class="headerlink" title="2. 解压源码包"></a>2. 解压源码包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar -zxvf nginx-1.12.2.tar.gz</div></pre></td></tr></table></figure>
+<h3 id="3-编译安装源码"><a href="#3-编译安装源码" class="headerlink" title="3. 编译安装源码"></a>3. 编译安装源码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">./configure</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
 <h3 id="4-nginx安装位置"><a href="#4-nginx安装位置" class="headerlink" title="4. nginx安装位置"></a>4. nginx安装位置</h3><ul>
 <li>默认安装位置 <strong>/usr/local/nginx</strong></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whereis nginx</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">whereis nginx</div></pre></td></tr></table></figure>
 <h3 id="5-常用命令"><a href="#5-常用命令" class="headerlink" title="5. 常用命令"></a>5. 常用命令</h3><ul>
 <li>测试配置文件</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx -t</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/nginx/sbin/nginx -t</div></pre></td></tr></table></figure>
 <ul>
 <li>启动</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/nginx/sbin/nginx</div></pre></td></tr></table></figure>
 <ul>
 <li>停止</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx -s stop</span><br><span class="line">或</span><br><span class="line">/usr/local/nginx/sbin/nginx -s quit</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/usr/local/nginx/sbin/nginx -s stop</div><div class="line">或</div><div class="line">/usr/local/nginx/sbin/nginx -s quit</div></pre></td></tr></table></figure>
 <ul>
 <li>重启</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx -s reload</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/local/nginx/sbin/nginx -s reload</div></pre></td></tr></table></figure>
 <ul>
 <li>平滑重启</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ps -ef|grep nginx</span><br><span class="line"></span><br><span class="line">kill -HUP PID[nginx主进程号]</span><br></pre></td></tr></table></figure>
-<h3 id="6-配置防火墙"><a href="#6-配置防火墙" class="headerlink" title="6. 配置防火墙"></a>6. 配置防火墙</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/iptables</span><br><span class="line"></span><br><span class="line">-A INPUT -p tcp -m tcp --dport 80 -j ACCEPT</span><br><span class="line"></span><br><span class="line">service iptables restart</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ps -ef|grep nginx</div><div class="line"></div><div class="line">kill -HUP PID[nginx主进程号]</div></pre></td></tr></table></figure>
+<h3 id="6-配置防火墙"><a href="#6-配置防火墙" class="headerlink" title="6. 配置防火墙"></a>6. 配置防火墙</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">vim /etc/sysconfig/iptables</div><div class="line"></div><div class="line">-A INPUT -p tcp -m tcp --dport 80 -j ACCEPT</div><div class="line"></div><div class="line">service iptables restart</div></pre></td></tr></table></figure>
 <h3 id="7-验证是否可用"><a href="#7-验证是否可用" class="headerlink" title="7. 验证是否可用"></a>7. 验证是否可用</h3><ul>
 <li>启动nginx服务</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">启动：</span><br><span class="line">/usr/local/nginx/sbin/nginx</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">启动：</div><div class="line">/usr/local/nginx/sbin/nginx</div></pre></td></tr></table></figure>
 <ul>
 <li>访问nginx服务<ul>
-<li>在浏览器访问 <strong><em><a href="http://ip:port" target="_blank" rel="noopener">http://ip:port</a></em></strong> 后进入nginx主页则表明服务可用</li>
+<li>在浏览器访问 <strong><em><a href="http://ip:port" target="_blank" rel="external">http://ip:port</a></em></strong> 后进入nginx主页则表明服务可用</li>
 </ul>
 </li>
 </ul>
-<h2 id="7-Mysql安装"><a href="#7-Mysql安装" class="headerlink" title="7. Mysql安装"></a>7. Mysql安装</h2><p><a href="https://www.cnblogs.com/silentdoer/articles/7258232.html" target="_blank" rel="noopener">参考链接</a></p>
+<h2 id="7-Mysql安装"><a href="#7-Mysql安装" class="headerlink" title="7. Mysql安装"></a>7. Mysql安装</h2><p><a href="https://www.cnblogs.com/silentdoer/articles/7258232.html" target="_blank" rel="external">参考链接</a></p>
 <h3 id="1-官方安装文档"><a href="#1-官方安装文档" class="headerlink" title="1. 官方安装文档"></a>1. 官方安装文档</h3><ul>
-<li><a href="https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/" target="_blank" rel="noopener">https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/</a></li>
+<li><a href="https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/" target="_blank" rel="external">https://dev.mysql.com/doc/mysql-yum-repo-quick-guide/en/</a></li>
 </ul>
 <h3 id="2-下载-Mysql-yum包"><a href="#2-下载-Mysql-yum包" class="headerlink" title="2. 下载 Mysql yum包"></a>2. 下载 Mysql yum包</h3><ul>
-<li><a href="http://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="noopener">http://dev.mysql.com/downloads/repo/yum/</a></li>
+<li><a href="http://dev.mysql.com/downloads/repo/yum/" target="_blank" rel="external">http://dev.mysql.com/downloads/repo/yum/</a></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://dev.mysql.com/get/mysql57-community-release-el6-11.noarch.rpm</span><br></pre></td></tr></table></figure>
-<h3 id="3-安装软件源"><a href="#3-安装软件源" class="headerlink" title="3. 安装软件源"></a>3. 安装软件源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh mysql57-community-release-el6-11.noarch.rpm</span><br></pre></td></tr></table></figure>
-<h3 id="4-安装mysql"><a href="#4-安装mysql" class="headerlink" title="4. 安装mysql"></a>4. 安装mysql</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y mysql-community-server</span><br></pre></td></tr></table></figure>
-<h3 id="5-启动mysql"><a href="#5-启动mysql" class="headerlink" title="5. 启动mysql"></a>5. 启动mysql</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld start</span><br></pre></td></tr></table></figure>
-<h3 id="6-查看mysql状态"><a href="#6-查看mysql状态" class="headerlink" title="6. 查看mysql状态"></a>6. 查看mysql状态</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld status</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget https://dev.mysql.com/get/mysql57-community-release-el6-11.noarch.rpm</div></pre></td></tr></table></figure>
+<h3 id="3-安装软件源"><a href="#3-安装软件源" class="headerlink" title="3. 安装软件源"></a>3. 安装软件源</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rpm -Uvh mysql57-community-release-el6-11.noarch.rpm</div></pre></td></tr></table></figure>
+<h3 id="4-安装mysql"><a href="#4-安装mysql" class="headerlink" title="4. 安装mysql"></a>4. 安装mysql</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install -y mysql-community-server</div></pre></td></tr></table></figure>
+<h3 id="5-启动mysql"><a href="#5-启动mysql" class="headerlink" title="5. 启动mysql"></a>5. 启动mysql</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service mysqld start</div></pre></td></tr></table></figure>
+<h3 id="6-查看mysql状态"><a href="#6-查看mysql状态" class="headerlink" title="6. 查看mysql状态"></a>6. 查看mysql状态</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">service mysqld status</div></pre></td></tr></table></figure>
 <h3 id="7-启动后查看临时密码"><a href="#7-启动后查看临时密码" class="headerlink" title="7. 启动后查看临时密码"></a>7. 启动后查看临时密码</h3><ul>
 <li>(如果之前安装过MySQL则这里可能会有多个密码，用最后一个，注意这个密码输入时是可以粘贴的)</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep &apos;temporary password&apos; /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
-<h3 id="8-用临时密码登录"><a href="#8-用临时密码登录" class="headerlink" title="8. 用临时密码登录"></a>8. 用临时密码登录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br><span class="line"></span><br><span class="line">输入临时密码，如：</span><br><span class="line">N2OcmlWjuj&amp;S</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep &apos;temporary password&apos; /var/log/mysqld.log</div></pre></td></tr></table></figure>
+<h3 id="8-用临时密码登录"><a href="#8-用临时密码登录" class="headerlink" title="8. 用临时密码登录"></a>8. 用临时密码登录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p</div><div class="line"></div><div class="line">输入临时密码，如：</div><div class="line">N2OcmlWjuj&amp;S</div></pre></td></tr></table></figure>
 <h3 id="9-修改密码"><a href="#9-修改密码" class="headerlink" title="9.修改密码"></a>9.修改密码</h3><ul>
-<li>修改密码强度校验<a href="http://www.cnblogs.com/ivictor/p/5142809.html" target="_blank" rel="noopener">参考链接</a><ul>
+<li>修改密码强度校验<a href="http://www.cnblogs.com/ivictor/p/5142809.html" target="_blank" rel="external">参考链接</a><ul>
 <li>修改校验策略为长度校验: set global validate_password_policy=0;</li>
 <li>设置密码数据长度最小值(全局)：set global validate_password_length=6;<ul>
 <li>设置密码数据长度最小值：set global validate_password_number_count=6;</li>
@@ -444,23 +444,23 @@ var _hmt = _hmt || [];
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;mima&apos;;</span><br><span class="line"></span><br><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;mima&apos;;</div><div class="line"></div><div class="line">FLUSH PRIVILEGES;</div></pre></td></tr></table></figure>
 <h3 id="10-授权"><a href="#10-授权" class="headerlink" title="10. 授权"></a>10. 授权</h3><ul>
 <li>授权给所有设备root的访问权限</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;mima&apos; WITH GRANT OPTION;</span><br><span class="line"></span><br><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;mima&apos; WITH GRANT OPTION;</div><div class="line"></div><div class="line">FLUSH PRIVILEGES;</div></pre></td></tr></table></figure>
 <ul>
 <li>新建用户授权</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CREATE USER &apos;rongle&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;mima&apos;;</span><br><span class="line"></span><br><span class="line">GRANT ALL PRIVILEGES ON *.* TO &apos;rongle&apos;@&apos;%&apos; IDENTIFIED BY &apos;mima&apos; WITH GRANT OPTION;</span><br><span class="line"></span><br><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure>
-<h3 id="11-配置默认字符集"><a href="#11-配置默认字符集" class="headerlink" title="11. 配置默认字符集"></a>11. 配置默认字符集</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/my.cnf</span><br><span class="line">加入:</span><br><span class="line">character-set-server=utf8</span><br></pre></td></tr></table></figure>
-<h3 id="12-自启动配置"><a href="#12-自启动配置" class="headerlink" title="12. 自启动配置"></a>12. 自启动配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig mysqld on</span><br></pre></td></tr></table></figure>
-<h3 id="13-配置防火墙"><a href="#13-配置防火墙" class="headerlink" title="13. 配置防火墙"></a>13. 配置防火墙</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/sysconfig/iptables</span><br><span class="line"></span><br><span class="line">-A INPUT -p tcp -m tcp --dport 3306 -j ACCEPT</span><br><span class="line"></span><br><span class="line">service iptables restart</span><br></pre></td></tr></table></figure>
-<h2 id="8-Git安装"><a href="#8-Git安装" class="headerlink" title="8. Git安装"></a>8. Git安装</h2><h3 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1. 安装Git"></a>1. 安装Git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install git</span><br></pre></td></tr></table></figure>
-<h3 id="2-生成ssh密钥"><a href="#2-生成ssh密钥" class="headerlink" title="2.生成ssh密钥"></a>2.生成ssh密钥</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxx.@xx.com&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="3-添加ssh密码"><a href="#3-添加ssh密码" class="headerlink" title="3.添加ssh密码"></a>3.添加ssh密码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-agent bash</span><br><span class="line">ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-<h3 id="4-查看密钥"><a href="#4-查看密钥" class="headerlink" title="4.查看密钥"></a>4.查看密钥</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
-<h3 id="5-验证安装是否成功"><a href="#5-验证安装是否成功" class="headerlink" title="5.验证安装是否成功"></a>5.验证安装是否成功</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">CREATE USER &apos;rongle&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;mima&apos;;</div><div class="line"></div><div class="line">GRANT ALL PRIVILEGES ON *.* TO &apos;rongle&apos;@&apos;%&apos; IDENTIFIED BY &apos;mima&apos; WITH GRANT OPTION;</div><div class="line"></div><div class="line">FLUSH PRIVILEGES;</div></pre></td></tr></table></figure>
+<h3 id="11-配置默认字符集"><a href="#11-配置默认字符集" class="headerlink" title="11. 配置默认字符集"></a>11. 配置默认字符集</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">vim /etc/my.cnf</div><div class="line">加入:</div><div class="line">character-set-server=utf8</div></pre></td></tr></table></figure>
+<h3 id="12-自启动配置"><a href="#12-自启动配置" class="headerlink" title="12. 自启动配置"></a>12. 自启动配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chkconfig mysqld on</div></pre></td></tr></table></figure>
+<h3 id="13-配置防火墙"><a href="#13-配置防火墙" class="headerlink" title="13. 配置防火墙"></a>13. 配置防火墙</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">vim /etc/sysconfig/iptables</div><div class="line"></div><div class="line">-A INPUT -p tcp -m tcp --dport 3306 -j ACCEPT</div><div class="line"></div><div class="line">service iptables restart</div></pre></td></tr></table></figure>
+<h2 id="8-Git安装"><a href="#8-Git安装" class="headerlink" title="8. Git安装"></a>8. Git安装</h2><h3 id="1-安装Git"><a href="#1-安装Git" class="headerlink" title="1. 安装Git"></a>1. 安装Git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum install git</div></pre></td></tr></table></figure>
+<h3 id="2-生成ssh密钥"><a href="#2-生成ssh密钥" class="headerlink" title="2.生成ssh密钥"></a>2.生成ssh密钥</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C &quot;xxx.@xx.com&quot;</div></pre></td></tr></table></figure>
+<h3 id="3-添加ssh密码"><a href="#3-添加ssh密码" class="headerlink" title="3.添加ssh密码"></a>3.添加ssh密码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssh-agent bash</div><div class="line">ssh-add ~/.ssh/id_rsa</div></pre></td></tr></table></figure>
+<h3 id="4-查看密钥"><a href="#4-查看密钥" class="headerlink" title="4.查看密钥"></a>4.查看密钥</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat ~/.ssh/id_rsa</div></pre></td></tr></table></figure>
+<h3 id="5-验证安装是否成功"><a href="#5-验证安装是否成功" class="headerlink" title="5.验证安装是否成功"></a>5.验证安装是否成功</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git --version</div></pre></td></tr></table></figure>
       
 	  
 	  
@@ -744,7 +744,7 @@ div.article-footer-copyright{
       <div class="clearfix"></div>
     </div>
   </div>
-  
+  <a href="https://github.com/ronglexie" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 </article>
 
   
@@ -841,7 +841,7 @@ window.YiliaChangyanWrap = function() {
 		</span>
     </div>
   </div>
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </footer>
     </div>
     <script>
@@ -922,10 +922,6 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">TOMCAT</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTTP</a>
               </li>
              
@@ -942,15 +938,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">TOMCAT</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -991,6 +983,14 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
