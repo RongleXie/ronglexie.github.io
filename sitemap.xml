@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.ronglexie.top/photos/data.json</loc>
+    
+    <lastmod>2019-01-20T09:57:33.656Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.ronglexie.top/2018/c89fc486.html</loc>
     
     <lastmod>2018-12-21T16:37:27.026Z</lastmod>
@@ -117,13 +124,6 @@
     <loc>http://www.ronglexie.top/baidu_verify_6sFfuscWJF.html</loc>
     
     <lastmod>2018-04-19T15:59:51.263Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.ronglexie.top/photos/data.json</loc>
-    
-    <lastmod>2018-04-17T04:27:41.022Z</lastmod>
     
   </url>
   
